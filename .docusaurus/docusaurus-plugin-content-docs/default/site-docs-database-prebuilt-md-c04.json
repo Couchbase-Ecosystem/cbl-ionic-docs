@@ -1,0 +1,27 @@
+{
+  "id": "database-prebuilt",
+  "title": "Pre-built Database",
+  "description": "",
+  "source": "@site/docs/database-prebuilt.md",
+  "sourceDirName": ".",
+  "slug": "/database-prebuilt",
+  "permalink": "/cbl-ionic-docs/docs/database-prebuilt",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/database-prebuilt.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Databases",
+    "permalink": "/cbl-ionic-docs/docs/databases"
+  },
+  "next": {
+    "title": "Scopes and Collections",
+    "permalink": "/cbl-ionic-docs/docs/scopes-collections"
+  }
+}

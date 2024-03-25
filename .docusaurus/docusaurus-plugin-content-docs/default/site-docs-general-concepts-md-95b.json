@@ -1,0 +1,27 @@
+{
+  "id": "general-concepts",
+  "title": "General Concepts",
+  "description": "",
+  "source": "@site/docs/general-concepts.md",
+  "sourceDirName": ".",
+  "slug": "/general-concepts",
+  "permalink": "/docs/general-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/general-concepts.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Build and Run",
+    "permalink": "/docs/StartHere/build-run"
+  },
+  "next": {
+    "title": "Databases",
+    "permalink": "/docs/databases"
+  }
+}

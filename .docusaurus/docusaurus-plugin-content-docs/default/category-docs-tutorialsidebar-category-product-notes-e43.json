@@ -1,0 +1,16 @@
+{
+  "title": "Product Notes",
+  "description": "Learn more about releases, compatibility, and supported platforms.",
+  "slug": "/category/product-notes",
+  "permalink": "/docs/category/product-notes",
+  "navigation": {
+    "previous": {
+      "title": "Troubleshooting Crashes",
+      "permalink": "/docs/Troubleshooting/troubleshoot-crashes"
+    },
+    "next": {
+      "title": "Release Notes",
+      "permalink": "/docs/ProductNotes/release-notes"
+    }
+  }
+}

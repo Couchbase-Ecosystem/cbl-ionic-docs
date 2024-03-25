@@ -1,0 +1,24 @@
+{
+  "id": "intro",
+  "title": "Overview",
+  "description": "Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/cbl-ionic-docs/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Start Here!",
+    "permalink": "/cbl-ionic-docs/docs/category/start-here"
+  }
+}

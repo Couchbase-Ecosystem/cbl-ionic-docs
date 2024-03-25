@@ -1,0 +1,27 @@
+{
+  "id": "using-full-text-search",
+  "title": "Using Full Text Search",
+  "description": "",
+  "source": "@site/docs/using-full-text-search.md",
+  "sourceDirName": ".",
+  "slug": "/using-full-text-search",
+  "permalink": "/docs/using-full-text-search",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/using-full-text-search.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Query Troubleshoooting",
+    "permalink": "/docs/Queries/query-troubleshooeting"
+  },
+  "next": {
+    "title": "Indexes",
+    "permalink": "/docs/indexes"
+  }
+}

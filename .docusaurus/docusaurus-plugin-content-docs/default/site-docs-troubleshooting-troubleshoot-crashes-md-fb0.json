@@ -1,0 +1,27 @@
+{
+  "id": "Troubleshooting/troubleshoot-crashes",
+  "title": "Troubleshooting Crashes",
+  "description": "",
+  "source": "@site/docs/Troubleshooting/troubleshoot-crashes.md",
+  "sourceDirName": "Troubleshooting",
+  "slug": "/Troubleshooting/troubleshoot-crashes",
+  "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Troubleshooting Queries",
+    "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries"
+  },
+  "next": {
+    "title": "Product Notes",
+    "permalink": "/cbl-ionic-docs/docs/category/product-notes"
+  }
+}

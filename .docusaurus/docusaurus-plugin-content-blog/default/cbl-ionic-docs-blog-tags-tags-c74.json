@@ -1,0 +1,22 @@
+[
+  {
+    "label": "hello",
+    "permalink": "/cbl-ionic-docs/blog/tags/hello",
+    "count": 1
+  },
+  {
+    "label": "ionic",
+    "permalink": "/cbl-ionic-docs/blog/tags/ionic",
+    "count": 1
+  },
+  {
+    "label": "couchbase lite",
+    "permalink": "/cbl-ionic-docs/blog/tags/couchbase-lite",
+    "count": 1
+  },
+  {
+    "label": "mobile",
+    "permalink": "/cbl-ionic-docs/blog/tags/mobile",
+    "count": 1
+  }
+]

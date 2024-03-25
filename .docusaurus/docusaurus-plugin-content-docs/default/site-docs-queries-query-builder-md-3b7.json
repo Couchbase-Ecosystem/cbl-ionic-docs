@@ -1,0 +1,27 @@
+{
+  "id": "Queries/query-builder",
+  "title": "Query Builder",
+  "description": "",
+  "source": "@site/docs/Queries/query-builder.md",
+  "sourceDirName": "Queries",
+  "slug": "/Queries/query-builder",
+  "permalink": "/cbl-ionic-docs/docs/Queries/query-builder",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/query-builder.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SQL++ and Query Builder Differences",
+    "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences"
+  },
+  "next": {
+    "title": "Query Result Sets",
+    "permalink": "/cbl-ionic-docs/docs/Queries/query-result-set"
+  }
+}

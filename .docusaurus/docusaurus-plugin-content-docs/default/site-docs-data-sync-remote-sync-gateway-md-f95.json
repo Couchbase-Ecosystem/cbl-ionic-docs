@@ -1,0 +1,27 @@
+{
+  "id": "DataSync/remote-sync-gateway",
+  "title": "Remote Sync Gateway",
+  "description": "",
+  "source": "@site/docs/DataSync/remote-sync-gateway.md",
+  "sourceDirName": "DataSync",
+  "slug": "/DataSync/remote-sync-gateway",
+  "permalink": "/docs/DataSync/remote-sync-gateway",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/DataSync/remote-sync-gateway.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Remote Sync Gateway",
+    "permalink": "/docs/DataSync/remote-sync-gateway copy"
+  },
+  "next": {
+    "title": "Typed Data",
+    "permalink": "/docs/typed-data"
+  }
+}

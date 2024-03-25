@@ -1,0 +1,27 @@
+{
+  "id": "migration",
+  "title": "Migration",
+  "description": "",
+  "source": "@site/docs/migration.md",
+  "sourceDirName": ".",
+  "slug": "/migration",
+  "permalink": "/cbl-ionic-docs/docs/migration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/migration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API References",
+    "permalink": "/cbl-ionic-docs/docs/api-reference"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/cbl-ionic-docs/docs/category/troubleshooting"
+  }
+}

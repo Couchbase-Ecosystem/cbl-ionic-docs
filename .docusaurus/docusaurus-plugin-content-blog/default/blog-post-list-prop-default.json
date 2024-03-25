@@ -1,0 +1,10 @@
+{
+  "title": "Recent posts",
+  "items": [
+    {
+      "title": "Introduction to Couchbase Lite for Ionic",
+      "permalink": "/cbl-ionic-docs/blog/intro-blog-post",
+      "unlisted": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "StartHere/build-run",
+  "title": "Build and Run",
+  "description": "",
+  "source": "@site/docs/StartHere/build-run.md",
+  "sourceDirName": "StartHere",
+  "slug": "/StartHere/build-run",
+  "permalink": "/cbl-ionic-docs/docs/StartHere/build-run",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/StartHere/build-run.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Install",
+    "permalink": "/cbl-ionic-docs/docs/StartHere/install"
+  },
+  "next": {
+    "title": "Databases",
+    "permalink": "/cbl-ionic-docs/docs/databases"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "blobs",
+  "title": "Blobs",
+  "description": "",
+  "source": "@site/docs/blobs.md",
+  "sourceDirName": ".",
+  "slug": "/blobs",
+  "permalink": "/cbl-ionic-docs/docs/blobs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/blobs.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Documents",
+    "permalink": "/cbl-ionic-docs/docs/documents"
+  },
+  "next": {
+    "title": "Queries",
+    "permalink": "/cbl-ionic-docs/docs/category/queries"
+  }
+}

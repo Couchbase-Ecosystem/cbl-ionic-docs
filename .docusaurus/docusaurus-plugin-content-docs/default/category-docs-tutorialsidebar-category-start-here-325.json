@@ -1,0 +1,16 @@
+{
+  "title": "Start Here!",
+  "description": "Learn the prerequisites, how to install the plugin, and how to build and run your application with Couchbase Lite.",
+  "slug": "/category/start-here",
+  "permalink": "/docs/category/start-here",
+  "navigation": {
+    "previous": {
+      "title": "Overview",
+      "permalink": "/docs/intro"
+    },
+    "next": {
+      "title": "Prerequisites",
+      "permalink": "/docs/StartHere/prerequisties"
+    }
+  }
+}

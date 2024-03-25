@@ -1,0 +1,23 @@
+{
+  "id": "queries/sql++-mobile-and-server-differences",
+  "title": "SQL++ for Mobile and Server Differences",
+  "description": "",
+  "source": "@site/docs/queries/sql++-mobile-and-server-differences.md",
+  "sourceDirName": "queries",
+  "slug": "/queries/sql++-mobile-and-server-differences",
+  "permalink": "/docs/queries/sql++-mobile-and-server-differences",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/queries/sql++-mobile-and-server-differences.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SQL++ for Typscript",
+    "permalink": "/docs/queries/sqlplusplus"
+  }
+}

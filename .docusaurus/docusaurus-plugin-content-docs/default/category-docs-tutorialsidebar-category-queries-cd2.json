@@ -1,0 +1,16 @@
+{
+  "title": "Queries",
+  "description": "Learn about how to Query using SQL++",
+  "slug": "/category/queries",
+  "permalink": "/docs/category/queries",
+  "navigation": {
+    "previous": {
+      "title": "Blobs",
+      "permalink": "/docs/blobs"
+    },
+    "next": {
+      "title": "SQL++ for Typscript",
+      "permalink": "/docs/Queries/sqlplusplus"
+    }
+  }
+}

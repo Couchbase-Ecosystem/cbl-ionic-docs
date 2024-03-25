@@ -1,0 +1,8 @@
+{
+  "label": "Data Sync",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about how to Sync Data between your Ionic app and Couchbase Capella App Services or Sync Gateway."
+  }
+}

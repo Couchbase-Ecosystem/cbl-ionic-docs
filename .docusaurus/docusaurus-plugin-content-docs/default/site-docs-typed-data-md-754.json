@@ -1,0 +1,27 @@
+{
+  "id": "typed-data",
+  "title": "Typed Data",
+  "description": "",
+  "source": "@site/docs/typed-data.md",
+  "sourceDirName": ".",
+  "slug": "/typed-data",
+  "permalink": "/cbl-ionic-docs/docs/typed-data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/typed-data.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Remote Sync Gateway",
+    "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy"
+  },
+  "next": {
+    "title": "API References",
+    "permalink": "/cbl-ionic-docs/docs/api-reference"
+  }
+}

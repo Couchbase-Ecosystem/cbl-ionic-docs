@@ -1,0 +1,27 @@
+{
+  "id": "ProductNotes/supported-platforms",
+  "title": "Supported Platforms",
+  "description": "",
+  "source": "@site/docs/ProductNotes/supported-platforms.md",
+  "sourceDirName": "ProductNotes",
+  "slug": "/ProductNotes/supported-platforms",
+  "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/supported-platforms.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Compatibility",
+    "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility"
+  },
+  "next": {
+    "title": "Learning Path",
+    "permalink": "/cbl-ionic-docs/docs/learning-path"
+  }
+}

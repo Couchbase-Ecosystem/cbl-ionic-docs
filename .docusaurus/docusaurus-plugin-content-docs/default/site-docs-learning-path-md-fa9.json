@@ -1,0 +1,23 @@
+{
+  "id": "learning-path",
+  "title": "Learning Path",
+  "description": "",
+  "source": "@site/docs/learning-path.md",
+  "sourceDirName": ".",
+  "slug": "/learning-path",
+  "permalink": "/cbl-ionic-docs/docs/learning-path",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/learning-path.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "sidebar_position": 18
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supported Platforms",
+    "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms"
+  }
+}

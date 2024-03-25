@@ -1,0 +1,16 @@
+{
+  "title": "Troubleshooting",
+  "description": "Learn about how to troubleshoot issues between Ionic and Native code and Couchbase Lite.",
+  "slug": "/category/troubleshooting",
+  "permalink": "/docs/category/troubleshooting",
+  "navigation": {
+    "previous": {
+      "title": "Migration",
+      "permalink": "/docs/migration"
+    },
+    "next": {
+      "title": "Using Logs",
+      "permalink": "/docs/Troubleshooting/using-logs"
+    }
+  }
+}

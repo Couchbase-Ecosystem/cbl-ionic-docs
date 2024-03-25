@@ -1,0 +1,27 @@
+{
+  "id": "scopes-collections",
+  "title": "Scopes and Collections",
+  "description": "",
+  "source": "@site/docs/scopes-collections.md",
+  "sourceDirName": ".",
+  "slug": "/scopes-collections",
+  "permalink": "/cbl-ionic-docs/docs/scopes-collections",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/scopes-collections.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pre-built Database",
+    "permalink": "/cbl-ionic-docs/docs/database-prebuilt"
+  },
+  "next": {
+    "title": "Documents",
+    "permalink": "/cbl-ionic-docs/docs/documents"
+  }
+}

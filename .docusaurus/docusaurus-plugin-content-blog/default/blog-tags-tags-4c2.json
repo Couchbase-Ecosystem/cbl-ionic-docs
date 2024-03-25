@@ -1,0 +1,22 @@
+[
+  {
+    "label": "hello",
+    "permalink": "/blog/tags/hello",
+    "count": 1
+  },
+  {
+    "label": "ionic",
+    "permalink": "/blog/tags/ionic",
+    "count": 1
+  },
+  {
+    "label": "couchbase lite",
+    "permalink": "/blog/tags/couchbase-lite",
+    "count": 1
+  },
+  {
+    "label": "mobile",
+    "permalink": "/blog/tags/mobile",
+    "count": 1
+  }
+]

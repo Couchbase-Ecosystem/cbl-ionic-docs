@@ -1,0 +1,27 @@
+{
+  "id": "Queries/sqlplusplus",
+  "title": "SQL++ for Typscript",
+  "description": "",
+  "source": "@site/docs/Queries/sqlplusplus.md",
+  "sourceDirName": "Queries",
+  "slug": "/Queries/sqlplusplus",
+  "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/sqlplusplus.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Queries",
+    "permalink": "/cbl-ionic-docs/docs/category/queries"
+  },
+  "next": {
+    "title": "SQL++ for Mobile and Server Differences",
+    "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences"
+  }
+}
