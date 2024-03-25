@@ -5,7 +5,7 @@
   "source": "@site/docs/Queries/live-queries.md",
   "sourceDirName": "Queries",
   "slug": "/Queries/live-queries",
-  "permalink": "/cbl-ionic-docs/docs/Queries/live-queries",
+  "permalink": "/cbl-ionic-docs/Queries/live-queries",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/live-queries.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Query Result Sets",
-    "permalink": "/cbl-ionic-docs/docs/Queries/query-result-set"
+    "permalink": "/cbl-ionic-docs/Queries/query-result-set"
   },
   "next": {
     "title": "Query Troubleshoooting",
-    "permalink": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting"
+    "permalink": "/cbl-ionic-docs/Queries/query-troubleshooeting"
   }
 }

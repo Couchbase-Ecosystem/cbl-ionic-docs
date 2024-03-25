@@ -5,7 +5,7 @@
   "source": "@site/docs/Troubleshooting/using-logs.md",
   "sourceDirName": "Troubleshooting",
   "slug": "/Troubleshooting/using-logs",
-  "permalink": "/cbl-ionic-docs/docs/Troubleshooting/using-logs",
+  "permalink": "/cbl-ionic-docs/Troubleshooting/using-logs",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Troubleshooting/using-logs.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Troubleshooting",
-    "permalink": "/cbl-ionic-docs/docs/category/troubleshooting"
+    "permalink": "/cbl-ionic-docs/category/troubleshooting"
   },
   "next": {
     "title": "Troubleshooting Queries",
-    "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries"
+    "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries"
   }
 }

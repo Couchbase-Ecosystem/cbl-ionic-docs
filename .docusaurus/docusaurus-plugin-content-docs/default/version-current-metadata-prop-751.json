@@ -12,7 +12,7 @@
       {
         "type": "link",
         "label": "Overview",
-        "href": "/cbl-ionic-docs/docs/intro",
+        "href": "/cbl-ionic-docs/",
         "docId": "intro",
         "unlisted": false
       },
@@ -25,59 +25,59 @@
           {
             "type": "link",
             "label": "Prerequisites",
-            "href": "/cbl-ionic-docs/docs/StartHere/prerequisties",
+            "href": "/cbl-ionic-docs/StartHere/prerequisties",
             "docId": "StartHere/prerequisties",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Install",
-            "href": "/cbl-ionic-docs/docs/StartHere/install",
+            "href": "/cbl-ionic-docs/StartHere/install",
             "docId": "StartHere/install",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Build and Run",
-            "href": "/cbl-ionic-docs/docs/StartHere/build-run",
+            "href": "/cbl-ionic-docs/StartHere/build-run",
             "docId": "StartHere/build-run",
             "unlisted": false
           }
         ],
-        "href": "/cbl-ionic-docs/docs/category/start-here"
+        "href": "/cbl-ionic-docs/category/start-here"
       },
       {
         "type": "link",
         "label": "Databases",
-        "href": "/cbl-ionic-docs/docs/databases",
+        "href": "/cbl-ionic-docs/databases",
         "docId": "databases",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Pre-built Database",
-        "href": "/cbl-ionic-docs/docs/database-prebuilt",
+        "href": "/cbl-ionic-docs/database-prebuilt",
         "docId": "database-prebuilt",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Scopes and Collections",
-        "href": "/cbl-ionic-docs/docs/scopes-collections",
+        "href": "/cbl-ionic-docs/scopes-collections",
         "docId": "scopes-collections",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Documents",
-        "href": "/cbl-ionic-docs/docs/documents",
+        "href": "/cbl-ionic-docs/documents",
         "docId": "documents",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Blobs",
-        "href": "/cbl-ionic-docs/docs/blobs",
+        "href": "/cbl-ionic-docs/blobs",
         "docId": "blobs",
         "unlisted": false
       },
@@ -90,66 +90,66 @@
           {
             "type": "link",
             "label": "SQL++ for Typscript",
-            "href": "/cbl-ionic-docs/docs/Queries/sqlplusplus",
+            "href": "/cbl-ionic-docs/Queries/sqlplusplus",
             "docId": "Queries/sqlplusplus",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "SQL++ for Mobile and Server Differences",
-            "href": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences",
+            "href": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences",
             "docId": "Queries/sqlplusplus-mobile-and-server-differences",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "SQL++ and Query Builder Differences",
-            "href": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences",
+            "href": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences",
             "docId": "Queries/sqlplusplus-and-query-builder-differences",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Query Builder",
-            "href": "/cbl-ionic-docs/docs/Queries/query-builder",
+            "href": "/cbl-ionic-docs/Queries/query-builder",
             "docId": "Queries/query-builder",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Query Result Sets",
-            "href": "/cbl-ionic-docs/docs/Queries/query-result-set",
+            "href": "/cbl-ionic-docs/Queries/query-result-set",
             "docId": "Queries/query-result-set",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Live Queries",
-            "href": "/cbl-ionic-docs/docs/Queries/live-queries",
+            "href": "/cbl-ionic-docs/Queries/live-queries",
             "docId": "Queries/live-queries",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Query Troubleshoooting",
-            "href": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting",
+            "href": "/cbl-ionic-docs/Queries/query-troubleshooeting",
             "docId": "Queries/query-troubleshooeting",
             "unlisted": false
           }
         ],
-        "href": "/cbl-ionic-docs/docs/category/queries"
+        "href": "/cbl-ionic-docs/category/queries"
       },
       {
         "type": "link",
         "label": "Using Full Text Search",
-        "href": "/cbl-ionic-docs/docs/full-text-search",
+        "href": "/cbl-ionic-docs/full-text-search",
         "docId": "full-text-search",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Indexing",
-        "href": "/cbl-ionic-docs/docs/indexes",
+        "href": "/cbl-ionic-docs/indexes",
         "docId": "indexes",
         "unlisted": false
       },
@@ -162,38 +162,38 @@
           {
             "type": "link",
             "label": "Couchbase Capella App Services",
-            "href": "/cbl-ionic-docs/docs/DataSync/capella",
+            "href": "/cbl-ionic-docs/DataSync/capella",
             "docId": "DataSync/capella",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Remote Sync Gateway",
-            "href": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy",
+            "href": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy",
             "docId": "DataSync/remote-sync-gateway copy",
             "unlisted": false
           }
         ],
-        "href": "/cbl-ionic-docs/docs/category/data-sync"
+        "href": "/cbl-ionic-docs/category/data-sync"
       },
       {
         "type": "link",
         "label": "Typed Data",
-        "href": "/cbl-ionic-docs/docs/typed-data",
+        "href": "/cbl-ionic-docs/typed-data",
         "docId": "typed-data",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "API References",
-        "href": "/cbl-ionic-docs/docs/api-reference",
+        "href": "/cbl-ionic-docs/api-reference",
         "docId": "api-reference",
         "unlisted": false
       },
       {
         "type": "link",
         "label": "Migration",
-        "href": "/cbl-ionic-docs/docs/migration",
+        "href": "/cbl-ionic-docs/migration",
         "docId": "migration",
         "unlisted": false
       },
@@ -206,26 +206,26 @@
           {
             "type": "link",
             "label": "Using Logs",
-            "href": "/cbl-ionic-docs/docs/Troubleshooting/using-logs",
+            "href": "/cbl-ionic-docs/Troubleshooting/using-logs",
             "docId": "Troubleshooting/using-logs",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Troubleshooting Queries",
-            "href": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries",
+            "href": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries",
             "docId": "Troubleshooting/troubleshoot-queries",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Troubleshooting Crashes",
-            "href": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes",
+            "href": "/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes",
             "docId": "Troubleshooting/troubleshoot-crashes",
             "unlisted": false
           }
         ],
-        "href": "/cbl-ionic-docs/docs/category/troubleshooting"
+        "href": "/cbl-ionic-docs/category/troubleshooting"
       },
       {
         "type": "category",
@@ -236,31 +236,31 @@
           {
             "type": "link",
             "label": "Release Notes",
-            "href": "/cbl-ionic-docs/docs/ProductNotes/release-notes",
+            "href": "/cbl-ionic-docs/ProductNotes/release-notes",
             "docId": "ProductNotes/release-notes",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Compatibility",
-            "href": "/cbl-ionic-docs/docs/ProductNotes/compatibility",
+            "href": "/cbl-ionic-docs/ProductNotes/compatibility",
             "docId": "ProductNotes/compatibility",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Supported Platforms",
-            "href": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms",
+            "href": "/cbl-ionic-docs/ProductNotes/supported-platforms",
             "docId": "ProductNotes/supported-platforms",
             "unlisted": false
           }
         ],
-        "href": "/cbl-ionic-docs/docs/category/product-notes"
+        "href": "/cbl-ionic-docs/category/product-notes"
       },
       {
         "type": "link",
         "label": "Learning Path",
-        "href": "/cbl-ionic-docs/docs/learning-path",
+        "href": "/cbl-ionic-docs/learning-path",
         "docId": "learning-path",
         "unlisted": false
       }

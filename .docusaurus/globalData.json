@@ -1,188 +1,188 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/cbl-ionic-docs/docs",
+      "path": "/cbl-ionic-docs/",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/cbl-ionic-docs/docs",
+          "path": "/cbl-ionic-docs/",
           "mainDocId": "intro",
           "docs": [
             {
               "id": "api-reference",
-              "path": "/cbl-ionic-docs/docs/api-reference",
+              "path": "/cbl-ionic-docs/api-reference",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "blobs",
-              "path": "/cbl-ionic-docs/docs/blobs",
+              "path": "/cbl-ionic-docs/blobs",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "database-prebuilt",
-              "path": "/cbl-ionic-docs/docs/database-prebuilt",
+              "path": "/cbl-ionic-docs/database-prebuilt",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "databases",
-              "path": "/cbl-ionic-docs/docs/databases",
+              "path": "/cbl-ionic-docs/databases",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "DataSync/capella",
-              "path": "/cbl-ionic-docs/docs/DataSync/capella",
+              "path": "/cbl-ionic-docs/DataSync/capella",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "DataSync/remote-sync-gateway copy",
-              "path": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy",
+              "path": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "documents",
-              "path": "/cbl-ionic-docs/docs/documents",
+              "path": "/cbl-ionic-docs/documents",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "full-text-search",
-              "path": "/cbl-ionic-docs/docs/full-text-search",
+              "path": "/cbl-ionic-docs/full-text-search",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "indexes",
-              "path": "/cbl-ionic-docs/docs/indexes",
+              "path": "/cbl-ionic-docs/indexes",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
-              "path": "/cbl-ionic-docs/docs/intro",
+              "path": "/cbl-ionic-docs/",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "learning-path",
-              "path": "/cbl-ionic-docs/docs/learning-path",
+              "path": "/cbl-ionic-docs/learning-path",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "migration",
-              "path": "/cbl-ionic-docs/docs/migration",
+              "path": "/cbl-ionic-docs/migration",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "ProductNotes/compatibility",
-              "path": "/cbl-ionic-docs/docs/ProductNotes/compatibility",
+              "path": "/cbl-ionic-docs/ProductNotes/compatibility",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "ProductNotes/release-notes",
-              "path": "/cbl-ionic-docs/docs/ProductNotes/release-notes",
+              "path": "/cbl-ionic-docs/ProductNotes/release-notes",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "ProductNotes/supported-platforms",
-              "path": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms",
+              "path": "/cbl-ionic-docs/ProductNotes/supported-platforms",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/live-queries",
-              "path": "/cbl-ionic-docs/docs/Queries/live-queries",
+              "path": "/cbl-ionic-docs/Queries/live-queries",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/query-builder",
-              "path": "/cbl-ionic-docs/docs/Queries/query-builder",
+              "path": "/cbl-ionic-docs/Queries/query-builder",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/query-result-set",
-              "path": "/cbl-ionic-docs/docs/Queries/query-result-set",
+              "path": "/cbl-ionic-docs/Queries/query-result-set",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/query-troubleshooeting",
-              "path": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting",
+              "path": "/cbl-ionic-docs/Queries/query-troubleshooeting",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/sqlplusplus",
-              "path": "/cbl-ionic-docs/docs/Queries/sqlplusplus",
+              "path": "/cbl-ionic-docs/Queries/sqlplusplus",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/sqlplusplus-and-query-builder-differences",
-              "path": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences",
+              "path": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Queries/sqlplusplus-mobile-and-server-differences",
-              "path": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences",
+              "path": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "scopes-collections",
-              "path": "/cbl-ionic-docs/docs/scopes-collections",
+              "path": "/cbl-ionic-docs/scopes-collections",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "StartHere/build-run",
-              "path": "/cbl-ionic-docs/docs/StartHere/build-run",
+              "path": "/cbl-ionic-docs/StartHere/build-run",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "StartHere/install",
-              "path": "/cbl-ionic-docs/docs/StartHere/install",
+              "path": "/cbl-ionic-docs/StartHere/install",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "StartHere/prerequisties",
-              "path": "/cbl-ionic-docs/docs/StartHere/prerequisties",
+              "path": "/cbl-ionic-docs/StartHere/prerequisties",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Troubleshooting/troubleshoot-crashes",
-              "path": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes",
+              "path": "/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Troubleshooting/troubleshoot-queries",
-              "path": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries",
+              "path": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Troubleshooting/using-logs",
-              "path": "/cbl-ionic-docs/docs/Troubleshooting/using-logs",
+              "path": "/cbl-ionic-docs/Troubleshooting/using-logs",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "typed-data",
-              "path": "/cbl-ionic-docs/docs/typed-data",
+              "path": "/cbl-ionic-docs/typed-data",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/start-here",
-              "path": "/cbl-ionic-docs/docs/category/start-here",
+              "path": "/cbl-ionic-docs/category/start-here",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/queries",
-              "path": "/cbl-ionic-docs/docs/category/queries",
+              "path": "/cbl-ionic-docs/category/queries",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/data-sync",
-              "path": "/cbl-ionic-docs/docs/category/data-sync",
+              "path": "/cbl-ionic-docs/category/data-sync",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/troubleshooting",
-              "path": "/cbl-ionic-docs/docs/category/troubleshooting",
+              "path": "/cbl-ionic-docs/category/troubleshooting",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/product-notes",
-              "path": "/cbl-ionic-docs/docs/category/product-notes",
+              "path": "/cbl-ionic-docs/category/product-notes",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -190,7 +190,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/cbl-ionic-docs/docs/intro",
+                "path": "/cbl-ionic-docs/",
                 "label": "intro"
               }
             }

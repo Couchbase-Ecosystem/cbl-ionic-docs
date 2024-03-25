@@ -28,6 +28,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
+          "routeBasePath": "/",
           "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs"
         },
         "blog": {
@@ -36,25 +37,27 @@ export default {
         },
         "theme": {
           "customCss": "./src/css/custom.css"
+        },
+        "sitemap": {
+          "changefreq": "hourly"
         }
       }
     ]
   ],
   "themeConfig": {
+    "colorMode": {
+      "defaultMode": "dark",
+      "disableSwitch": false,
+      "respectPrefersColorScheme": false
+    },
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
       "title": "cbl-ionic",
       "logo": {
-        "alt": "My Site Logo",
+        "alt": "Couchbase Logo",
         "src": "img/couchbase.svg"
       },
       "items": [
-        {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
-          "position": "left",
-          "label": "Overview"
-        },
         {
           "to": "/blog",
           "label": "Blog",
@@ -66,7 +69,14 @@ export default {
           "position": "right"
         }
       ],
-      "hideOnScroll": false
+      "hideOnScroll": true
+    },
+    "docs": {
+      "sidebar": {
+        "autoCollapseCategories": false,
+        "hideable": false
+      },
+      "versionPersistence": "localStorage"
     },
     "footer": {
       "style": "dark",
@@ -324,18 +334,6 @@ export default {
           }
         }
       ]
-    },
-    "colorMode": {
-      "defaultMode": "light",
-      "disableSwitch": false,
-      "respectPrefersColorScheme": false
-    },
-    "docs": {
-      "versionPersistence": "localStorage",
-      "sidebar": {
-        "hideable": false,
-        "autoCollapseCategories": false
-      }
     },
     "metadata": [],
     "tableOfContents": {

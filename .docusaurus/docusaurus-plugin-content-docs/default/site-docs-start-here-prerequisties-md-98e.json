@@ -5,7 +5,7 @@
   "source": "@site/docs/StartHere/prerequisties.md",
   "sourceDirName": "StartHere",
   "slug": "/StartHere/prerequisties",
-  "permalink": "/cbl-ionic-docs/docs/StartHere/prerequisties",
+  "permalink": "/cbl-ionic-docs/StartHere/prerequisties",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/StartHere/prerequisties.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Start Here!",
-    "permalink": "/cbl-ionic-docs/docs/category/start-here"
+    "permalink": "/cbl-ionic-docs/category/start-here"
   },
   "next": {
     "title": "Install",
-    "permalink": "/cbl-ionic-docs/docs/StartHere/install"
+    "permalink": "/cbl-ionic-docs/StartHere/install"
   }
 }

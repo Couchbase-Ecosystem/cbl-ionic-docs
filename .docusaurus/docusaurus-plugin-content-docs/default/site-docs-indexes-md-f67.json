@@ -5,7 +5,7 @@
   "source": "@site/docs/indexes.md",
   "sourceDirName": ".",
   "slug": "/indexes",
-  "permalink": "/cbl-ionic-docs/docs/indexes",
+  "permalink": "/cbl-ionic-docs/indexes",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/indexes.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Using Full Text Search",
-    "permalink": "/cbl-ionic-docs/docs/full-text-search"
+    "permalink": "/cbl-ionic-docs/full-text-search"
   },
   "next": {
     "title": "Data Sync",
-    "permalink": "/cbl-ionic-docs/docs/category/data-sync"
+    "permalink": "/cbl-ionic-docs/category/data-sync"
   }
 }

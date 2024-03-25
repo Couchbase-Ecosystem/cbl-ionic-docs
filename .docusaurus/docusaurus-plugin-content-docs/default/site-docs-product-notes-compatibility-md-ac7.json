@@ -5,7 +5,7 @@
   "source": "@site/docs/ProductNotes/compatibility.md",
   "sourceDirName": "ProductNotes",
   "slug": "/ProductNotes/compatibility",
-  "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility",
+  "permalink": "/cbl-ionic-docs/ProductNotes/compatibility",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/compatibility.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Release Notes",
-    "permalink": "/cbl-ionic-docs/docs/ProductNotes/release-notes"
+    "permalink": "/cbl-ionic-docs/ProductNotes/release-notes"
   },
   "next": {
     "title": "Supported Platforms",
-    "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms"
+    "permalink": "/cbl-ionic-docs/ProductNotes/supported-platforms"
   }
 }

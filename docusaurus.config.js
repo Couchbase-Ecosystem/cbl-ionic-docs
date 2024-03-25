@@ -1,8 +1,3 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -23,6 +18,7 @@ const config = {
   organizationName: 'couchbaselabs', // Usually your GitHub org/user name.
   projectName: 'cbl-ionic', // Usually your repo name.
   deploymentBranch: 'main',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -41,6 +37,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -56,6 +53,9 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'hourly',
+        },
       }),
     ],
   ],
@@ -64,20 +64,19 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false, 
+        respectPrefersColorScheme: false,
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'cbl-ionic',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Couchbase Logo',
           src: 'img/couchbase.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Overview',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/couchbaselabs/cbl-enterprise-ionic',
@@ -85,6 +84,12 @@ const config = {
             position: 'right',
           },
         ],
+        hideOnScroll: true,
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: false,
+        }
       },
       footer: {
         style: 'dark',

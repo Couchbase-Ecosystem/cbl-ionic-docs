@@ -2,55 +2,55 @@
   "/cbl-ionic-docs/__docusaurus/debug-5cc": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/__docusaurus/debug/config-bf4": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/__docusaurus/debug/content-0d4": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     },
-    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+    "allContent": "allContent---cbl-ionic-docs-docusaurus-debug-content-246-8a7"
   },
   "/cbl-ionic-docs/__docusaurus/debug/globalData-d2e": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/__docusaurus/debug/metadata-a5d": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/__docusaurus/debug/registry-a68": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/__docusaurus/debug/routes-01b": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debugf-80-332"
+      "plugin": "plugin---cbl-ionic-docs-docusaurus-debugf-80-0eb"
     }
   },
   "/cbl-ionic-docs/blog-727": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "items": [
       {
-        "content": "content---blog-973-f83"
+        "content": "content---cbl-ionic-docs-blog-973-18d"
       }
     ],
     "metadata": "metadata---cbl-ionic-docs-blog-303-ce2"
@@ -58,35 +58,35 @@
   "/cbl-ionic-docs/blog/archive-00b": {
     "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
     "archive": "archive---cbl-ionic-docs-blog-archive-91-e-bc7"
   },
   "/cbl-ionic-docs/blog/intro-blog-post-5f0": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-intro-blog-posta-04-8b4"
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
+    "content": "content---cbl-ionic-docs-blog-intro-blog-posta-04-2e7"
   },
   "/cbl-ionic-docs/blog/tags-990": {
     "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "tags": "tags---cbl-ionic-docs-blog-tagsc-5-a-189"
   },
   "/cbl-ionic-docs/blog/tags/couchbase-lite-1aa": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "items": [
       {
-        "content": "content---blog-973-f83"
+        "content": "content---cbl-ionic-docs-blog-973-18d"
       }
     ],
     "tag": "tag---cbl-ionic-docs-blog-tags-couchbase-litea-97-8ed",
@@ -95,12 +95,12 @@
   "/cbl-ionic-docs/blog/tags/hello-bf6": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "items": [
       {
-        "content": "content---blog-973-f83"
+        "content": "content---cbl-ionic-docs-blog-973-18d"
       }
     ],
     "tag": "tag---cbl-ionic-docs-blog-tags-helloa-0-a-fe4",
@@ -109,12 +109,12 @@
   "/cbl-ionic-docs/blog/tags/ionic-f6f": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "items": [
       {
-        "content": "content---blog-973-f83"
+        "content": "content---cbl-ionic-docs-blog-973-18d"
       }
     ],
     "tag": "tag---cbl-ionic-docs-blog-tags-ionic-4-cd-f68",
@@ -123,182 +123,168 @@
   "/cbl-ionic-docs/blog/tags/mobile-521": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---blogc-55-ce6"
+      "plugin": "plugin---cbl-ionic-docs-blogc-55-da7"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "sidebar---cbl-ionic-docs-blog-814-8e1",
     "items": [
       {
-        "content": "content---blog-973-f83"
+        "content": "content---cbl-ionic-docs-blog-973-18d"
       }
     ],
     "tag": "tag---cbl-ionic-docs-blog-tags-mobiledb-6-335",
     "listMetadata": "listMetadata---cbl-ionic-docs-blog-tags-mobilee-87-23f"
   },
-  "/cbl-ionic-docs/markdown-page-fc5": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
-    "__context": {
-      "plugin": "plugin---markdown-page-266-e83"
-    },
-    "content": "content---markdown-page-393-028"
-  },
-  "/cbl-ionic-docs/docs-6cf": {
+  "/cbl-ionic-docs/-908": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docs-7-b-7-8fc"
+      "plugin": "plugin---cbl-ionic-docs-7-b-7-2e5"
     }
   },
-  "/cbl-ionic-docs/docs-d7b": {
+  "/cbl-ionic-docs/-ccb": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "version": "version---docs-935-398"
+    "version": "version---cbl-ionic-docs-935-a81"
   },
-  "/cbl-ionic-docs/docs-da1": {
+  "/cbl-ionic-docs/-bd3": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/cbl-ionic-docs/docs/api-reference-4a0": {
+  "/cbl-ionic-docs/api-reference-327": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-api-reference-964-9b8"
+    "content": "content---cbl-ionic-docs-api-reference-964-121"
   },
-  "/cbl-ionic-docs/docs/blobs-d86": {
+  "/cbl-ionic-docs/blobs-b28": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-blobsa-7-e-a93"
+    "content": "content---cbl-ionic-docs-blobsa-7-e-8db"
   },
-  "/cbl-ionic-docs/docs/category/data-sync-16c": {
+  "/cbl-ionic-docs/category/data-sync-638": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-docs-category-data-sync-583-eba"
+    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-category-data-syncb-9-b-e5b"
   },
-  "/cbl-ionic-docs/docs/category/product-notes-003": {
+  "/cbl-ionic-docs/category/product-notes-163": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-docs-category-product-notesc-99-377"
+    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-category-product-notes-820-ddc"
   },
-  "/cbl-ionic-docs/docs/category/queries-23f": {
+  "/cbl-ionic-docs/category/queries-064": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-docs-category-queries-38-a-c0a"
+    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-category-queries-856-9e9"
   },
-  "/cbl-ionic-docs/docs/category/start-here-f72": {
+  "/cbl-ionic-docs/category/start-here-6e1": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-docs-category-start-heref-8-b-d0c"
+    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-category-start-here-8-af-24f"
   },
-  "/cbl-ionic-docs/docs/category/troubleshooting-150": {
+  "/cbl-ionic-docs/category/troubleshooting-67e": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-docs-category-troubleshootingcfc-581"
+    "categoryGeneratedIndex": "categoryGeneratedIndex---cbl-ionic-docs-category-troubleshootingaa-6-380"
   },
-  "/cbl-ionic-docs/docs/database-prebuilt-f28": {
+  "/cbl-ionic-docs/database-prebuilt-5ae": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-database-prebuiltc-04-92d"
+    "content": "content---cbl-ionic-docs-database-prebuiltc-04-57d"
   },
-  "/cbl-ionic-docs/docs/databases-5fc": {
+  "/cbl-ionic-docs/databases-307": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-databasesd-22-fe2"
+    "content": "content---cbl-ionic-docs-databasesd-22-094"
   },
-  "/cbl-ionic-docs/docs/DataSync/capella-fec": {
+  "/cbl-ionic-docs/DataSync/capella-13f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-data-sync-capella-6-e-9-acf"
+    "content": "content---cbl-ionic-docs-data-sync-capella-6-e-9-367"
   },
-  "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy-d69": {
+  "/cbl-ionic-docs/DataSync/remote-sync-gateway copy-38d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-data-sync-remote-sync-gateway-copy-59-a-aba"
+    "content": "content---cbl-ionic-docs-data-sync-remote-sync-gateway-copy-59-a-0f9"
   },
-  "/cbl-ionic-docs/docs/documents-833": {
+  "/cbl-ionic-docs/documents-6ff": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-documentsd-21-2d0"
+    "content": "content---cbl-ionic-docs-documentsd-21-460"
   },
-  "/cbl-ionic-docs/docs/full-text-search-32b": {
+  "/cbl-ionic-docs/full-text-search-5c8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-full-text-searchfda-274"
+    "content": "content---cbl-ionic-docs-full-text-searchfda-51c"
   },
-  "/cbl-ionic-docs/docs/indexes-70f": {
+  "/cbl-ionic-docs/indexes-8ef": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-indexesf-67-463"
+    "content": "content---cbl-ionic-docs-indexesf-67-377"
   },
-  "/cbl-ionic-docs/docs/intro-e4d": {
+  "/cbl-ionic-docs/learning-path-799": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "content": "content---cbl-ionic-docs-learning-pathfa-9-5c3"
   },
-  "/cbl-ionic-docs/docs/learning-path-ab0": {
+  "/cbl-ionic-docs/migration-a35": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-learning-pathfa-9-94b"
+    "content": "content---cbl-ionic-docs-migration-295-43b"
   },
-  "/cbl-ionic-docs/docs/migration-742": {
+  "/cbl-ionic-docs/ProductNotes/compatibility-82c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-migration-295-167"
+    "content": "content---cbl-ionic-docs-product-notes-compatibilityac-7-ecd"
   },
-  "/cbl-ionic-docs/docs/ProductNotes/compatibility-71e": {
+  "/cbl-ionic-docs/ProductNotes/release-notes-6c5": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-product-notes-compatibilityac-7-a6c"
+    "content": "content---cbl-ionic-docs-product-notes-release-notes-4-c-8-e6c"
   },
-  "/cbl-ionic-docs/docs/ProductNotes/release-notes-597": {
+  "/cbl-ionic-docs/ProductNotes/supported-platforms-396": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-product-notes-release-notes-4-c-8-a45"
+    "content": "content---cbl-ionic-docs-product-notes-supported-platformsedc-0c2"
   },
-  "/cbl-ionic-docs/docs/ProductNotes/supported-platforms-1d9": {
+  "/cbl-ionic-docs/Queries/live-queries-846": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-product-notes-supported-platformsedc-5e3"
+    "content": "content---cbl-ionic-docs-queries-live-queries-392-529"
   },
-  "/cbl-ionic-docs/docs/Queries/live-queries-80f": {
+  "/cbl-ionic-docs/Queries/query-builder-60c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-live-queries-392-92e"
+    "content": "content---cbl-ionic-docs-queries-query-builder-3-b-7-3e6"
   },
-  "/cbl-ionic-docs/docs/Queries/query-builder-4f6": {
+  "/cbl-ionic-docs/Queries/query-result-set-9c1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-query-builder-3-b-7-c1d"
+    "content": "content---cbl-ionic-docs-queries-query-result-set-239-1c1"
   },
-  "/cbl-ionic-docs/docs/Queries/query-result-set-5da": {
+  "/cbl-ionic-docs/Queries/query-troubleshooeting-319": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-query-result-set-239-e69"
+    "content": "content---cbl-ionic-docs-queries-query-troubleshooeting-85-a-4ce"
   },
-  "/cbl-ionic-docs/docs/Queries/query-troubleshooeting-a0c": {
+  "/cbl-ionic-docs/Queries/sqlplusplus-0a9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-query-troubleshooeting-85-a-ec1"
+    "content": "content---cbl-ionic-docs-queries-sqlplusplus-9-b-5-ad2"
   },
-  "/cbl-ionic-docs/docs/Queries/sqlplusplus-e2e": {
+  "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences-ed7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-sqlplusplus-9-b-5-77f"
+    "content": "content---cbl-ionic-docs-queries-sqlplusplus-and-query-builder-differences-7-c-2-da0"
   },
-  "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences-699": {
+  "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences-74a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-sqlplusplus-and-query-builder-differences-7-c-2-b2e"
+    "content": "content---cbl-ionic-docs-queries-sqlplusplus-mobile-and-server-differences-103-4ca"
   },
-  "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences-a74": {
+  "/cbl-ionic-docs/scopes-collections-4c7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-queries-sqlplusplus-mobile-and-server-differences-103-23c"
+    "content": "content---cbl-ionic-docs-scopes-collectionsa-7-c-632"
   },
-  "/cbl-ionic-docs/docs/scopes-collections-ff9": {
+  "/cbl-ionic-docs/StartHere/build-run-13b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-scopes-collectionsa-7-c-4ed"
+    "content": "content---cbl-ionic-docs-start-here-build-run-956-b7f"
   },
-  "/cbl-ionic-docs/docs/StartHere/build-run-459": {
+  "/cbl-ionic-docs/StartHere/install-d5a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-start-here-build-run-956-994"
+    "content": "content---cbl-ionic-docs-start-here-install-075-0d0"
   },
-  "/cbl-ionic-docs/docs/StartHere/install-cdb": {
+  "/cbl-ionic-docs/StartHere/prerequisties-880": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-start-here-install-075-a2c"
+    "content": "content---cbl-ionic-docs-start-here-prerequisties-98-e-c22"
   },
-  "/cbl-ionic-docs/docs/StartHere/prerequisties-b06": {
+  "/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes-c60": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-start-here-prerequisties-98-e-e6b"
+    "content": "content---cbl-ionic-docs-troubleshooting-troubleshoot-crashesfb-0-44e"
   },
-  "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes-cca": {
+  "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries-547": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-troubleshooting-troubleshoot-crashesfb-0-791"
+    "content": "content---cbl-ionic-docs-troubleshooting-troubleshoot-queriesf-20-113"
   },
-  "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries-5e1": {
+  "/cbl-ionic-docs/Troubleshooting/using-logs-7ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-troubleshooting-troubleshoot-queriesf-20-faf"
+    "content": "content---cbl-ionic-docs-troubleshooting-using-logs-5-e-5-fcf"
   },
-  "/cbl-ionic-docs/docs/Troubleshooting/using-logs-d7d": {
+  "/cbl-ionic-docs/typed-data-2ca": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-troubleshooting-using-logs-5-e-5-52c"
+    "content": "content---cbl-ionic-docs-typed-data-754-f41"
   },
-  "/cbl-ionic-docs/docs/typed-data-001": {
+  "/cbl-ionic-docs/-a94": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-typed-data-754-936"
-  },
-  "/cbl-ionic-docs/-ad4": {
-    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
-    "__context": {
-      "plugin": "plugin---markdown-page-266-e83"
-    },
-    "config": "config---5-e-9-4f3"
+    "content": "content---cbl-ionic-docs-0-e-3-27a"
   }
 }

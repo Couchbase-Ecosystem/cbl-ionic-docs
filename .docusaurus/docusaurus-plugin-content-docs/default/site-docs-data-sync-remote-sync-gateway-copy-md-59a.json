@@ -5,7 +5,7 @@
   "source": "@site/docs/DataSync/remote-sync-gateway copy.md",
   "sourceDirName": "DataSync",
   "slug": "/DataSync/remote-sync-gateway copy",
-  "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy",
+  "permalink": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Couchbase Capella App Services",
-    "permalink": "/cbl-ionic-docs/docs/DataSync/capella"
+    "permalink": "/cbl-ionic-docs/DataSync/capella"
   },
   "next": {
     "title": "Typed Data",
-    "permalink": "/cbl-ionic-docs/docs/typed-data"
+    "permalink": "/cbl-ionic-docs/typed-data"
   }
 }

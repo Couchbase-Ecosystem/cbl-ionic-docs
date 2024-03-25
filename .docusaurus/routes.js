@@ -78,229 +78,224 @@ export default [
     exact: true
   },
   {
-    path: '/cbl-ionic-docs/markdown-page',
-    component: ComponentCreator('/cbl-ionic-docs/markdown-page', 'fc5'),
-    exact: true
-  },
-  {
-    path: '/cbl-ionic-docs/docs',
-    component: ComponentCreator('/cbl-ionic-docs/docs', '6cf'),
+    path: '/cbl-ionic-docs/',
+    component: ComponentCreator('/cbl-ionic-docs/', '908'),
     routes: [
       {
-        path: '/cbl-ionic-docs/docs',
-        component: ComponentCreator('/cbl-ionic-docs/docs', 'd7b'),
+        path: '/cbl-ionic-docs/',
+        component: ComponentCreator('/cbl-ionic-docs/', 'ccb'),
         routes: [
           {
-            path: '/cbl-ionic-docs/docs',
-            component: ComponentCreator('/cbl-ionic-docs/docs', 'da1'),
+            path: '/cbl-ionic-docs/',
+            component: ComponentCreator('/cbl-ionic-docs/', 'bd3'),
             routes: [
               {
-                path: '/cbl-ionic-docs/docs/api-reference',
-                component: ComponentCreator('/cbl-ionic-docs/docs/api-reference', '4a0'),
+                path: '/cbl-ionic-docs/api-reference',
+                component: ComponentCreator('/cbl-ionic-docs/api-reference', '327'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/blobs',
-                component: ComponentCreator('/cbl-ionic-docs/docs/blobs', 'd86'),
+                path: '/cbl-ionic-docs/blobs',
+                component: ComponentCreator('/cbl-ionic-docs/blobs', 'b28'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/category/data-sync',
-                component: ComponentCreator('/cbl-ionic-docs/docs/category/data-sync', '16c'),
+                path: '/cbl-ionic-docs/category/data-sync',
+                component: ComponentCreator('/cbl-ionic-docs/category/data-sync', '638'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/category/product-notes',
-                component: ComponentCreator('/cbl-ionic-docs/docs/category/product-notes', '003'),
+                path: '/cbl-ionic-docs/category/product-notes',
+                component: ComponentCreator('/cbl-ionic-docs/category/product-notes', '163'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/category/queries',
-                component: ComponentCreator('/cbl-ionic-docs/docs/category/queries', '23f'),
+                path: '/cbl-ionic-docs/category/queries',
+                component: ComponentCreator('/cbl-ionic-docs/category/queries', '064'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/category/start-here',
-                component: ComponentCreator('/cbl-ionic-docs/docs/category/start-here', 'f72'),
+                path: '/cbl-ionic-docs/category/start-here',
+                component: ComponentCreator('/cbl-ionic-docs/category/start-here', '6e1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/category/troubleshooting',
-                component: ComponentCreator('/cbl-ionic-docs/docs/category/troubleshooting', '150'),
+                path: '/cbl-ionic-docs/category/troubleshooting',
+                component: ComponentCreator('/cbl-ionic-docs/category/troubleshooting', '67e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/database-prebuilt',
-                component: ComponentCreator('/cbl-ionic-docs/docs/database-prebuilt', 'f28'),
+                path: '/cbl-ionic-docs/database-prebuilt',
+                component: ComponentCreator('/cbl-ionic-docs/database-prebuilt', '5ae'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/databases',
-                component: ComponentCreator('/cbl-ionic-docs/docs/databases', '5fc'),
+                path: '/cbl-ionic-docs/databases',
+                component: ComponentCreator('/cbl-ionic-docs/databases', '307'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/DataSync/capella',
-                component: ComponentCreator('/cbl-ionic-docs/docs/DataSync/capella', 'fec'),
+                path: '/cbl-ionic-docs/DataSync/capella',
+                component: ComponentCreator('/cbl-ionic-docs/DataSync/capella', '13f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy',
-                component: ComponentCreator('/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy', 'd69'),
+                path: '/cbl-ionic-docs/DataSync/remote-sync-gateway copy',
+                component: ComponentCreator('/cbl-ionic-docs/DataSync/remote-sync-gateway copy', '38d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/documents',
-                component: ComponentCreator('/cbl-ionic-docs/docs/documents', '833'),
+                path: '/cbl-ionic-docs/documents',
+                component: ComponentCreator('/cbl-ionic-docs/documents', '6ff'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/full-text-search',
-                component: ComponentCreator('/cbl-ionic-docs/docs/full-text-search', '32b'),
+                path: '/cbl-ionic-docs/full-text-search',
+                component: ComponentCreator('/cbl-ionic-docs/full-text-search', '5c8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/indexes',
-                component: ComponentCreator('/cbl-ionic-docs/docs/indexes', '70f'),
+                path: '/cbl-ionic-docs/indexes',
+                component: ComponentCreator('/cbl-ionic-docs/indexes', '8ef'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/intro',
-                component: ComponentCreator('/cbl-ionic-docs/docs/intro', 'e4d'),
+                path: '/cbl-ionic-docs/learning-path',
+                component: ComponentCreator('/cbl-ionic-docs/learning-path', '799'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/learning-path',
-                component: ComponentCreator('/cbl-ionic-docs/docs/learning-path', 'ab0'),
+                path: '/cbl-ionic-docs/migration',
+                component: ComponentCreator('/cbl-ionic-docs/migration', 'a35'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/migration',
-                component: ComponentCreator('/cbl-ionic-docs/docs/migration', '742'),
+                path: '/cbl-ionic-docs/ProductNotes/compatibility',
+                component: ComponentCreator('/cbl-ionic-docs/ProductNotes/compatibility', '82c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/ProductNotes/compatibility',
-                component: ComponentCreator('/cbl-ionic-docs/docs/ProductNotes/compatibility', '71e'),
+                path: '/cbl-ionic-docs/ProductNotes/release-notes',
+                component: ComponentCreator('/cbl-ionic-docs/ProductNotes/release-notes', '6c5'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/ProductNotes/release-notes',
-                component: ComponentCreator('/cbl-ionic-docs/docs/ProductNotes/release-notes', '597'),
+                path: '/cbl-ionic-docs/ProductNotes/supported-platforms',
+                component: ComponentCreator('/cbl-ionic-docs/ProductNotes/supported-platforms', '396'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/ProductNotes/supported-platforms',
-                component: ComponentCreator('/cbl-ionic-docs/docs/ProductNotes/supported-platforms', '1d9'),
+                path: '/cbl-ionic-docs/Queries/live-queries',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/live-queries', '846'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/live-queries',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/live-queries', '80f'),
+                path: '/cbl-ionic-docs/Queries/query-builder',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/query-builder', '60c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/query-builder',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/query-builder', '4f6'),
+                path: '/cbl-ionic-docs/Queries/query-result-set',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/query-result-set', '9c1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/query-result-set',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/query-result-set', '5da'),
+                path: '/cbl-ionic-docs/Queries/query-troubleshooeting',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/query-troubleshooeting', '319'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/query-troubleshooeting',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/query-troubleshooeting', 'a0c'),
+                path: '/cbl-ionic-docs/Queries/sqlplusplus',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/sqlplusplus', '0a9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/sqlplusplus',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/sqlplusplus', 'e2e'),
+                path: '/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences', 'ed7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences', '699'),
+                path: '/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences',
+                component: ComponentCreator('/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences', '74a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences', 'a74'),
+                path: '/cbl-ionic-docs/scopes-collections',
+                component: ComponentCreator('/cbl-ionic-docs/scopes-collections', '4c7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/scopes-collections',
-                component: ComponentCreator('/cbl-ionic-docs/docs/scopes-collections', 'ff9'),
+                path: '/cbl-ionic-docs/StartHere/build-run',
+                component: ComponentCreator('/cbl-ionic-docs/StartHere/build-run', '13b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/StartHere/build-run',
-                component: ComponentCreator('/cbl-ionic-docs/docs/StartHere/build-run', '459'),
+                path: '/cbl-ionic-docs/StartHere/install',
+                component: ComponentCreator('/cbl-ionic-docs/StartHere/install', 'd5a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/StartHere/install',
-                component: ComponentCreator('/cbl-ionic-docs/docs/StartHere/install', 'cdb'),
+                path: '/cbl-ionic-docs/StartHere/prerequisties',
+                component: ComponentCreator('/cbl-ionic-docs/StartHere/prerequisties', '880'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/StartHere/prerequisties',
-                component: ComponentCreator('/cbl-ionic-docs/docs/StartHere/prerequisties', 'b06'),
+                path: '/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes',
+                component: ComponentCreator('/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes', 'c60'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes', 'cca'),
+                path: '/cbl-ionic-docs/Troubleshooting/troubleshoot-queries',
+                component: ComponentCreator('/cbl-ionic-docs/Troubleshooting/troubleshoot-queries', '547'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries', '5e1'),
+                path: '/cbl-ionic-docs/Troubleshooting/using-logs',
+                component: ComponentCreator('/cbl-ionic-docs/Troubleshooting/using-logs', '7ce'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/Troubleshooting/using-logs',
-                component: ComponentCreator('/cbl-ionic-docs/docs/Troubleshooting/using-logs', 'd7d'),
+                path: '/cbl-ionic-docs/typed-data',
+                component: ComponentCreator('/cbl-ionic-docs/typed-data', '2ca'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/cbl-ionic-docs/docs/typed-data',
-                component: ComponentCreator('/cbl-ionic-docs/docs/typed-data', '001'),
+                path: '/cbl-ionic-docs/',
+                component: ComponentCreator('/cbl-ionic-docs/', 'a94'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -309,11 +304,6 @@ export default [
         ]
       }
     ]
-  },
-  {
-    path: '/cbl-ionic-docs/',
-    component: ComponentCreator('/cbl-ionic-docs/', 'ad4'),
-    exact: true
   },
   {
     path: '*',

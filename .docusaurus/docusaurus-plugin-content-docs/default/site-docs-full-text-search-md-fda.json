@@ -5,7 +5,7 @@
   "source": "@site/docs/full-text-search.md",
   "sourceDirName": ".",
   "slug": "/full-text-search",
-  "permalink": "/cbl-ionic-docs/docs/full-text-search",
+  "permalink": "/cbl-ionic-docs/full-text-search",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/full-text-search.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Query Troubleshoooting",
-    "permalink": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting"
+    "permalink": "/cbl-ionic-docs/Queries/query-troubleshooeting"
   },
   "next": {
     "title": "Indexing",
-    "permalink": "/cbl-ionic-docs/docs/indexes"
+    "permalink": "/cbl-ionic-docs/indexes"
   }
 }

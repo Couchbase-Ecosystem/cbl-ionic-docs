@@ -5,7 +5,7 @@
   "source": "@site/docs/ProductNotes/release-notes.md",
   "sourceDirName": "ProductNotes",
   "slug": "/ProductNotes/release-notes",
-  "permalink": "/cbl-ionic-docs/docs/ProductNotes/release-notes",
+  "permalink": "/cbl-ionic-docs/ProductNotes/release-notes",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/release-notes.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Product Notes",
-    "permalink": "/cbl-ionic-docs/docs/category/product-notes"
+    "permalink": "/cbl-ionic-docs/category/product-notes"
   },
   "next": {
     "title": "Compatibility",
-    "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility"
+    "permalink": "/cbl-ionic-docs/ProductNotes/compatibility"
   }
 }

@@ -9,8 +9,8 @@
           "badge": false,
           "noIndex": false,
           "className": "docs-version-current",
-          "path": "/cbl-ionic-docs/docs",
-          "tagsPath": "/cbl-ionic-docs/docs/tags",
+          "path": "/cbl-ionic-docs/",
+          "tagsPath": "/cbl-ionic-docs/tags",
           "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs",
           "editUrlLocalized": "https://github.com/couchbaselabs/cbl-ionic-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
@@ -26,7 +26,7 @@
               "source": "@site/docs/api-reference.md",
               "sourceDirName": ".",
               "slug": "/api-reference",
-              "permalink": "/cbl-ionic-docs/docs/api-reference",
+              "permalink": "/cbl-ionic-docs/api-reference",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/api-reference.md",
@@ -39,11 +39,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Typed Data",
-                "permalink": "/cbl-ionic-docs/docs/typed-data"
+                "permalink": "/cbl-ionic-docs/typed-data"
               },
               "next": {
                 "title": "Migration",
-                "permalink": "/cbl-ionic-docs/docs/migration"
+                "permalink": "/cbl-ionic-docs/migration"
               }
             },
             {
@@ -53,7 +53,7 @@
               "source": "@site/docs/blobs.md",
               "sourceDirName": ".",
               "slug": "/blobs",
-              "permalink": "/cbl-ionic-docs/docs/blobs",
+              "permalink": "/cbl-ionic-docs/blobs",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/blobs.md",
@@ -66,11 +66,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Documents",
-                "permalink": "/cbl-ionic-docs/docs/documents"
+                "permalink": "/cbl-ionic-docs/documents"
               },
               "next": {
                 "title": "Queries",
-                "permalink": "/cbl-ionic-docs/docs/category/queries"
+                "permalink": "/cbl-ionic-docs/category/queries"
               }
             },
             {
@@ -80,7 +80,7 @@
               "source": "@site/docs/database-prebuilt.md",
               "sourceDirName": ".",
               "slug": "/database-prebuilt",
-              "permalink": "/cbl-ionic-docs/docs/database-prebuilt",
+              "permalink": "/cbl-ionic-docs/database-prebuilt",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/database-prebuilt.md",
@@ -93,11 +93,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Databases",
-                "permalink": "/cbl-ionic-docs/docs/databases"
+                "permalink": "/cbl-ionic-docs/databases"
               },
               "next": {
                 "title": "Scopes and Collections",
-                "permalink": "/cbl-ionic-docs/docs/scopes-collections"
+                "permalink": "/cbl-ionic-docs/scopes-collections"
               }
             },
             {
@@ -107,7 +107,7 @@
               "source": "@site/docs/databases.md",
               "sourceDirName": ".",
               "slug": "/databases",
-              "permalink": "/cbl-ionic-docs/docs/databases",
+              "permalink": "/cbl-ionic-docs/databases",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/databases.md",
@@ -120,11 +120,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Build and Run",
-                "permalink": "/cbl-ionic-docs/docs/StartHere/build-run"
+                "permalink": "/cbl-ionic-docs/StartHere/build-run"
               },
               "next": {
                 "title": "Pre-built Database",
-                "permalink": "/cbl-ionic-docs/docs/database-prebuilt"
+                "permalink": "/cbl-ionic-docs/database-prebuilt"
               }
             },
             {
@@ -134,7 +134,7 @@
               "source": "@site/docs/DataSync/capella.md",
               "sourceDirName": "DataSync",
               "slug": "/DataSync/capella",
-              "permalink": "/cbl-ionic-docs/docs/DataSync/capella",
+              "permalink": "/cbl-ionic-docs/DataSync/capella",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/DataSync/capella.md",
@@ -147,11 +147,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Data Sync",
-                "permalink": "/cbl-ionic-docs/docs/category/data-sync"
+                "permalink": "/cbl-ionic-docs/category/data-sync"
               },
               "next": {
                 "title": "Remote Sync Gateway",
-                "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy"
+                "permalink": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy"
               }
             },
             {
@@ -161,7 +161,7 @@
               "source": "@site/docs/DataSync/remote-sync-gateway copy.md",
               "sourceDirName": "DataSync",
               "slug": "/DataSync/remote-sync-gateway copy",
-              "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy",
+              "permalink": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy.md",
@@ -174,11 +174,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Couchbase Capella App Services",
-                "permalink": "/cbl-ionic-docs/docs/DataSync/capella"
+                "permalink": "/cbl-ionic-docs/DataSync/capella"
               },
               "next": {
                 "title": "Typed Data",
-                "permalink": "/cbl-ionic-docs/docs/typed-data"
+                "permalink": "/cbl-ionic-docs/typed-data"
               }
             },
             {
@@ -188,7 +188,7 @@
               "source": "@site/docs/documents.md",
               "sourceDirName": ".",
               "slug": "/documents",
-              "permalink": "/cbl-ionic-docs/docs/documents",
+              "permalink": "/cbl-ionic-docs/documents",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/documents.md",
@@ -201,11 +201,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Scopes and Collections",
-                "permalink": "/cbl-ionic-docs/docs/scopes-collections"
+                "permalink": "/cbl-ionic-docs/scopes-collections"
               },
               "next": {
                 "title": "Blobs",
-                "permalink": "/cbl-ionic-docs/docs/blobs"
+                "permalink": "/cbl-ionic-docs/blobs"
               }
             },
             {
@@ -215,7 +215,7 @@
               "source": "@site/docs/full-text-search.md",
               "sourceDirName": ".",
               "slug": "/full-text-search",
-              "permalink": "/cbl-ionic-docs/docs/full-text-search",
+              "permalink": "/cbl-ionic-docs/full-text-search",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/full-text-search.md",
@@ -228,11 +228,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Query Troubleshoooting",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting"
+                "permalink": "/cbl-ionic-docs/Queries/query-troubleshooeting"
               },
               "next": {
                 "title": "Indexing",
-                "permalink": "/cbl-ionic-docs/docs/indexes"
+                "permalink": "/cbl-ionic-docs/indexes"
               }
             },
             {
@@ -242,7 +242,7 @@
               "source": "@site/docs/indexes.md",
               "sourceDirName": ".",
               "slug": "/indexes",
-              "permalink": "/cbl-ionic-docs/docs/indexes",
+              "permalink": "/cbl-ionic-docs/indexes",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/indexes.md",
@@ -255,11 +255,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Using Full Text Search",
-                "permalink": "/cbl-ionic-docs/docs/full-text-search"
+                "permalink": "/cbl-ionic-docs/full-text-search"
               },
               "next": {
                 "title": "Data Sync",
-                "permalink": "/cbl-ionic-docs/docs/category/data-sync"
+                "permalink": "/cbl-ionic-docs/category/data-sync"
               }
             },
             {
@@ -268,8 +268,8 @@
               "description": "Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.",
               "source": "@site/docs/intro.md",
               "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/cbl-ionic-docs/docs/intro",
+              "slug": "/",
+              "permalink": "/cbl-ionic-docs/",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/intro.md",
@@ -277,13 +277,15 @@
               "version": "current",
               "sidebarPosition": 1,
               "frontMatter": {
+                "slug": "/",
                 "sidebar_position": 1,
-                "title": "Overview"
+                "title": "Overview",
+                "description": "Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications."
               },
               "sidebar": "tutorialSidebar",
               "next": {
                 "title": "Start Here!",
-                "permalink": "/cbl-ionic-docs/docs/category/start-here"
+                "permalink": "/cbl-ionic-docs/category/start-here"
               }
             },
             {
@@ -293,7 +295,7 @@
               "source": "@site/docs/learning-path.md",
               "sourceDirName": ".",
               "slug": "/learning-path",
-              "permalink": "/cbl-ionic-docs/docs/learning-path",
+              "permalink": "/cbl-ionic-docs/learning-path",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/learning-path.md",
@@ -306,7 +308,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Supported Platforms",
-                "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms"
+                "permalink": "/cbl-ionic-docs/ProductNotes/supported-platforms"
               }
             },
             {
@@ -316,7 +318,7 @@
               "source": "@site/docs/migration.md",
               "sourceDirName": ".",
               "slug": "/migration",
-              "permalink": "/cbl-ionic-docs/docs/migration",
+              "permalink": "/cbl-ionic-docs/migration",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/migration.md",
@@ -329,11 +331,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "API References",
-                "permalink": "/cbl-ionic-docs/docs/api-reference"
+                "permalink": "/cbl-ionic-docs/api-reference"
               },
               "next": {
                 "title": "Troubleshooting",
-                "permalink": "/cbl-ionic-docs/docs/category/troubleshooting"
+                "permalink": "/cbl-ionic-docs/category/troubleshooting"
               }
             },
             {
@@ -343,7 +345,7 @@
               "source": "@site/docs/ProductNotes/compatibility.md",
               "sourceDirName": "ProductNotes",
               "slug": "/ProductNotes/compatibility",
-              "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility",
+              "permalink": "/cbl-ionic-docs/ProductNotes/compatibility",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/compatibility.md",
@@ -356,11 +358,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Release Notes",
-                "permalink": "/cbl-ionic-docs/docs/ProductNotes/release-notes"
+                "permalink": "/cbl-ionic-docs/ProductNotes/release-notes"
               },
               "next": {
                 "title": "Supported Platforms",
-                "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms"
+                "permalink": "/cbl-ionic-docs/ProductNotes/supported-platforms"
               }
             },
             {
@@ -370,7 +372,7 @@
               "source": "@site/docs/ProductNotes/release-notes.md",
               "sourceDirName": "ProductNotes",
               "slug": "/ProductNotes/release-notes",
-              "permalink": "/cbl-ionic-docs/docs/ProductNotes/release-notes",
+              "permalink": "/cbl-ionic-docs/ProductNotes/release-notes",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/release-notes.md",
@@ -383,11 +385,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Product Notes",
-                "permalink": "/cbl-ionic-docs/docs/category/product-notes"
+                "permalink": "/cbl-ionic-docs/category/product-notes"
               },
               "next": {
                 "title": "Compatibility",
-                "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility"
+                "permalink": "/cbl-ionic-docs/ProductNotes/compatibility"
               }
             },
             {
@@ -397,7 +399,7 @@
               "source": "@site/docs/ProductNotes/supported-platforms.md",
               "sourceDirName": "ProductNotes",
               "slug": "/ProductNotes/supported-platforms",
-              "permalink": "/cbl-ionic-docs/docs/ProductNotes/supported-platforms",
+              "permalink": "/cbl-ionic-docs/ProductNotes/supported-platforms",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/ProductNotes/supported-platforms.md",
@@ -410,11 +412,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Compatibility",
-                "permalink": "/cbl-ionic-docs/docs/ProductNotes/compatibility"
+                "permalink": "/cbl-ionic-docs/ProductNotes/compatibility"
               },
               "next": {
                 "title": "Learning Path",
-                "permalink": "/cbl-ionic-docs/docs/learning-path"
+                "permalink": "/cbl-ionic-docs/learning-path"
               }
             },
             {
@@ -424,7 +426,7 @@
               "source": "@site/docs/Queries/live-queries.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/live-queries",
-              "permalink": "/cbl-ionic-docs/docs/Queries/live-queries",
+              "permalink": "/cbl-ionic-docs/Queries/live-queries",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/live-queries.md",
@@ -437,11 +439,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Query Result Sets",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-result-set"
+                "permalink": "/cbl-ionic-docs/Queries/query-result-set"
               },
               "next": {
                 "title": "Query Troubleshoooting",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting"
+                "permalink": "/cbl-ionic-docs/Queries/query-troubleshooeting"
               }
             },
             {
@@ -451,7 +453,7 @@
               "source": "@site/docs/Queries/query-builder.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/query-builder",
-              "permalink": "/cbl-ionic-docs/docs/Queries/query-builder",
+              "permalink": "/cbl-ionic-docs/Queries/query-builder",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/query-builder.md",
@@ -464,11 +466,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "SQL++ and Query Builder Differences",
-                "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences"
+                "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences"
               },
               "next": {
                 "title": "Query Result Sets",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-result-set"
+                "permalink": "/cbl-ionic-docs/Queries/query-result-set"
               }
             },
             {
@@ -478,7 +480,7 @@
               "source": "@site/docs/Queries/query-result-set.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/query-result-set",
-              "permalink": "/cbl-ionic-docs/docs/Queries/query-result-set",
+              "permalink": "/cbl-ionic-docs/Queries/query-result-set",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/query-result-set.md",
@@ -491,11 +493,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Query Builder",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-builder"
+                "permalink": "/cbl-ionic-docs/Queries/query-builder"
               },
               "next": {
                 "title": "Live Queries",
-                "permalink": "/cbl-ionic-docs/docs/Queries/live-queries"
+                "permalink": "/cbl-ionic-docs/Queries/live-queries"
               }
             },
             {
@@ -505,7 +507,7 @@
               "source": "@site/docs/Queries/query-troubleshooeting.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/query-troubleshooeting",
-              "permalink": "/cbl-ionic-docs/docs/Queries/query-troubleshooeting",
+              "permalink": "/cbl-ionic-docs/Queries/query-troubleshooeting",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/query-troubleshooeting.md",
@@ -518,11 +520,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Live Queries",
-                "permalink": "/cbl-ionic-docs/docs/Queries/live-queries"
+                "permalink": "/cbl-ionic-docs/Queries/live-queries"
               },
               "next": {
                 "title": "Using Full Text Search",
-                "permalink": "/cbl-ionic-docs/docs/full-text-search"
+                "permalink": "/cbl-ionic-docs/full-text-search"
               }
             },
             {
@@ -532,7 +534,7 @@
               "source": "@site/docs/Queries/sqlplusplus.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/sqlplusplus",
-              "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus",
+              "permalink": "/cbl-ionic-docs/Queries/sqlplusplus",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/sqlplusplus.md",
@@ -545,11 +547,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Queries",
-                "permalink": "/cbl-ionic-docs/docs/category/queries"
+                "permalink": "/cbl-ionic-docs/category/queries"
               },
               "next": {
                 "title": "SQL++ for Mobile and Server Differences",
-                "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences"
+                "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences"
               }
             },
             {
@@ -559,7 +561,7 @@
               "source": "@site/docs/Queries/sqlplusplus-and-query-builder-differences.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/sqlplusplus-and-query-builder-differences",
-              "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences",
+              "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences.md",
@@ -572,11 +574,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "SQL++ for Mobile and Server Differences",
-                "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences"
+                "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences"
               },
               "next": {
                 "title": "Query Builder",
-                "permalink": "/cbl-ionic-docs/docs/Queries/query-builder"
+                "permalink": "/cbl-ionic-docs/Queries/query-builder"
               }
             },
             {
@@ -586,7 +588,7 @@
               "source": "@site/docs/Queries/sqlplusplus-mobile-and-server-differences.md",
               "sourceDirName": "Queries",
               "slug": "/Queries/sqlplusplus-mobile-and-server-differences",
-              "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences",
+              "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences.md",
@@ -599,11 +601,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "SQL++ for Typscript",
-                "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus"
+                "permalink": "/cbl-ionic-docs/Queries/sqlplusplus"
               },
               "next": {
                 "title": "SQL++ and Query Builder Differences",
-                "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences"
+                "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences"
               }
             },
             {
@@ -613,7 +615,7 @@
               "source": "@site/docs/scopes-collections.md",
               "sourceDirName": ".",
               "slug": "/scopes-collections",
-              "permalink": "/cbl-ionic-docs/docs/scopes-collections",
+              "permalink": "/cbl-ionic-docs/scopes-collections",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/scopes-collections.md",
@@ -626,11 +628,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Pre-built Database",
-                "permalink": "/cbl-ionic-docs/docs/database-prebuilt"
+                "permalink": "/cbl-ionic-docs/database-prebuilt"
               },
               "next": {
                 "title": "Documents",
-                "permalink": "/cbl-ionic-docs/docs/documents"
+                "permalink": "/cbl-ionic-docs/documents"
               }
             },
             {
@@ -640,7 +642,7 @@
               "source": "@site/docs/StartHere/build-run.md",
               "sourceDirName": "StartHere",
               "slug": "/StartHere/build-run",
-              "permalink": "/cbl-ionic-docs/docs/StartHere/build-run",
+              "permalink": "/cbl-ionic-docs/StartHere/build-run",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/StartHere/build-run.md",
@@ -653,11 +655,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Install",
-                "permalink": "/cbl-ionic-docs/docs/StartHere/install"
+                "permalink": "/cbl-ionic-docs/StartHere/install"
               },
               "next": {
                 "title": "Databases",
-                "permalink": "/cbl-ionic-docs/docs/databases"
+                "permalink": "/cbl-ionic-docs/databases"
               }
             },
             {
@@ -667,7 +669,7 @@
               "source": "@site/docs/StartHere/install.md",
               "sourceDirName": "StartHere",
               "slug": "/StartHere/install",
-              "permalink": "/cbl-ionic-docs/docs/StartHere/install",
+              "permalink": "/cbl-ionic-docs/StartHere/install",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/StartHere/install.md",
@@ -680,11 +682,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Prerequisites",
-                "permalink": "/cbl-ionic-docs/docs/StartHere/prerequisties"
+                "permalink": "/cbl-ionic-docs/StartHere/prerequisties"
               },
               "next": {
                 "title": "Build and Run",
-                "permalink": "/cbl-ionic-docs/docs/StartHere/build-run"
+                "permalink": "/cbl-ionic-docs/StartHere/build-run"
               }
             },
             {
@@ -694,7 +696,7 @@
               "source": "@site/docs/StartHere/prerequisties.md",
               "sourceDirName": "StartHere",
               "slug": "/StartHere/prerequisties",
-              "permalink": "/cbl-ionic-docs/docs/StartHere/prerequisties",
+              "permalink": "/cbl-ionic-docs/StartHere/prerequisties",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/StartHere/prerequisties.md",
@@ -707,11 +709,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Start Here!",
-                "permalink": "/cbl-ionic-docs/docs/category/start-here"
+                "permalink": "/cbl-ionic-docs/category/start-here"
               },
               "next": {
                 "title": "Install",
-                "permalink": "/cbl-ionic-docs/docs/StartHere/install"
+                "permalink": "/cbl-ionic-docs/StartHere/install"
               }
             },
             {
@@ -721,7 +723,7 @@
               "source": "@site/docs/Troubleshooting/troubleshoot-crashes.md",
               "sourceDirName": "Troubleshooting",
               "slug": "/Troubleshooting/troubleshoot-crashes",
-              "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes",
+              "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes.md",
@@ -734,11 +736,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Troubleshooting Queries",
-                "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries"
+                "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries"
               },
               "next": {
                 "title": "Product Notes",
-                "permalink": "/cbl-ionic-docs/docs/category/product-notes"
+                "permalink": "/cbl-ionic-docs/category/product-notes"
               }
             },
             {
@@ -748,7 +750,7 @@
               "source": "@site/docs/Troubleshooting/troubleshoot-queries.md",
               "sourceDirName": "Troubleshooting",
               "slug": "/Troubleshooting/troubleshoot-queries",
-              "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries",
+              "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries.md",
@@ -761,11 +763,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Using Logs",
-                "permalink": "/cbl-ionic-docs/docs/Troubleshooting/using-logs"
+                "permalink": "/cbl-ionic-docs/Troubleshooting/using-logs"
               },
               "next": {
                 "title": "Troubleshooting Crashes",
-                "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-crashes"
+                "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-crashes"
               }
             },
             {
@@ -775,7 +777,7 @@
               "source": "@site/docs/Troubleshooting/using-logs.md",
               "sourceDirName": "Troubleshooting",
               "slug": "/Troubleshooting/using-logs",
-              "permalink": "/cbl-ionic-docs/docs/Troubleshooting/using-logs",
+              "permalink": "/cbl-ionic-docs/Troubleshooting/using-logs",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Troubleshooting/using-logs.md",
@@ -788,11 +790,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Troubleshooting",
-                "permalink": "/cbl-ionic-docs/docs/category/troubleshooting"
+                "permalink": "/cbl-ionic-docs/category/troubleshooting"
               },
               "next": {
                 "title": "Troubleshooting Queries",
-                "permalink": "/cbl-ionic-docs/docs/Troubleshooting/troubleshoot-queries"
+                "permalink": "/cbl-ionic-docs/Troubleshooting/troubleshoot-queries"
               }
             },
             {
@@ -802,7 +804,7 @@
               "source": "@site/docs/typed-data.md",
               "sourceDirName": ".",
               "slug": "/typed-data",
-              "permalink": "/cbl-ionic-docs/docs/typed-data",
+              "permalink": "/cbl-ionic-docs/typed-data",
               "draft": false,
               "unlisted": false,
               "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/typed-data.md",
@@ -815,11 +817,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Remote Sync Gateway",
-                "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy"
+                "permalink": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy"
               },
               "next": {
                 "title": "API References",
-                "permalink": "/cbl-ionic-docs/docs/api-reference"
+                "permalink": "/cbl-ionic-docs/api-reference"
               }
             }
           ],
@@ -853,7 +855,7 @@
                   "type": "generated-index",
                   "description": "Learn the prerequisites, how to install the plugin, and how to build and run your application with Couchbase Lite.",
                   "slug": "/category/start-here",
-                  "permalink": "/cbl-ionic-docs/docs/category/start-here"
+                  "permalink": "/cbl-ionic-docs/category/start-here"
                 }
               },
               {
@@ -915,7 +917,7 @@
                   "type": "generated-index",
                   "description": "Learn about how to Query using SQL++",
                   "slug": "/category/queries",
-                  "permalink": "/cbl-ionic-docs/docs/category/queries"
+                  "permalink": "/cbl-ionic-docs/category/queries"
                 }
               },
               {
@@ -945,7 +947,7 @@
                   "type": "generated-index",
                   "description": "Learn about how to Sync Data between your Ionic app and Couchbase Capella App Services or Sync Gateway.",
                   "slug": "/category/data-sync",
-                  "permalink": "/cbl-ionic-docs/docs/category/data-sync"
+                  "permalink": "/cbl-ionic-docs/category/data-sync"
                 }
               },
               {
@@ -983,7 +985,7 @@
                   "type": "generated-index",
                   "description": "Learn about how to troubleshoot issues between Ionic and Native code and Couchbase Lite.",
                   "slug": "/category/troubleshooting",
-                  "permalink": "/cbl-ionic-docs/docs/category/troubleshooting"
+                  "permalink": "/cbl-ionic-docs/category/troubleshooting"
                 }
               },
               {
@@ -1009,7 +1011,7 @@
                   "type": "generated-index",
                   "description": "Learn more about releases, compatibility, and supported platforms.",
                   "slug": "/category/product-notes",
-                  "permalink": "/cbl-ionic-docs/docs/category/product-notes"
+                  "permalink": "/cbl-ionic-docs/category/product-notes"
                 }
               },
               {
@@ -1217,24 +1219,7 @@
     }
   },
   "docusaurus-plugin-content-pages": {
-    "default": [
-      {
-        "type": "jsx",
-        "permalink": "/cbl-ionic-docs/",
-        "source": "@site/src/pages/index.js"
-      },
-      {
-        "type": "mdx",
-        "permalink": "/cbl-ionic-docs/markdown-page",
-        "source": "@site/src/pages/markdown-page.md",
-        "title": "Markdown page example",
-        "description": "You don't need React to write simple standalone pages.",
-        "frontMatter": {
-          "title": "Markdown page example"
-        },
-        "unlisted": false
-      }
-    ]
+    "default": null
   },
   "docusaurus-plugin-debug": {},
   "docusaurus-theme-classic": {},

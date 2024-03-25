@@ -5,7 +5,7 @@
   "source": "@site/docs/api-reference.md",
   "sourceDirName": ".",
   "slug": "/api-reference",
-  "permalink": "/cbl-ionic-docs/docs/api-reference",
+  "permalink": "/cbl-ionic-docs/api-reference",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/api-reference.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Typed Data",
-    "permalink": "/cbl-ionic-docs/docs/typed-data"
+    "permalink": "/cbl-ionic-docs/typed-data"
   },
   "next": {
     "title": "Migration",
-    "permalink": "/cbl-ionic-docs/docs/migration"
+    "permalink": "/cbl-ionic-docs/migration"
   }
 }

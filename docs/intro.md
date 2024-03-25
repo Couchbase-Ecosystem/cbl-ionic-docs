@@ -1,6 +1,9 @@
 ---
+slug: /
 sidebar_position: 1 
 title: Overview 
+description:
+  Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.
 ---
 
 # Couchbase Lite for Ionic

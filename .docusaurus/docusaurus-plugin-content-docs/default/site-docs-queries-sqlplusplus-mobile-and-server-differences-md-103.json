@@ -5,7 +5,7 @@
   "source": "@site/docs/Queries/sqlplusplus-mobile-and-server-differences.md",
   "sourceDirName": "Queries",
   "slug": "/Queries/sqlplusplus-mobile-and-server-differences",
-  "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences",
+  "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-mobile-and-server-differences",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/Queries/sqlplusplus-mobile-and-server-differences.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SQL++ for Typscript",
-    "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus"
+    "permalink": "/cbl-ionic-docs/Queries/sqlplusplus"
   },
   "next": {
     "title": "SQL++ and Query Builder Differences",
-    "permalink": "/cbl-ionic-docs/docs/Queries/sqlplusplus-and-query-builder-differences"
+    "permalink": "/cbl-ionic-docs/Queries/sqlplusplus-and-query-builder-differences"
   }
 }

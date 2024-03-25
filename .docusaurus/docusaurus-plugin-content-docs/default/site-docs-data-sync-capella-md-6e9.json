@@ -5,7 +5,7 @@
   "source": "@site/docs/DataSync/capella.md",
   "sourceDirName": "DataSync",
   "slug": "/DataSync/capella",
-  "permalink": "/cbl-ionic-docs/docs/DataSync/capella",
+  "permalink": "/cbl-ionic-docs/DataSync/capella",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/couchbaselabs/cbl-ionic-docs/docs/DataSync/capella.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Data Sync",
-    "permalink": "/cbl-ionic-docs/docs/category/data-sync"
+    "permalink": "/cbl-ionic-docs/category/data-sync"
   },
   "next": {
     "title": "Remote Sync Gateway",
-    "permalink": "/cbl-ionic-docs/docs/DataSync/remote-sync-gateway copy"
+    "permalink": "/cbl-ionic-docs/DataSync/remote-sync-gateway copy"
   }
 }
