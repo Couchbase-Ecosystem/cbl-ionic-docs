@@ -1,4 +1,5 @@
 ---
+id: query-troubleshooting
 sidebar_position: 7
 ---
 

@@ -1,4 +1,5 @@
 ---
+id: remote-sync-gateway
 sidebar_position: 2
 ---
 

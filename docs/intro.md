@@ -1,6 +1,8 @@
 ---
 slug: /
 sidebar_position: 1 
+sidebar_label: Overview
+id: intro
 title: Overview 
 description:
   Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.

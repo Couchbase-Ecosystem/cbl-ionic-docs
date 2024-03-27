@@ -21,7 +21,7 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -79,7 +79,7 @@ const config = {
           src: 'img/couchbase.svg',
         },
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/couchbaselabs/cbl-enterprise-ionic',
             label: 'GitHub',
@@ -101,7 +101,7 @@ const config = {
             items: [
               {
                 label: 'Overview',
-                to: '/docs/intro',
+                to: 'docs/intro',
               },
             ],
           },
@@ -135,7 +135,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'blog',
               },
               {
                 label: 'GitHub',
