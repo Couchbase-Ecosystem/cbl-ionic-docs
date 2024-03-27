@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Couchbase Lite Ionic Capacitor Plugin Blog</title>
-        <link>https://cbl-ionic.dev/blog</link>
+        <link>http://labs.couchbase.com/cbl-ionic-docs/blog</link>
         <description>Couchbase Lite Ionic Capacitor Plugin Blog</description>
         <lastBuildDate>Mon, 25 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Introduction to Couchbase Lite for Ionic]]></title>
-            <link>https://cbl-ionic.dev/blog/intro-blog-post</link>
-            <guid>https://cbl-ionic.dev/blog/intro-blog-post</guid>
+            <link>http://labs.couchbase.com/cbl-ionic-docs/blog/intro-blog-post</link>
+            <guid>http://labs.couchbase.com/cbl-ionic-docs/blog/intro-blog-post</guid>
             <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Hello World]]></description>
             <content:encoded><![CDATA[<p>Hello World</p>]]></content:encoded>

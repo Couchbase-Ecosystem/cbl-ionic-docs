@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[2235],{5645:o=>{o.exports=JSON.parse('{"permalink":"/cbl-ionic-docs/blog/tags/mobile","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

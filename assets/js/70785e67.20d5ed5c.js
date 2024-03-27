@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[508],{737:l=>{l.exports=JSON.parse('{"permalink":"/cbl-ionic-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

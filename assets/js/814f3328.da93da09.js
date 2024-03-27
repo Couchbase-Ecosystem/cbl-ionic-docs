@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Introduction to Couchbase Lite for Ionic","permalink":"/cbl-ionic-docs/blog/intro-blog-post","unlisted":false}]}')}}]);
