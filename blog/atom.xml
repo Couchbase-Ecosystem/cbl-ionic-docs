@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://cbl-ionic.dev/blog</id>
+    <title>Couchbase Lite Ionic Capacitor Plugin Blog</title>
+    <updated>2024-03-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://cbl-ionic.dev/blog"/>
+    <subtitle>Couchbase Lite Ionic Capacitor Plugin Blog</subtitle>
+    <icon>https://cbl-ionic.dev/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Introduction to Couchbase Lite for Ionic]]></title>
+        <id>https://cbl-ionic.dev/blog/intro-blog-post</id>
+        <link href="https://cbl-ionic.dev/blog/intro-blog-post"/>
+        <updated>2024-03-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hello World]]></summary>
+        <content type="html"><![CDATA[<p>Hello World</p>]]></content>
+        <author>
+            <name>Denis Rosa</name>
+            <uri>https://github.com/deniswsrosa</uri>
+        </author>
+        <author>
+            <name>Aaron LaBeau</name>
+            <uri>https://github.com/biozal</uri>
+        </author>
+        <author>
+            <name>Matt Ingenthron</name>
+            <uri>https://github.com/ingenthr</uri>
+        </author>
+        <category label="hello" term="hello"/>
+        <category label="ionic" term="ionic"/>
+        <category label="couchbase lite" term="couchbase lite"/>
+        <category label="mobile" term="mobile"/>
+    </entry>
+</feed>

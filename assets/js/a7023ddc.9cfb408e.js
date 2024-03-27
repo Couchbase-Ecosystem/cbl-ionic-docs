@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[9267],{8289:l=>{l.exports=JSON.parse('[{"label":"hello","permalink":"/blog/tags/hello","count":1},{"label":"ionic","permalink":"/blog/tags/ionic","count":1},{"label":"couchbase lite","permalink":"/blog/tags/couchbase-lite","count":1},{"label":"mobile","permalink":"/blog/tags/mobile","count":1}]')}}]);
