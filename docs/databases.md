@@ -4,3 +4,154 @@ sidebar_position: 4
 ---
 
 # Databases 
+
+> Description — _Working with Couchbase Lite Databases_  
+> Related Content — [Blobs](blobs.md) | [Documents](documents.md) | [Indexing](indexing.md)
+
+
+## Database Concepts
+
+Databases created on Couchbase Lite can share the same hierarchical structure as Capella databases. This makes it easier to sync data between mobile applications and applications built using Capella.
+
+<div align="center">
+
+![Couchbase Lite Database Hierarchy](/img/Couchbase_Lite_Database_Hierarchy.svg)
+
+_Figure 1. Couchbase Lite Database Hierarchy_
+
+</div>
+
+Although the terminology is different, the structure can be mapped to relational database terms:
+
+Table 1. Relational Database → Couchbase
+
+| Relational database | Couchbase           |
+|---------------------|---------------------|
+| Database            | Database            |
+| Schema              | Scope               |
+| Table               | Collection          |
+
+This structure gives you plenty of choices when it comes to partitioning your data. The most basic structure is to use the single default scope with a single default collection; or you could opt for a structure that allow you to split your collections into logical scopes.
+
+
+<div align="center">
+
+![Couchbase Lite Examples](/img/Couchbase_Lite_Examples.svg)
+
+_Figure 2. Couchbase Lite Examples_
+
+</div>
+
+### Storing local configuration
+
+You may not need to sync all the data related to a particular application. You can set up a scope that syncs data, and a second scope that doesn’t. One reason for doing this is to store local configuration data (such as the preferred screen orientation or keyboard layout). Since this information only relates to a particular device, there is no need to sync it:
+
+- **local data scope** — Contains information pertaining to the device.
+- **syncing data scope** — Contains information pertaining to the user, which can be synced back to the cloud for use on the web or another device.
+
+## Managing Couchbase Lite Databases in Ionic
+
+### Initializing the Environment
+To work with Couchbase Lite databases in an Ionic application, you must first initialize the Capacitor Engine and set up the Database Context. This setup is crucial for enabling communication between your Ionic application and the native platform-specific database operations.
+
+**Example: Initializing Capacitor Engine and Database Context**
+```javascript
+import { CapacitorEngine } from 'couchbase-lite-ee-ionic';
+import DatabaseContext from './providers/DatabaseContext';
+
+const engine = new CapacitorEngine();
+```
+
+This initialization should occur once, typically in your application's root component or main entry file.
+
+### Create or Open a Database
+
+To create or open a database, use the Database class from the cblite-core package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
+
+**Example 1. Creating/Opening a Database**
+
+```javascript
+import { Database, DatabaseConfiguration } from 'cblite-core';
+
+const config = new DatabaseConfiguration();
+config.setDirectory('path/to/database'); // Optional
+const myDatabase = new Database('myDatabaseName', config);
+await myDatabase.open();
+```
+
+### Closing a Database
+
+You are advised to incorporate the closing of all open databases into your application workflow.
+
+**Example 2. Closing a Database**
+
+```javascript
+await myDatabase.close();
+```
+
+## Database Encryption
+
+Couchbase Lite includes the ability to encrypt Couchbase Lite databases. This allows mobile applications to secure data at rest, when it is being stored on the device. The algorithm used to encrypt the database is 256-bit AES.
+
+### Enabling
+
+To enable database encryption in Ionic, use the `DatabaseConfiguration` class to set an encryption key before opening or creating a database. This encryption key must be provided every time the database is accessed.
+
+**Example3. Configure Database Encryption**
+
+```typescript
+import { useContext } from 'react';
+import { IonButton, IonInput } from '@ionic/react';
+import DatabaseContext from '../context/DatabaseContext';
+import { Database, DatabaseConfiguration } from 'cblite-core';
+
+const EncryptDatabasePage = () => {
+  const { addDatabase } = useContext(DatabaseContext);
+  
+  const createEncryptedDatabase = async () => {
+    const dbName = 'my_secure_db';
+    const encryptionKey = 'my_secret_key';
+    const config = new DatabaseConfiguration().setEncryptionKey(encryptionKey);
+    const db = new Database(dbName, config);
+    await db.open();
+    addDatabase(db);
+  };
+
+  return (
+    <div>
+      <IonInput placeholder="Database Name" disabled value="my_secure_db" />
+      <IonInput placeholder="Encryption Key" disabled value="my_secret_key" />
+      <IonButton onClick={createEncryptedDatabase}>Encrypt & Open Database</IonButton>
+    </div>
+  );
+};
+
+export default EncryptDatabasePage;
+```
+
+### Persisting
+
+Couchbase Lite does not persist the key. It is the application’s responsibility to manage the key and store it in a platform-specific secure store such as Apples's [Keystore](https://developer.apple.com/documentation/security/keychain_services) or Android’s [Keystore](https://developer.android.com/privacy-and-security/keystore).
+
+### Opening
+
+An encrypted database can only be opened with the same language package that was used to encrypt it in the first place. So a database encrypted using the Ionic package, and then exported, is readable only by the Ionic package.
+
+## Database Maintenance
+
+
+
+## Command Line Tool
+
+cblite is a command-line tool for inspecting and querying Couchbase Lite databases.
+
+You can download and build it from the couchbaselabs [GitHub repository](https://github.com/couchbaselabs/couchbase-mobile-tools/blob/master/README.cblite.md). Note that the cblite tool is not supported by the [Couchbase Support Policy](https://www.couchbase.com/support-policy/).
+
+
+## Couchbase Lite for VSCode
+
+Couchbase Lite for VSCode is a Visual Studio Code extension that provides a user interface for inspecting and querying Couchbase Lite databases. You can find more information about this extension from it's [GitHub repository](https://github.com/couchbaselabs/vscode-cblite).
+
+
+
+
