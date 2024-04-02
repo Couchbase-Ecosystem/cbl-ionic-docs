@@ -52,17 +52,17 @@ You may not need to sync all the data related to a particular application. You c
 ## Managing Couchbase Lite Databases in Ionic
 
 ### Initializing the Environment
-To work with Couchbase Lite databases in an Ionic application, you must first initialize the Capacitor Engine and set up the Database Context. This setup is crucial for enabling communication between your Ionic application and the native platform-specific database operations.
+
+In an Ionic application using Couchbase Lite, begin by initializing the Capacitor Engine. Subsequently, employ a design pattern such as Context/Provider or Service Locator to maintain and access your database instances throughout the application lifecycle.
 
 **Example: Initializing Capacitor Engine and Database Context**
 ```javascript
 import { CapacitorEngine } from 'couchbase-lite-ee-ionic';
-import DatabaseContext from './providers/DatabaseContext';
 
-const engine = new CapacitorEngine();
+const engine = new CapacitorEngine(); // Initialize once, early in your app
 ```
 
-This initialization should occur once, typically in your application's root component or main entry file.
+This configuration ensures seamless interaction between your Ionic app and the underlying native database functionalities, facilitating effective database management.
 
 ### Create or Open a Database
 
@@ -100,33 +100,11 @@ To enable database encryption in Ionic, use the `DatabaseConfiguration` class to
 **Example3. Configure Database Encryption**
 
 ```typescript
-import { useContext } from 'react';
-import { IonButton, IonInput } from '@ionic/react';
-import DatabaseContext from '../context/DatabaseContext';
-import { Database, DatabaseConfiguration } from 'cblite-core';
-
-const EncryptDatabasePage = () => {
-  const { addDatabase } = useContext(DatabaseContext);
-  
-  const createEncryptedDatabase = async () => {
-    const dbName = 'my_secure_db';
-    const encryptionKey = 'my_secret_key';
-    const config = new DatabaseConfiguration().setEncryptionKey(encryptionKey);
-    const db = new Database(dbName, config);
-    await db.open();
-    addDatabase(db);
-  };
-
-  return (
-    <div>
-      <IonInput placeholder="Database Name" disabled value="my_secure_db" />
-      <IonInput placeholder="Encryption Key" disabled value="my_secret_key" />
-      <IonButton onClick={createEncryptedDatabase}>Encrypt & Open Database</IonButton>
-    </div>
-  );
-};
-
-export default EncryptDatabasePage;
+const dbName = 'my_secure_db';
+const encryptionKey = 'my_secret_key';
+const config = new DatabaseConfiguration().setEncryptionKey(encryptionKey);
+const db = new Database(dbName, config);
+await db.open();
 ```
 
 ### Persisting
@@ -139,6 +117,11 @@ An encrypted database can only be opened with the same language package that was
 
 ## Database Maintenance
 
+From time to time it may be necessary to perform certain maintenance activities on your database, for example to compact the database file, removing unused documents and blobs no longer referenced by any documents.
+
+```typescript
+await db.compact();
+```
 
 
 ## Command Line Tool
@@ -151,6 +134,28 @@ You can download and build it from the couchbaselabs [GitHub repository](https:/
 ## Couchbase Lite for VSCode
 
 Couchbase Lite for VSCode is a Visual Studio Code extension that provides a user interface for inspecting and querying Couchbase Lite databases. You can find more information about this extension from it's [GitHub repository](https://github.com/couchbaselabs/vscode-cblite).
+
+## Couchbase Lite for JetBrains
+
+Couchbase Lite for JetBrains is a JetBrains IDE plugin that provides a user interface for inspecting and querying Couchbase Lite databases. You can find more information about this plugin from its [GitHub repository](https://github.com/couchbaselabs/couchbase_jetbrains_plugin).
+
+## Troubleshooting
+
+You should use console logs as your first source of diagnostic information. If the information in the default logging level is insufficient you can focus it on database errors and generate more verbose messages.
+
+
+```typescript
+import { Database, LogDomain, LogLevel } from 'cblite-core';
+
+db.setLogLevel(LogDomain.DATABASE, LogLevel.VERBOSE)
+  .then(() => console.log('Database log level set to VERBOSE.'))
+  .catch(error => console.error('Setting log level failed:', error));
+```
+
+
+
+
+
 
 
 
