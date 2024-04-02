@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[6419],{992:o=>{o.exports=JSON.parse('{"permalink":"/cbl-ionic-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

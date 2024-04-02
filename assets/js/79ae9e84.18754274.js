@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[8551],{6880:e=>{e.exports=JSON.parse('{"permalink":"/cbl-ionic-docs/blog/tags/couchbase-lite","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

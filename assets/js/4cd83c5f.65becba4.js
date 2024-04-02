@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[4643],{180:c=>{c.exports=JSON.parse('{"label":"ionic","permalink":"/cbl-ionic-docs/blog/tags/ionic","allTagsPath":"/cbl-ionic-docs/blog/tags","count":1,"unlisted":false}')}}]);

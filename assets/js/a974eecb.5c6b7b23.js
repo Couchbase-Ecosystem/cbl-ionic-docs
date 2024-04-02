@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcbl_ionic=self.webpackChunkcbl_ionic||[]).push([[7142],{5729:c=>{c.exports=JSON.parse('{"label":"couchbase lite","permalink":"/cbl-ionic-docs/blog/tags/couchbase-lite","allTagsPath":"/cbl-ionic-docs/blog/tags","count":1,"unlisted":false}')}}]);

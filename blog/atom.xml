@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://labs.couchbase.com/cbl-ionic-docs/blog</id>
+    <id>http://cbl-ionic.dev/blog</id>
     <title>Couchbase Lite Ionic Capacitor Plugin Blog</title>
     <updated>2024-03-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://labs.couchbase.com/cbl-ionic-docs/blog"/>
+    <link rel="alternate" href="http://cbl-ionic.dev/blog"/>
     <subtitle>Couchbase Lite Ionic Capacitor Plugin Blog</subtitle>
-    <icon>http://labs.couchbase.com/cbl-ionic-docs/img/favicon.ico</icon>
+    <icon>http://cbl-ionic.dev/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Introduction to Couchbase Lite for Ionic]]></title>
-        <id>http://labs.couchbase.com/cbl-ionic-docs/blog/intro-blog-post</id>
-        <link href="http://labs.couchbase.com/cbl-ionic-docs/blog/intro-blog-post"/>
+        <id>http://cbl-ionic.dev/blog/intro-blog-post</id>
+        <link href="http://cbl-ionic.dev/blog/intro-blog-post"/>
         <updated>2024-03-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Hello World]]></summary>
         <content type="html"><![CDATA[<p>Hello World</p>]]></content>
