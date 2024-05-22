@@ -110,7 +110,7 @@ config.setEncryptionKey(encryptionKey);
 
 const db = new Database(dbName, config);
 
-await db.open();dar
+await db.open();
 ```
 
 ### Persisting
@@ -127,7 +127,7 @@ From time to time it may be necessary to perform certain maintenance activities 
 
 Couchbase Lite's API provides the Database.performMaintenance method. The available maintenance operations, including compact are as shown in the enum MaintenanceType to accomplish this.
 
-This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API. If in doubt, consult Couchbase support.
+This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API. For questions or issues, please visit the [Couchbase Forums](https://www.couchbase.com/forums/) where you can ask for help and discuss with the community.
 
 
 ## Command Line Tool

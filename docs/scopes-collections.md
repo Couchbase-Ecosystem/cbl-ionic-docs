@@ -67,7 +67,15 @@ You cannot create an empty user-defined scope. A scope is implicitly created and
 **Example 2. Index a Collection**
 
 ```typescript
+ // Define a value index on 'name' and 'documentType'
+const valueIndex = IndexBuilder.valueIndex(
+    ValueIndexItem.property('name'),
+    ValueIndexItem.property('documentType')
+);
 
+// Create the value index
+const valueIndexName = 'nameTypeIndex';
+await collection.createIndex(valueIndexName, valueIndex);
 ```
 
 ## Drop a Collection

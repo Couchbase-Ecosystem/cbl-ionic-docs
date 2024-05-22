@@ -23,7 +23,7 @@ Use `Database.createQuery` to define a query through an SQL++ string. Then run t
 #### Example 1. Running a SQL++ Query
 
 ```typescript
-const query = database.createQuery("SELECT META().id AS thisId FROM _ WHERE type = \"hotel\"");
+const query = database.createQuery('SELECT META().id AS thisId FROM inventory.hotel WHERE city="Medway"');
 const resultSet = await query.execute();
 ```
 
@@ -104,7 +104,7 @@ This behavior is inline with that of SQL++ for Server — see example in [Table 
 | `SELECT * AS data FROM _`	    | `data`              |
 | `SELECT * FROM _`	            | `_`                 |
 | `SELECT * FROM _default`	    | `_default`          |
-| `SELECT * FROM users`		    | `users`             |
+| `SELECT * FROM users`		      | `users`             |
 | `SELECT * FROM users AS user`	| `user`              |
 
 ### Example
@@ -149,12 +149,13 @@ Here `dataSource` is the collection name against which the query is to run. Use 
 #### Example 6. FROM Examples
 
 ```SQL
-SELECT name FROM user;
-SELECT user.name FROM users AS user;
-SELECT user.name FROM users user;
-SELECT name FROM _;
-SELECT user.name FROM _ AS user;
-SELECT user.name FROM _ user;
+SELECT name FROM testScope.user;
+SELECT user.name FROM testScope.users AS user;
+SELECT user.name FROM testScope.users user;
+-- These queries use the default scope and default collection (_default._default) in Couchbase.
+SELECT name FROM _default._default;
+SELECT user.name FROM _default._default AS user;
+SELECT user.name FROM _default._default user;
 ```
 
 ## JOIN Clause
@@ -190,11 +191,11 @@ collectionAlias = IDENTIFIER
 
 ```SQL
 SELECT users.prop1, other.prop2
-FROM users
+FROM testScope.users
 JOIN users AS other ON users.key = other.key;
 
 SELECT users.prop1, other.prop2
-FROM users
+FROM testScope.users
 LEFT JOIN users AS other ON users.key = other.key;
 ```
 
@@ -204,7 +205,7 @@ This example joins the documents from the `routes` collections with documents fr
 
 ```SQL
 SELECT *
-FROM routes r
+FROM inventory.routes r
 JOIN airlines a ON r.airlineId = META(a).id
 WHERE a.country = "France";
 ```
@@ -233,7 +234,7 @@ where = WHERE _ expression
 
 ```SQL
 SELECT name
-FROM employees
+FROM testScope.employees
 WHERE department = "engineer" AND group = "mobile"
 ```
 
@@ -265,16 +266,16 @@ having   = HAVING _ expression
 
 ```SQL
 SELECT COUNT(airlineId), destination
-FROM routes
+FROM inventory.routes
 GROUP BY destination;
 
 SELECT COUNT(airlineId), destination
-FROM routes
+FROM inventory.routes
 GROUP BY destination
 HAVING COUNT(airlineId) > 100;
 
 SELECT COUNT(airlineId), destination
-FROM routes
+FROM inventory.routes
 WHERE destinationState = "CA"
 GROUP BY destination
 HAVING COUNT(airlineId) > 100;
@@ -308,15 +309,15 @@ order    = ( ASC | DESC )
 
 ```SQL
 SELECT name
-FROM users
+FROM testScope.users
 ORDER BY name;
 
 SELECT name
-FROM users
+FROM testScope.users
 ORDER BY name DESC;
 
 SELECT name, score
-FROM users
+FROM testScope.users
 ORDER BY name ASC, score DESC;
 ```
 
@@ -344,7 +345,7 @@ limit = LIMIT _ expression
 
 ```SQL
 SELECT name
-FROM users
+FROM testScope.users
 LIMIT 10;
 ```
 
@@ -375,11 +376,11 @@ offset = OFFSET _ expression
 
 ```sql
 SELECT name
-FROM db
+FROM testScope.users
 OFFSET 10;
 
 SELECT name
-FROM db
+FROM testScope.users
 LIMIT 10
 OFFSET 10;
 ```
@@ -413,11 +414,11 @@ boolean = ( TRUE | FALSE )
 
 ```sql
 SELECT value
-FROM db
+FROM testScope.testCollection
 WHERE value = true;
 
 SELECT value
-FROM db
+FROM testScope.testCollection
 WHERE value = false;
 ```
 
@@ -452,7 +453,7 @@ SELECT
   10.25E2,
   10.25E+2,
   10.25E-2
-FROM db;
+FROM testScope.testCollection;
 ```
 
 #### String
@@ -485,8 +486,8 @@ The string literal can be double-quoted as well as single-quoted.
 
 ```sql
 SELECT firstName, lastName
-FROM db
-WHERE middleName = "middle" AND lastName = 'last';
+FROM crm.customer
+WHERE contact.middleName = "middle" AND contact.lastName = 'last';
 ```
 
 #### NULL
@@ -509,8 +510,8 @@ null = NULL
 
 ```sql
 SELECT firstName, lastName
-FROM db
-WHERE middleName IS NULL;
+FROM crm.customer
+WHERE contact.middleName IS NULL;
 ```
 
 #### MISSING
@@ -533,8 +534,8 @@ missing = MISSING
 
 ```sql
 SELECT firstName, lastName
-FROM db
-WHERE middleName IS MISSING;
+FROM crm.customer
+WHERE contact.middleName IS MISSING;
 ```
 
 #### Array
@@ -557,10 +558,10 @@ array = [ ( _? expression ( _? ',' _? expression )* _? )? ]
 
 ```sql
 SELECT ["a", "b", "c"]
-FROM db;
+FROM testScope.testCollection
 
 SELECT [property1, property2, property3]
-FROM db;
+FROM testScope.testCollection
 ```
 
 #### Dictionary
@@ -584,13 +585,13 @@ dictionary = { ( _? string _? : _? expression ( _? , _? string _? : _? expressio
 
 ```sql
 SELECT { 'name': 'James', 'department': 10 }
-FROM db;
+FROM testScope.testCollection;
 
 SELECT { 'name': 'James', 'department': dept }
-FROM db;
+FROM testScope.testCollection;
 
 SELECT { 'name': 'James', 'phones': ['650-100-1000', '650-100-2000'] }
-FROM db;
+FROM testScope.testCollection;
 ```
 
 ### Identifier
@@ -624,6 +625,8 @@ To use other than basic characters in the identifier, surround the identifier
 with the backticks ` character. For example, to use a hyphen (-) in an
 identifier, use backticks to surround the identifier.
 
+Please note that backticks are commonly used for string literals/interpolation in TypeScript/JavaScript. Therefore, you should be aware that backticks need to be escaped properly to function correctly in TypeScript/JavaScript. For more information, refer to [Template Literal Types in TypeScript](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html).
+
 :::
 
 #### Example
@@ -631,20 +634,21 @@ identifier, use backticks to surround the identifier.
 #### Example 35. Identifier Examples
 
 ```sql
+-- This query uses the default scope and default collection (_default._default) in Couchbase.
 SELECT *
-FROM _;
+FROM _default._default;
 
 SELECT *
-FROM `db-1`;
+FROM test-scope.test-collection;
 
 SELECT key
-FROM db;
+FROM testScope.testCollection;
 
 SELECT key$1
-FROM db_1;
+FROM test_Scope.test_Collection;
 
 SELECT `key-1`
-FROM db;
+FROM testScope.testCollection;
 ```
 
 ### Property Expression
@@ -677,20 +681,20 @@ propertyName = IDENTIFIER
 
 ```sql
 SELECT *
-FROM db
-WHERE contact.name = 'daniel';
+FROM crm.customer
+WHERE contact.firstName = 'daniel';
 
-SELECT db.*
-FROM db
-WHERE contact.name = 'daniel';
+SELECT crm.customer.*
+FROM crm.customer
+WHERE contact.firstName = 'daniel';
 
-SELECT db.contact.address.city
-FROM db
-WHERE contact.name = 'daniel';
+SELECT crm.customer.contact.address.city
+FROM crm.customer
+WHERE contact.firstName = 'daniel';
 
 SELECT contact.address.city, contact.phones[0]
-FROM db
-WHERE contact.name = 'daniel';
+FROM crm.customer
+WHERE contact.firstName = 'daniel';
 ```
 
 ### Any and Every Expression
@@ -741,8 +745,8 @@ variableName    = IDENTIFIER
 
 
 ```sql
-SELECT name
-FROM db
+SELECT firstName, lastName
+FROM crm.customer
 WHERE
   ANY contact IN contacts
     SATISFIES contact.city = 'San Mateo'
@@ -778,24 +782,20 @@ parameter = $ IDENTIFIER
 
 
 ```sql
-SELECT name
-FROM db
-WHERE department = $department;
+SELECT *
+FROM crm.customer
+WHERE contact.firstName = $firstName;
 ```
 
 #### Example 42. Using a Parameter
 
 
-```dart
-final query = await Query.fromN1ql(
-  db,
-  r'''
-  SELECT name
-  WHERE department = $department
-  ''',
-);
-query.parameters = Parameters({'department': 'E001'});
-final results = query.execute();
+```typescript
+const query = database.createQuery('SELECT * FROM crm.customer WHERE contact.firstName = $firstName');
+const params = new Parameters();                    
+params.setValue('firstName', 'daniel');
+query.parameters = params;
+const resultSet = await query.execute();
 ```
 
 ### Parenthesis Expression
@@ -812,14 +812,14 @@ establish operator precedence.
 
 ```sql
 SELECT (value1 + value2) * value 3
-FROM db;
+FROM testScope.testCollection
 
 SELECT *
-FROM db;
+FROM testScope.testCollection
 WHERE ((value1 + value2) * value3) + value4 = 10;
 
 SELECT *
-FROM db
+FROM testScope.testCollection
 WHERE (value1 = value2)
    OR (value3 = value4);
 ```
@@ -972,9 +972,9 @@ A single string operator is provided. It enables string concatenation.
 #### Table 7. String Operators
 
 
-| Op           | Description   | Example                                                    |
-| ------------ | ------------- | ---------------------------------------------------------- |
-| `&#124&#124` | Concatenating | `SELECT firstName &#124&#124 lastName AS fullName FROM db` |
+| Op           | Description   | Example                                                                          |
+| ------------ | ------------- | -------------------------------------------------------------------------------- |
+| `&#124&#124` | Concatenating | `SELECT firstName &#124&#124 lastName AS fullName FROM testScope.testCollection` |
 
 
 ### Unary Operators
@@ -1063,17 +1063,17 @@ collation = NO? (UNICODE | CASE | DIACRITICS)
 #### Example 46. COLLATE Operator Example
 
 ```sql
-SELECT department
-FROM db
-WHERE name = "fred" COLLATE UNICODE;
+SELECT contact
+FROM crm.customer
+WHERE contact.firstName = "fred" COLLATE UNICODE;
 
-SELECT department
-FROM db
-WHERE name = "fred" COLLATE (UNICODE CASE);
+SELECT contact
+FROM crm.customer
+WHERE contact.firstName = "fred" COLLATE (UNICODE CASE);
 
-SELECT name
-FROM db
-ORDER BY name COLLATE (UNICODE DIACRITIC);
+SELECT firstName, lastName
+FROM crm.customer
+ORDER BY firstName COLLATE (UNICODE DIACRITIC), lastName COLLATE (UNICODE DIACRITIC);
 ```
 
 ### Conditional Operator
@@ -1123,7 +1123,7 @@ SELECT
       THEN 'Local'
     ELSE 'Non-Local'
   END
-FROM db;
+FROM testScope.testCollection;
 ```
 
 #### Examples
@@ -1138,7 +1138,7 @@ SELECT
       THEN 'SHIPPED'
     ELSE 'NOT-SHIPPED'
   END
-FROM db;
+FROM testScope.testCollection;
 ```
 
 

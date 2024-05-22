@@ -334,6 +334,9 @@ const token = collection.addDocumentChangeListener('user.john', async (change) =
     console.log(`Status: ${document.getString('verified_account')}`);
   }
 });
+
+// Remove the change listener when it is no longer needed
+await collection.removeDocumentChangeListener(token);
 ```
 
 ## Document Constraints
