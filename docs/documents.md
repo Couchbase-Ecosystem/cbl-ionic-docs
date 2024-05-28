@@ -355,18 +355,3 @@ Couchbase Lite APIs do not explicitly disallow the use of attributes with the un
 * `_removed`
 * `_rev`
 * `_sequence`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

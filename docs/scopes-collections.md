@@ -97,10 +97,3 @@ const scopes = await database.scopes();
 // Get Collections of a particular Scope
 const collections = await database.collections(scopeName);
 ```
-
-
-
-
-
-
-
