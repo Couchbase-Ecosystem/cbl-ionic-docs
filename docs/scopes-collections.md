@@ -50,8 +50,11 @@ Scope and collection names are case sensitive.
 **Example 1. Create a scope and collection**
 
 ```typescript
+const scopeName = "myScopeName";  
+const collectionName = "myCollectionName";  
 const collection = await database.createCollection(collectionName, scopeName);
 ```
+
 In the example above, you can see that `Database.createCollection` can take two parameters. The second is the scope assigned to the created collection, if this parameter is omitted then a collection of the given name will be assigned to the `_default` scope.
 
 The first parameter is the name of the collection you want to create, in this case `myCollectionName`.

@@ -50,7 +50,7 @@ const imageData = await fetchAvatarImageData();
 const avatarBlob = new Blob('image/jpeg', imageData);
 
 // Retrieve an existing document
-let document = await collection.document(documentId);
+const document = await collection.document(documentId);
 
 // Assign the Blob to the document under the 'avatar' key
 document.setBlob('avatar', avatarBlob);

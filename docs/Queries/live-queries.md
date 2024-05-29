@@ -20,24 +20,21 @@ With Couchbase Lite for Ionic, live queries can be watched through:
 
 Each time you start watching a live query, the query is executed and an initial change notification is dispatched. The query is then kept active and further change notifications are dispatched whenever a change occurs.
 
-## Watching with Change Listeners
-
-In the case of the synchronous API, all changes are delivered to the listeners as soon as they are registered.
-
-With the asynchronous API, changes are only guaranteed to be delivered once the `Promise` returned from the registration call is completed:
-
 #### Example 1. Starting a Live Query - Change Listener
 
 ```typescript
 // Register a change listener and await the Promise returned from the registration call.
-await query.addChangeListener(async (change) => {  
-  // Await the results of the change.
-  const results = await change.results;
-  
-  results.forEach(result => {
-    // Do something with the result...
-  });
-});
+const token = await query.addChangeListener((change) => {  
+  if (change.error !== null && change.error !== undefined) {  
+    // deal with error...  
+  } else {  
+    const results = change.results;  
+    //loop through ResultSet  
+    for (const doc of results) {  
+      //do something with doc                   
+    }  
+  }  
+}); 
 ```
 
 To stop receiving notifications, call `Query.removeChangeListener` with the token that was returned from the registration call. Regardless of the whether the API is synchronous or asynchronous, listeners will stop receiving notifications immediately:
@@ -45,9 +42,6 @@ To stop receiving notifications, call `Query.removeChangeListener` with the toke
 #### Example 2. Stopping a Live Query - Change Listener
 
 ```typescript
-final token = await query.addChangeListener((change) async { ... });
-
-// Some time goes by...
-
+const token = await query.addChangeListener((change) => { ... });
 await query.removeChangeListener(token);
 ```

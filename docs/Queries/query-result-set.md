@@ -19,3 +19,5 @@ for (const result of resultSet) {
 ```
 
 In this example, `hotelItems` is the alias used for the collection in the query, and it serves as the key in the `Result` objects within the `ResultSet`.
+
+

@@ -66,12 +66,12 @@ This configuration ensures seamless interaction between your Ionic app and the u
 
 ### Create or Open a Database
 
-To create or open a database, use the Database class from the cbl-cblite package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
+To create or open a database, use the Database class from the cblite package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
 
 **Example 1. Creating/Opening a Database**
 
 ```javascript
-import { Database, DatabaseConfiguration } from 'cbl-cblite'; //import the package
+import { Database, DatabaseConfiguration } from 'cblite'; //import the package
 ```
 
 ```javascript

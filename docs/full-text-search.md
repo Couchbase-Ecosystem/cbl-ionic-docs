@@ -50,9 +50,10 @@ const ftsQueryString = `
 const ftsQuery = database.createQuery(ftsQueryString);
 
 const results = await ftsQuery.execute();
-results.forEach(result => {
+
+for(const result of results) {
     console.log(result.getString('_id') + ": " + result.getString('overview'));
-});
+}
 ```
 
 ## Operation

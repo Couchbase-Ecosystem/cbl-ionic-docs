@@ -27,8 +27,6 @@ const query = database.createQuery('SELECT META().id AS thisId FROM inventory.ho
 const resultSet = await query.execute();
 ```
 
-Here we are accessing the default collection using the shorthand notation (`_`) — see the FROM clause for more on data source selection and Query Parameters for more on parameterized queries.
-
 ## Query Format
 
 The API uses query statements of the form shown in [Example 2](#example-2-query-format).
