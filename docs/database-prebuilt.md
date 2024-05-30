@@ -108,10 +108,19 @@ Start your normal application logic immediately, unless it is essential to have 
 #### Example 1. Decompress and Copy Database using API
 
 ```typescript
-// Check if the database already exists
-if (!await Database.exists(dbName, null)) {
-    // Copy the database from the sourcePath to the app's directory
-    await Database.copy(sourcePath, dbName, new DatabaseConfiguration());
+// Get the default path 
+const path = await pd.getDefaultPath();
+
+// Set database name, source path, and configuration
+const dbName = 'my_prebuilt_db';
+const sourcePath = await database.getPath();
+const config = new DatabaseConfiguration();
+config.setDirectory(path);
+
+const databaseExists = await database.exists(dbName, sourcePath);
+if (!databaseExists) {
+    // Copy the database from the sourcePath to the app's directory if it doesn't already exist
+    await database.copy(sourcePath, dbName, config);
 }
 ```
 

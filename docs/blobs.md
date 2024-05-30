@@ -22,7 +22,7 @@ The blob as an object appears in a document as dictionary property — see, fo
 
 Other properties include `length` (the length in bytes), and optionally `content_type` (typically, its MIME type).
 
-The blob's data (an image, audio or video content) is not stored in the document, but in a separate content-addressable store, indexed by the `digest` property — see [Using Blobs].
+The blob's data (an image, audio or video content) is not stored in the document, but in a separate content-addressable store, indexed by the `digest` property — see [Using Blobs](#using-blobs).
 
 ### Constraints
 
@@ -50,20 +50,20 @@ const imageData = await fetchAvatarImageData();
 const avatarBlob = new Blob('image/jpeg', imageData);
 
 // Retrieve an existing document
-let document = await database.getDocument(documentId);
+const document = await collection.document(documentId);
 
 // Assign the Blob to the document under the 'avatar' key
 document.setBlob('avatar', avatarBlob);
 
 // Save the updated document back to the database
-await database.save(document);
+await collection.save(document);
 ```
 
 ## Syncing
 
 When a document containing a blob object is synchronized, the Couchbase Lite replicator generates an `_attachments` dictionary with an auto-generated name for each blob attachment. This is different to the `avatar` key and is used internally to access the blob content.
 
-If you view a sync'd blob document in either Capella's Admin Interface or Couchbase Server's Admin Console, you will see something similar to [Figure 1], which shows the document with its generated `_attachments` dictionary, including the digest.
+If you view a sync'd blob document in either Capella's Admin Interface or Couchbase Server's Admin Console, you will see something similar to [Figure 1](#figure-1-sample-blob-document), which shows the document with its generated `_attachments` dictionary, including the digest.
 
 #### Figure 1. Sample Blob Document
 

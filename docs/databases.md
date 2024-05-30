@@ -57,7 +57,7 @@ In an Ionic application using Couchbase Lite, begin by initializing the Capacito
 
 **Example: Initializing Capacitor Engine and Database Context**
 ```javascript
-import { CapacitorEngine } from 'couchbase-lite-ee-ionic';
+import { CapacitorEngine } from 'cbl-ionic';
 
 const engine = new CapacitorEngine(); // Initialize once, early in your app
 ```
@@ -66,13 +66,15 @@ This configuration ensures seamless interaction between your Ionic app and the u
 
 ### Create or Open a Database
 
-To create or open a database, use the Database class from the cblite-core package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
+To create or open a database, use the Database class from the cblite package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
 
 **Example 1. Creating/Opening a Database**
 
 ```javascript
-import { Database, DatabaseConfiguration } from 'cblite-core';
+import { Database, DatabaseConfiguration } from 'cblite'; //import the package
+```
 
+```javascript
 const config = new DatabaseConfiguration();
 config.setDirectory('path/to/database'); // Optional
 const myDatabase = new Database('myDatabaseName', config);
@@ -102,8 +104,12 @@ To enable database encryption in Ionic, use the `DatabaseConfiguration` class to
 ```typescript
 const dbName = 'my_secure_db';
 const encryptionKey = 'my_secret_key';
-const config = new DatabaseConfiguration().setEncryptionKey(encryptionKey);
+
+const config = new DatabaseConfiguration();
+config.setEncryptionKey(encryptionKey);
+
 const db = new Database(dbName, config);
+
 await db.open();
 ```
 
@@ -119,9 +125,9 @@ An encrypted database can only be opened with the same language package that was
 
 From time to time it may be necessary to perform certain maintenance activities on your database, for example to compact the database file, removing unused documents and blobs no longer referenced by any documents.
 
-```typescript
-await db.compact();
-```
+Couchbase Lite's API provides the Database.performMaintenance method. The available maintenance operations, including compact are as shown in the enum MaintenanceType to accomplish this.
+
+This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API. For questions or issues, please visit the [Couchbase Forums](https://www.couchbase.com/forums/) where you can ask for help and discuss with the community.
 
 
 ## Command Line Tool
@@ -145,11 +151,12 @@ You should use console logs as your first source of diagnostic information. If t
 
 
 ```typescript
-import { Database, LogDomain, LogLevel } from 'cblite-core';
-
-db.setLogLevel(LogDomain.DATABASE, LogLevel.VERBOSE)
-  .then(() => console.log('Database log level set to VERBOSE.'))
-  .catch(error => console.error('Setting log level failed:', error));
+try {
+  await db.setLogLevel(LogDomain.DATABASE, LogLevel.VERBOSE);
+  console.log('Database log level set to VERBOSE.');
+} catch (error) {
+  console.error('Setting log level failed:', error);
+}
 ```
 
 
