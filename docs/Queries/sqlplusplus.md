@@ -1341,23 +1341,22 @@ for the features supported by SQL++ for Mobile but not by `QueryBuilder`.
 
 You can provide runtime parameters to your SQL++ query to make it more flexible.
 To specify substitutable parameters within your query string prefix the name
-with `$` — see: [Example 51](#).
+with `$` — see: [Example 51](#example-51-running-a-sql-query).
 
 #### Example 51. Running a SQL++ Query
 
-```dart
-final db = await Database.openAsync('hotel');
-final query = await Query.fromN1ql(
-  db,
-  r'''
-  SELECT META().id AS docId
-  FROM _
-  WHERE type = $type
-  ''',
+You can provide runtime parameters to your SQL++ query to make it more flexible. To specify substitutable parameters within your query string prefix the name with $ — see: [Example 51](#example-51-running-a-sql-query).
+
+```typescript
+const query = await database.createQuery(
+  'SELECT META().id AS docId FROM hotel WHERE country = $country'
 );
-query.parameters = Parameters({'type': 'hotel'});
-final resultSet = query.execute();
+
+const params = new Parameters();
+params.setValue('country','France')
+query.parameters = params;
+const resultSet = await query.execute();
 ```
 
-1. Define a parameter placeholder `$type`.
-2. Set the value of the `type` parameter.
+1. Define a parameter placeholder `$country`.
+2. Set the value of the `country` parameter.
