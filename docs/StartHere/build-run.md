@@ -62,8 +62,8 @@ async function runDbSample() : Promise<void> {
  dc.setDirectory(directoryPath);
  const database = new Database('travel', dc);
 
- await this.database.open();
- const collection = this.database.getDefaultCollection();
+ await database.open();
+ const collection = database.getDefaultCollection();
 
  //create a document
  const mutableDoc = new MutableDocument('doc-1');
