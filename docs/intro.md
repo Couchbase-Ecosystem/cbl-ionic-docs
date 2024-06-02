@@ -8,11 +8,13 @@ description:
   Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.
 ---
 
-# Couchbase Lite for Ionic
+# Couchbase Lite for Ionic Capacitor
 
 Couchbase Lite is an embedded, document-style NoSQL database that is syncable and makes it easy to build offline-enabled applications.
 
-Couchbase Lite for Ionic is a plugin implementation of Couchbase Lite for Ionic using Typescript. It has feature parity with Couchbase Lite implementations for other platforms, with a few exceptions.
+Couchbase Lite for Ionic Capacitor is a Capacitor plugin implementation of Couchbase Lite for Ionic using Typescript. It has feature parity with Couchbase Lite implementations for other platforms, with a few exceptions.
+
+More information on Ionic Capacitor can be found here: [Capacitor](https://capacitorjs.com/docs)
 
 :::note
 This plugin only works with iOS and Android platforms.  Web support is not available.
@@ -21,7 +23,7 @@ This plugin only works with iOS and Android platforms.  Web support is not avail
 The version of this plugin is based on supporting Couchbase Lite Enterprise for iOS and Android.  This plugin is not compatible with Couchbase Lite Community Edition.  A [license](https://www.couchbase.com/pricing/) is required to use Couchbase Lite Enterprise edition.  
 
 :::note
-Couchbase Lite for Ionic is a community provided solution that is actively developed and maintained by the community.  It is not an official Couchbase product.
+Couchbase Lite for Ionic Capacitor is a community provided solution that is actively developed and maintained by the community.  It is not an official Couchbase product.
 :::
 
 ## Features
@@ -50,6 +52,9 @@ Couchbase Lite for Ionic is a community provided solution that is actively devel
 
 ## Limitations
 Some of the features supported by other platform implementations of Couchbase Lite are currently not supported:
+
+* Vector Search
+	- This is still in beta for the native platforms and is not yet supported in the plugin.
 
 * Peer-to-Peer Sync
 	- There is no "platform" specific code built into the plugin to allow you to find other peers.

@@ -56,7 +56,7 @@ You may not need to sync all the data related to a particular application. You c
 In an Ionic application using Couchbase Lite, begin by initializing the Capacitor Engine. Subsequently, employ a design pattern such as Context/Provider or Service Locator to maintain and access your database instances throughout the application lifecycle.
 
 **Example: Initializing Capacitor Engine and Database Context**
-```javascript
+```typescript
 import { CapacitorEngine } from 'cbl-ionic';
 
 const engine = new CapacitorEngine(); // Initialize once, early in your app
@@ -66,12 +66,12 @@ This configuration ensures seamless interaction between your Ionic app and the u
 
 ### Create or Open a Database
 
-To create or open a database, use the Database class from the cblite package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
+To create or open a database, use the Database class from the cbl-ionic package, specifying the database name and optionally, a DatabaseConfiguration for custom settings like the database directory or encryption.
 
 **Example 1. Creating/Opening a Database**
 
 ```javascript
-import { Database, DatabaseConfiguration } from 'cblite'; //import the package
+import { Database, DatabaseConfiguration } from 'cbl-ionic'; //import the package
 ```
 
 ```javascript
