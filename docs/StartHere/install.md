@@ -10,38 +10,35 @@ sidebar_position: 2
 To get started coding Couchbase Lite for Ionic Capacitor apps, you will need to clone the Ionic Plugin repo and build the plugin.
 
  :::note
- This plugin is actively developed and a full release download isn't currently available. A downloadable release is planned for the future. 
+This plugin is currently under active development.  The plugin is not yet available on npm.  You must use a release from the GitHub repo. 
  :::
 
-### How to Build the Plugin
+### How to install the cbl-ionic Plugin
 
-1. Fork and clone this repo.  You will need to also clone all the submodules for the shared libraries and tests and update them with the latest version of each of those modules code.  Run the following commands from the root of the cbl-ionic repo:
- ```shell
-    git clone --recurse-submodules git@github.com:Couchbase-Ecosystem/cbl-ionic.git
-    cd cbl-ionic
-    git submodule update --remote --recursive
-    ```  
+1. Browse to the list of release on GitHub for the cbl-ionic plugin [here](https://github.com/Couchbase-Ecosystem/cbl-ionic/releases).  Pick a release to download and grab the cbl-ionic.tar.gz file for that release. Once it is downloaded, you can untar the file and the plugin into the root folder of the same as your ionic project.  Your directory structure should look something similar to this: 
+
+- root directory 
+  - cbl-ionic
+  - ionic-mobile-app
+
+From the root directory change directory into the cbl-ionic folder:
+
+```shell
+  cd cbl-ionic
+```  
  
 2. Install the dependencies on main project.
 
     ```shell
-    cd cbl-ionic
     npm install
     ```
-3. Install CocoaPods if you are going to work on iOS. 
-
-    ```shell
-    cd ios
-    pod install 
-    cd ..
-    ```
-
-4. Run npm build to build Javascript - from project root.
+3. Build and validate that the plugin works.  The verify process will build the plugin and install the CocoaPods in iOS and the gradle files in Android for the plugin.
 
     ```shell
     npm run build
     npm run verify
     ```
+
 Once you have built the plugin, you can add it to your Ionic project.
 
 ### Add the Plugin to your Ionic Project
@@ -107,6 +104,7 @@ Once you validated the CocoaPods installation, you must do a `pod install` from 
 ```shell 
 cd ios/App
 pod install
+cd ../..
 ```
 
 ### Android - Update the `all projects` gradle file 
@@ -125,3 +123,41 @@ allprojects {
 ![Android Maven Gradle screenshot](./android-maven-gradle.png)
 
 In this example, the maven url was added that points to the maven server that hosts the Couchbase Lite Android packages.
+
+### Build your app
+You can now use the standard build and run commands that ionic capacitor offers to run your app from the main directory of your app.
+
+```shell
+npm run build
+```
+
+### Run your app in Native IDEs
+You can run your apps in the Native IDEs (XCode and Android Studio) by using the following commands:
+
+**iOS**:
+```shell
+npx cap sync ios 
+npx cap open ios
+```
+
+**Android**:
+```shell
+npx cap sync android
+npx cap open android 
+```
+
+
+### Live Reload
+
+To use the live reload feature of ionic capacitor, you can use the following commands:
+
+**iOS**:
+```shell
+ionic capacitor run ios --livereload external
+```
+
+**Android**:
+```shell
+ionic capacitor run android --livereload external
+```
+
