@@ -45,6 +45,7 @@ To get started coding Couchbase Lite for Ionic Capacitor apps, you will need to 
 Once you have built the plugin, you can add it to your Ionic project.
 
 ### Add the Plugin to your Ionic Project
+
 In your project package.json add the ionic plugin to your dependencies. Since this is done at the file system you can use either a relative file path or [npm link/unlink](https://docs.npmjs.com/cli/v10/commands/npm-link).  The following example shows using a file path. 
 
 ```json  
@@ -62,7 +63,7 @@ Finally do an npm install to install the plugin into your project.
 npm install
 ```
 
-### Validate Cocoa Pod Installation
+### iOS - Validate Cocoa Pod Installation
 
 The `npm install` should add the plugin to your project and install the CocoaPods for iOS.  You can validate the CocoaPods installation by reviewing the `Podfile` the ios\App folder of your Ionic project.  The file should look something like this:
 
@@ -107,3 +108,20 @@ Once you validated the CocoaPods installation, you must do a `pod install` from 
 cd ios/App
 pod install
 ```
+
+### Android - Update the `all projects` gradle file 
+
+In Android, you need to update the main build.gradle file found at the root of your Android folder of the application to include the URL to find Couchbase Lite for Android.  The following is an example of the build.gradle file:
+
+```gradle
+allprojects {
+    repositories {
+        google()
+        maven {url 'https://mobile.maven.couchbase.com/maven2/dev/'}
+        mavenCentral()
+    }
+}
+```
+![Android Maven Gradle screenshot](./android-maven-gradle.png)
+
+In this example, the maven url was added that points to the maven server that hosts the Couchbase Lite Android packages.
