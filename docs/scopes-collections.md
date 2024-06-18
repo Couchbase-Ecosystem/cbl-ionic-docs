@@ -19,6 +19,8 @@ For example, if your database contains travel information, airport documents can
 Collections can be assigned to different scopes according to content-type or deployment-phase (for example, test versus production).
 
 * Collection names must be unique within their scope.
+
+Unlike Couchbase Server and Capella, a scope cannot exist without a collection, thus there is no API to create a scope.  Instead, use the collection API to create a collection in a scope and the scope is created from that API.
 :::
 
 ## Default Scopes and Collections
@@ -64,6 +66,7 @@ If a collection with the specified name already exists in the specified scope, `
 :::note
 You cannot create an empty user-defined scope. A scope is implicitly created and removed by the `Database.createCollection` and `Database.deleteCollection` methods.
 :::
+
 
 ## Index a Collection
 
