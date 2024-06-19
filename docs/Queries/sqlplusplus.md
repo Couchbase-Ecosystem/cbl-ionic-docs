@@ -1353,7 +1353,7 @@ const query = await database.createQuery(
 );
 
 const params = new Parameters();
-params.setValue('country','France')
+params.setString('country','France')
 query.parameters = params;
 const resultSet = await query.execute();
 ```
