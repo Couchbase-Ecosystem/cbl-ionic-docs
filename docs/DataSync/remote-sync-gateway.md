@@ -51,15 +51,6 @@ Couchbase Mobile uses a replication protocol based on WebSockets for replication
 
 Couchbase Lite’s replication protocol is incompatible with CouchDB-based databases. And since Couchbase Lite 2.x+ only supports the new protocol, you will need to run a version of Sync Gateway that supports it — see: [Compatibility](../ProductNotes/compatibility.md).
 
-#### Legacy Compatibility
-
-Clients using Couchbase Lite 1.x can continue to use http as the URL scheme. Sync Gateway 2.x+ will automatically use:
-
-    * The 1.x replication protocol when a Couchbase Lite 1.x client connects through `http://localhost:4984/db`.
-    * The 2.0 replication protocol when a Couchbase Lite 2.0 client connects through `ws://localhost:4984/db`.
-
-You can find further information in our blog: [Introducing the Data Replication Protocol](https://www.couchbase.com/blog/data-replication-couchbase-mobile/).
-
 ### Ordering
 
 To optimize for speed, the replication protocol doesn’t guarantee that documents will be received in a particular order. So we don’t recommend to rely on that when using the replication or database change listeners for example.
@@ -185,7 +176,7 @@ The constructor provides:
 
 ```typescript
 // Define the target URL for the replication endpoint
-const targetURL = 'wss://10.1.1.12:8092/travel-sample';
+const targetURL = 'wss://10.1.1.12:4984/travel-sample';
 
 // Initialize the URLEndpoint with the target URL
 const targetEndpoint = new URLEndpoint(targetURL);
@@ -312,11 +303,10 @@ Define the credentials your app (the client) is expecting to receive from the Sy
 
 Note that the client cannot authenticate the server if TLS is turned off. When TLS is enabled (Sync Gateway’s default) the client *must* authenticate the server. If the server cannot provide acceptable credentials then the connection will fail.
 
-Use `ReplicatorConfiguration` properties `acceptOnlySelfSignedServerCertificate` and `setPinnedServerCertificate()`, to tell the replicator how to verify server-supplied TLS server certificates.
+Use `ReplicatorConfiguration` property `acceptOnlySelfSignedServerCertificate` to tell the replicator how to verify server-supplied TLS server certificates.
 
-    * If there is a pinned certificate, nothing else matters, the server cert must **exactly** match the pinned certificate.
-    * If there are no pinned certs and `acceptOnlySelfSignedServerCertificate` is `true` then any self-signed certificate is accepted. Certificates that are not self signed are rejected, no matter who signed them.
-    * If there are no pinned certificates and `acceptOnlySelfSignedServerCertificate` is `false` (default), the client validates the server’s certificates against the system CA certificates. The server must supply a chain of certificates whose root is signed by one of the certificates in the system CA bundle.
+    * If `acceptOnlySelfSignedServerCertificate` is `true` then any self-signed certificate is accepted. Certificates that are not self signed are rejected, no matter who signed them.
+    * If `acceptOnlySelfSignedServerCertificate` is `false` (default), the client validates the server’s certificates against the system CA certificates. The server must supply a chain of certificates whose root is signed by one of the certificates in the system CA bundle.
 
 #### Example 7. Set Server TLS security
 
@@ -338,18 +328,11 @@ Set the client to expect and accept only self-signed certificates
 ```typescript
 // Configure Server Security -- only accept self-signed certs
 config.acceptOnlySelfSignedServerCertificate = true; 
-
-// Configure Server Security -- only accept self-signed certs
-config.acceptOnlySelfSignedServerCertificate = true
 ```
 
 Set this to true to accept any self signed cert. Any certificates that are not self-signed are rejected.
 
-##### Pinned Certificate
-
-<!-- // Todo -->
-
-This all assumes that you have configured the Sync Gateway to provide the appropriate SSL certificates, and have included the appropriate certificate in your app bundle — for more on this see: Certificate Pinning.
+This all assumes that you have configured the Sync Gateway to provide the appropriate SSL certificates, and have included the appropriate certificate in your app bundle.
 
 ### Client Authentication
 
@@ -391,11 +374,14 @@ The HTTP response contains a session ID which can then be used to authenticate a
 const url = new URL("ws://localhost:4984/mydatabase");
 const target = new URLEndpoint(url);
 const config = new ReplicatorConfiguration(target);
+const sessionID = 'your-session-id';
+const cookieName = 'your-cookie-name';
 
 // Assuming collection is already defined and initialized
 config.addCollection(collectionName);
 
-const sessionAuthenticator = new SessionAuthenticator("904ac010862f37c8dd99015a33ab5a3565fd8447");
+// Here cookieName is optional, if not passed it will default to the default value
+const sessionAuthenticator = new SessionAuthenticator(sessionID, cookieName);
 config.setAuthenticator(sessionAuthenticator);
 
 let replicator = new Replicator(config);
@@ -495,21 +481,6 @@ config.enableAutoPurge = false;
 ```
 
 Here we have opted to turn off the auto purge behavior. By default auto purge is enabled.
-
-#### Overrides
-
-Where necessary, clients can override the default auto-purge behavior. This can be done either by setting enableAutoPurge to false, or for finer control by applying pull-filters — see: Table 4 and Replication Filters This ensures backwards compatible with 2.8 clients that use pull filters to prevent auto purge of removed docs.
-
-#### Table 4. Impact of Pull-Filters
-
-|  |                                  Pull Filter        | Pull Filter |
-|----------------------|------------------------------------------------------------------|-------------------------------------------------------------------|
-| **purge_on_removal setting** | **Not Defined**                               | **Defined to filter removals/revoked docs**               |
-| disabled             | Doc remains in local database                                  |              |
-|                      | App notified of “accessRemoved” if a *Documentlistener* is registered           |                                                                   |
-| enabled (DEFAULT)       | Doc is auto purged                                 | Doc remains in local database                                          |
-|                      | App notified of “accessRemoved” if *Documentlistener* registered           |             |
-
 
 ### Delta Sync
 
@@ -740,8 +711,6 @@ The following error codes are considered temporary by the Couchbase Lite replica
 Couchbase Lite uses WebSockets as the communication protocol to transmit data. Some load balancers are not configured for WebSocket connections by default (NGINX for example); so it might be necessary to explicitly enable them in the load balancer’s configuration (see [Load Balancers](https://docs.couchbase.com/sync-gateway/current/load-balancer.html)).
 
 By default, the WebSocket protocol uses compression to optimize for speed and bandwidth utilization. The level of compression is set on Sync Gateway and can be tuned in the configuration file ([replicator_compression](https://docs.couchbase.com/sync-gateway/current/configuration-properties-legacy.html#replicator_compression)).
-
-## Certificate Pinning 
 
 ## Troubleshooting
 
