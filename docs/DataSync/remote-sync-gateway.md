@@ -45,7 +45,7 @@ As part of the syncing setup, the Gateway has to map the Couchbase Lite database
 
 ### Scheme
 
-Couchbase Mobile uses a replication protocol based on WebSockets for replication. To use this protocol the replication URL should specify WebSockets as the URL scheme (see the [Configure Target] section below).
+Couchbase Mobile uses a replication protocol based on WebSockets for replication. To use this protocol the replication URL should specify WebSockets as the URL scheme (see the [Configure Target](#configure-target) section below).
 
 #### Incompatibilities
 
@@ -120,8 +120,6 @@ You need Couchbase Lite 3.1+ and Sync Gateway 3.1+ to use `custom` Scopes and Co
 If you’re using Capella App Services or Sync Gateway releases that are older than version 3.1, you won’t be able to access `custom` Scopes and Collections. To use Couchbase Lite 3.1+ with these older versions, you can use the `default` Collection as a backup option.
 :::
 
-Click the **GitHub** tab in the code examples for further details.
-
 #### Example 1. Replication configuration and initialization
 
 ```typescript
@@ -160,6 +158,11 @@ Click the **GitHub** tab in the code examples for further details.
 
 ## Configure
 
+##### In this section
+
+[Configure Target](#configure-target) | [Sync Mode](#sync-mode) | [Retry Configuration](#retry-configuration) | [User Authorization](#user-authorization) | [Server Authentication](#server-authentication) | [Client Authentication](#client-authentication) | [Monitor Document Changes](#monitor-document-changes) | [Custom Headers](#custom-headers) | [Checkpoint Starts](#checkpoint-starts) | [Channels](#channels) | [Auto-purge on Channel Access Revocation](#auto-purge-on-channel-access-revocation) | [Delta Sync](#delta-sync)
+
+
 ### Configure Target
 
 Use the Initialize and define the replication configuration with local and remote database locations using the ReplicatorConfiguration object.
@@ -196,7 +199,7 @@ Note use of the scheme prefix (`wss://` to ensure TLS encryption — strongl
 
 Here we define the direction and type of replication we want to initiate.
 
-We use ReplicatorConfiguration class’s replicatorType and continuous parameters, to tell the replicator:
+We use `ReplicatorConfiguration` class’s `replicatorType` and `continuous` parameters, to tell the replicator:
 
     * The type (or direction) of the replication: `PUSH_AND_PULL`; `PULL`; `PUSH`
     * The replication mode, that is either of:
@@ -271,9 +274,9 @@ config.setMaxAttemptWaitTime(600);
 const replicator = await Replicator.create(config);
 ```
 
-1. Here we use setHeartbeat() to set the required interval (in seconds) between the heartbeat pulses
-2. Here we use setMaxAttempts() to set the required number of retry attempts
-3. Here we use setMaxAttemptWaitTime() to set the required interval between retry attempts.
+1. Here we use `setHeartbeat()` to set the required interval (in seconds) between the heartbeat pulses
+2. Here we use `setMaxAttempts()` to set the required number of retry attempts
+3. Here we use `setMaxAttemptWaitTime()` to set the required interval between retry attempts.
 
 ### User Authorization
 
@@ -294,8 +297,8 @@ You can enable authorization in the sync gateway configuration file, as shown in
   }
 }
 ```
+To authorize with Sync Gateway, an associated user must first be created. Sync Gateway users can be created through the [`POST /{tkn-db}/_user`](https://docs.couchbase.com/sync-gateway/current/rest-api-admin.html#/user/post__db___user_) endpoint on the Admin REST API.
 
-<!-- To authorize with Sync Gateway, an associated user must first be created. Sync Gateway users can be created through the [POST /{tkn-db}/_user](https://docs.couchbase.com/sync-gateway/current/rest-api-admin.html#/user/post__db___user_) endpoint on the Admin REST API. -->
 
 ### Server Authentication
 
@@ -336,11 +339,11 @@ This all assumes that you have configured the Sync Gateway to provide the approp
 
 ### Client Authentication
 
-There are two ways to authenticate from a Couchbase Lite client: Basic Authentication or Session Authentication.
+There are two ways to authenticate from a Couchbase Lite client: `Basic Authentication` or `Session Authentication`.
 
 #### Basic Authentication
 
-You can provide a user name and password to the basic authenticator class method. Under the hood, the replicator will send the credentials in the first request to retrieve a `SyncGatewaySession` cookie and use it for all subsequent requests during the replication. This is the recommended way of using basic authentication. Example 8 shows how to initiate a one-shot replication as the user **username** with the password **password**.
+You can provide a user name and password to the basic authenticator class method. Under the hood, the replicator will send the credentials in the first request to retrieve a `SyncGatewaySession` cookie and use it for all subsequent requests during the replication. This is the recommended way of using basic authentication. [Example 8](#example-8-basic-authentication) shows how to initiate a one-shot replication as the user **username** with the password **password**.
 
 #### Example 8. Basic Authentication
 
@@ -362,11 +365,11 @@ await replicator.start();
 
 Session authentication is another way to authenticate with Sync Gateway.
 
-<!-- A user session must first be created through the POST /{tkn-db}/_session endpoint on the Public REST API. -->
+A user session must first be created through the [`POST /{tkn-db}/_session`](https://docs.couchbase.com/sync-gateway/current/rest-api.html#/session/post__db___session) endpoint on the Public REST API.
 
 The HTTP response contains a session ID which can then be used to authenticate as the user it was created for.
 
-<!-- See Example 9, which shows how to initiate a one-shot replication with the session ID returned from the POST /{tkn-db}/_session endpoint. -->
+See [Example 9](#example-9-session-authentication), which shows how to initiate a one-shot replication with the session ID returned from the `POST /{tkn-db}/_session` endpoint.
 
 #### Example 9. Session Authentication
 
@@ -392,7 +395,7 @@ await replicator.start();
 
 Custom headers can be set on the configuration object. The replicator will then include those headers in every request.
 
-This feature is useful in passing additional credentials, perhaps when an authentication or authorization step is being done by a proxy server (between Couchbase Lite and Sync Gateway) — see Example 10.
+This feature is useful in passing additional credentials, perhaps when an authentication or authorization step is being done by a proxy server (between Couchbase Lite and Sync Gateway) — see [Example 10](#example-10-setting-custom-headers).
 
 #### Example 10. Setting custom headers
 
@@ -408,7 +411,7 @@ config.setHeaders({ "CustomHeaderName": "Value" });
 
 By default, Couchbase Lite gets all the channels to which the configured user account has access.
 
-This behavior is suitable for most apps that rely on user authentication and the sync function to specify which data to pull for each user.
+This behavior is suitable for most apps that rely on `user authentication` and the `sync function` to specify which data to pull for each user.
 
 Optionally, it’s also possible to specify a string array of channel names on Couchbase Lite’s replicator configuration object. In this case, the replication from Sync Gateway will only pull documents tagged with those channels.
 
@@ -436,7 +439,7 @@ Users may lose access to channels in a number of ways:
     * User is removed from a role
     * A channel is removed from a role the user is assigned to
 
-By default, when a user loses access to a channel, the next Couchbase Lite Pull replication auto-purges all documents in the channel from local Couchbase Lite databases (on devices belonging to the user) unless they belong to any of the user’s other channels — see: Table 2.
+By default, when a user loses access to a channel, the next Couchbase Lite Pull replication auto-purges all documents in the channel from local Couchbase Lite databases (on devices belonging to the user) unless they belong to any of the user’s other channels — see: [Table 2](#table-2-behavior-following-access-revocation).
 
 Documents that exist in multiple channels belonging to the user (even if they are not actively replicating that channel) are not auto-purged unless the user loses access to all channels.
 
@@ -455,7 +458,7 @@ Users will be receive an `AccessRemoved` notification from the DocumentListener 
 |                      | Sync Function includes `requireAccess(revokedChannel)`           | Local changes continue to be pushed to remote but are rejected by Sync Gateway |
 
 
-If a user subsequently regains access to a lost channel, then any previously auto-purged documents still assigned to any of their channels are automatically pulled down by the active Sync Gateway when they are next updated — see behavior summary in Table 3
+If a user subsequently regains access to a lost channel, then any previously auto-purged documents still assigned to any of their channels are automatically pulled down by the active Sync Gateway when they are next updated — see behavior summary in [Table 3](#table-3-behavior-if-access-is-regained).
 
 #### Table 3. Behavior if access is regained
 
@@ -471,7 +474,7 @@ If a user subsequently regains access to a lost channel, then any previously aut
 
 #### Config
 
-Auto-purge behavior is controlled primarily by the ReplicationConfiguration option enableAutoPurge. Changing the state of this will impact only future replications; the replicator will not attempt to sync revisions that were auto purged on channel access removal. Clients wishing to sync previously removed documents must use the resetCheckpoint API to resync from the start.
+Auto-purge behavior is controlled primarily by the ReplicationConfiguration option `enableAutoPurge`. Changing the state of this will impact only future replications; the replicator will not attempt to sync revisions that were auto purged on channel access removal. Clients wishing to sync previously removed documents must use the resetCheckpoint API to resync from the start.
 
 #### Example 11. Setting auto-purge
 
@@ -496,9 +499,13 @@ Intra-Device replications automatically disable delta sync, whilst Peer-to-Peer 
 
 ## Initialize
 
+##### In this section
+
+[Start Replicator](#start-replicator) | [Checkpoint Starts](#checkpoint-starts)
+
 ### Start Replicator
 
-Use the Replicator.create() method to initialize the replicator with the configuration you have defined. You can optionally add a change listener (see Monitor) before starting the replicator using start().
+Use the `Replicator.create()` method to initialize the replicator with the configuration you have defined. You can optionally add a change listener (see [Monitor](#monitor)) before starting the replicator using `start()`.
 
 #### Example 12. Initialize and run replicator
 
@@ -512,11 +519,11 @@ await replicator.start(false);
 
 ### Checkpoint Starts
 
-Replicators use checkpoints to keep track of documents sent to the target database.
+Replicators use `checkpoints` to keep track of documents sent to the target database.
 
-Without checkpoints, Couchbase Lite would replicate the entire database content to the target database on each connection, even though previous replications may already have replicated some or all of that content.
+Without `checkpoints`, Couchbase Lite would replicate the entire database content to the target database on each connection, even though previous replications may already have replicated some or all of that content.
 
-This functionality is generally not a concern to application developers. However, if you do want to force the replication to start again from zero, use the checkpoint reset argument when starting the replicator — as shown in Example 13.
+This functionality is generally not a concern to application developers. However, if you do want to force the replication to start again from zero, use the `checkpoint` reset argument when starting the replicator — as shown in Example 13.
 
 #### Example 13. Resetting checkpoints
 
@@ -527,12 +534,18 @@ if (doResetCheckpointRequired) {
     this.replicator.start(false);
 }
 ```
+The default `false` is shown here for completeness only; it is unlikely you would explicitly use it in practice.
+
 
 ## Monitor
 
-You can monitor a replication’s status by using a combination of Change Listeners and the `Replicator.getStatus()` property. This enables you to know, for example, when the replication is actively transferring data and when it has stopped.
+##### In this section
 
-You can also choose to monitor document changes — see: Monitor Document Changes.
+    [Change Listeners](#change-listeners) | [Replicator Status](#replicator-status) | [Monitor Document Changes](#monitor-document-changes) | [Documents Pending Push](#documents-pending-push)
+
+You can monitor a replication’s status by using a combination of `Change Listeners` and the `Replicator.getStatus()` property. This enables you to know, for example, when the replication is actively transferring data and when it has stopped.
+
+You can also choose to monitor document changes — see: [Monitor Document Changes](#monitor-document-changes).
 
 ### Change Listeners
 
@@ -542,23 +555,23 @@ Use this to monitor changes and to inform on sync progress; this is an optional 
 Don’t forget to save the token so you can remove the listener later
 :::
 
-Use the Replicator class to add a change listener as a callback to the Replicator (addChangeListener()) — see: Example 14. You will then be asynchronously notified of state changes.
+Use the `Replicator` class to add a change listener as a callback to the Replicator (`addChangeListener()`) — see: [Example 14](#example-14-monitor-replication). You will then be asynchronously notified of state changes.
 
-You can remove a change listener with removeChangeListener(token).
+You can remove a change listener with `removeChangeListener(token)`.
 
 ### Replicator Status
 
-You can use the `Replicator.getStatus()` property to check the replicator status. That is, whether it is actively transferring data or if it has stopped — see: Example 14.
+You can use the `Replicator.getStatus()` property to check the replicator status. That is, whether it is actively transferring data or if it has stopped — see: [Example 14](#example-14-monitor-replication).
 
 The returned *ReplicationStatus* structure comprises:
 
-* ActivityLevel — stopped, offline, connecting, idle or busy — see states described in: Table 5
+* `ActivityLevel` — stopped, offline, connecting, idle or busy — see states described in: [Table 5](#table-5-replicator-activity-levels)
 
-* Progress
+* `Progress`
     * completed — the total number of changes completed
     * total — the total number of changes to be processed
 
-* Error - the current error, if any.
+* `Error` - the current error, if any.
 
 #### Example 14. Monitor replication
 
@@ -576,7 +589,7 @@ const token = replicator.addChangeListener((change) => {
 
 ### Replication States
 
-Table 5 shows the different states, or activity levels, reported in the API; and the meaning of each.
+[Table 5](#table-5-replicator-activity-levels) shows the different states, or activity levels, reported in the API; and the meaning of each.
 
 #### Table 5. Replicator activity levels
 
@@ -602,7 +615,7 @@ On other platforms, Couchbase Lite doesn’t react to OS backgrounding or foregr
 
 You can choose to register for document updates during a replication.
 
-For example, the code snippet in Example 15 registers a listener to monitor document replication performed by the replicator referenced by the variable replicator. It prints the document ID of each document received and sent. Stop the listener as shown in Example 16.
+For example, the code snippet in [Example 15](#example-15-register-a-document-listener) registers a listener to monitor document replication performed by the replicator referenced by the variable `replicator`. It prints the document ID of each document received and sent. Stop the listener as shown in [Example 16](#example-16-stop-document-listener).
 
 #### Example 15. Register a document listener
 
@@ -656,9 +669,9 @@ You can check whether documents are waiting to be pushed in any forthcoming sync
 
 ## Stop
 
-Stopping a replication is straightforward. It is done using stop(). This initiates an asynchronous operation and so is not necessarily immediate. Your app should account for this potential delay before attempting any subsequent operations.
+Stopping a replication is straightforward. It is done using `stop()`. This initiates an asynchronous operation and so is not necessarily immediate. Your app should account for this potential delay before attempting any subsequent operations.
 
-You can find further information on database operations in Databases.
+You can find further information on database operations in [Databases](../databases.md).
 
 #### Example 18. Stop replicator
 
@@ -670,13 +683,13 @@ await this.replicator.removeChangeListener(token)
 await this.replicator.stop()
 ```
 
-Here we initiate the stopping of the replication using the `stop()` method. It will stop any active change listener once the replication is stopped.
+Here we initiate the stopping of the replication using the `stop()` method. It will stop any active `change listener` once the replication is stopped.
 
 ## Error Handling
 
 When *replicator* detects a network error it updates its status depending on the error type (permanent or temporary) and returns an appropriate HTTP error code. 
 
-The following code snippet adds a Change Listener, which monitors a replication for errors and logs the the returned error code.
+The following code snippet adds a `Change Listener`, which monitors a replication for errors and logs the the returned error code.
 
 #### Example 19. Monitoring for network errors
 
@@ -716,7 +729,7 @@ By default, the WebSocket protocol uses compression to optimize for speed and ba
 
 ### Logs
 
-As always, when there is a problem with replication, logging is your friend. You can increase the log output for activity related to replication with Sync Gateway — see Example 21.
+As always, when there is a problem with replication, logging is your friend. You can increase the log output for activity related to replication with Sync Gateway — see [Example 21](#example-21-set-logging-verbosity).
 
 #### Example 21. Set logging verbosity
 
@@ -733,7 +746,7 @@ For more on troubleshooting with logs, see: [Using Logs](../Troubleshooting/usin
 
 ### Authentication Errors
 
-If Sync Gateway is configured with a self signed certificate but your app points to a `ws` scheme instead of `wss` you will encounter an error with status code 11006 — see: Example 22
+If Sync Gateway is configured with a self signed certificate but your app points to a `ws` scheme instead of `wss` you will encounter an error with status code 11006 — see: [Example 22](#example-22-protocol-mismatch)
 
 #### Example 22. Protocol Mismatch
 
@@ -741,7 +754,7 @@ If Sync Gateway is configured with a self signed certificate but your app points
 CouchbaseLite Replicator ERROR: {Repl#2} Got LiteCore error: WebSocket error 1006 "connection closed abnormally"
 ```
 
-If Sync Gateway is configured with a self signed certificate, and your app points to a `wss` scheme but the replicator configuration isn’t using the certificate you will encounter an error with status code `5011` — see: Example 23
+If Sync Gateway is configured with a self signed certificate, and your app points to a `wss` scheme but the replicator configuration isn’t using the certificate you will encounter an error with status code `5011` — see: [Example 23](#example-23-certificate-mismatch-or-not-found)
 
 #### Example 23. Certificate Mismatch or Not Found
 
