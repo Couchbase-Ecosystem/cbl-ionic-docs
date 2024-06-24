@@ -64,13 +64,13 @@ await collection.save(document);
 ```typescript
 // code for setting blob
 const encoder = new TextEncoder();
-const textBlob = new Blob("text/plain", encoder.encode("Hello World"));
-doc.setBlob('textBlob', textBlob);
+const blobEncoded = new Blob("text/plain", encoder.encode("Hello World"));
+doc.setBlob('textBlob', blobEncoded);
 
 // code for getting blob's content
 const textDecoder = new TextDecoder();
-const blobText = await doc.getBlobContent('textBlob', collection);
-const textBlobResults = textDecoder.decode(blobText);
+const blobArrayBuffer = await doc.getBlobContent('textBlob', collection);
+const textBlobResults = textDecoder.decode(blobArrayBuffer);
 ```
 
 ## Syncing
