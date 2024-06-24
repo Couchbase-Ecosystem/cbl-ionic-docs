@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Get Started
 
-To get started coding Couchbase Lite for Ionic Capacitor apps, you will need to clone the Ionic Plugin repo and build the plugin.
+To get started coding Couchbase Lite for Ionic Capacitor apps, you will need to download the assets for the Ionic Plugin repo and build the plugin.
 
  :::note
 This plugin is currently under active development.  The plugin is not yet available on npm.  You must use a release from the GitHub repo. 
@@ -35,7 +35,6 @@ From the root directory change directory into the cbl-ionic folder:
 3. Build and validate that the plugin works.  The verify process will build the plugin and install the CocoaPods in iOS and the gradle files in Android for the plugin.
 
     ```shell
-    npm run build
     npm run verify
     ```
 

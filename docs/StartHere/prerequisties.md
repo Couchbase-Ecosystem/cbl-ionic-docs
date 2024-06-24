@@ -43,4 +43,5 @@ A developer using this plugin should have a basic understanding of the following
     - [API 23 (Android 6)] or higher.  Any apps using the plugin must be upgraded to API 23 or higher.  Any older versions of Android are not supported.
     - [Android Studio](https://developer.android.com/studio?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oALYfxbMYW_zkuYoacS9TX16aItdvLYe6GB7_j1QwvXBjFDRkawfUBoComcQAvD_BwE&gclsrc=aw.ds) installed and working
     - Android SDK 34 >= installed and working (with command line tools)
+    - Java SDK v17 installed and configured to work with Android Studio
     - An Android Emulator downloaded and working 
