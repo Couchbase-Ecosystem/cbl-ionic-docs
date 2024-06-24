@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Remote Sync Gateway 
 
-> Description - _Couchbase Lite for Swift — Synchronizing data changes between local and remote databases using Sync Gateway_
+> Description - _Couchbase Lite for Ionic — Synchronizing data changes between local and remote databases using Sync Gateway_
 
 :::note
 All code examples are indicative only. They demonstrate the basic concepts and approaches to using a feature. Use them as inspiration and adapt these examples to best practice when developing applications for your platform.

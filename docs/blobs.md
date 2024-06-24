@@ -59,6 +59,20 @@ document.setBlob('avatar', avatarBlob);
 await collection.save(document);
 ```
 
+#### Example 2. Get Blob's content
+
+```typescript
+// code for setting blob
+const encoder = new TextEncoder();
+const blobEncoded = new Blob("text/plain", encoder.encode("Hello World"));
+doc.setBlob('textBlob', blobEncoded);
+
+// code for getting blob's content
+const textDecoder = new TextDecoder();
+const blobArrayBuffer = await doc.getBlobContent('textBlob', collection);
+const textBlobResults = textDecoder.decode(blobArrayBuffer);
+```
+
 ## Syncing
 
 When a document containing a blob object is synchronized, the Couchbase Lite replicator generates an `_attachments` dictionary with an auto-generated name for each blob attachment. This is different to the `avatar` key and is used internally to access the blob content.
@@ -86,6 +100,8 @@ If you view a sync'd blob document in either Capella's Admin Interface or Couchb
   }
 }
 ```
+
+
 
 
 
