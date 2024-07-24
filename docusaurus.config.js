@@ -43,14 +43,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/couchbaselabs/cbl-ionic-docs',
+            'https://github.com/Couchbase-Ecosystem/cbl-ionic-docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/couchbaselabs/cbl-ionic-docs',
+            'https://github.com/Couchbase-Ecosystem/cbl-ionic-docs',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -81,7 +81,7 @@ const config = {
         items: [
           {to: 'blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/couchbaselabs/cbl-enterprise-ionic',
+            href: 'https://github.com/Couchbase-Ecosystem/cbl-ionic',
             label: 'GitHub',
             position: 'right',
           },
@@ -139,7 +139,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/couchbaselabs/cbl-enterprise-ionic',
+                href: 'https://github.com/Couchbase-Ecosystem/cbl-ionic',
               },
             ],
           },
