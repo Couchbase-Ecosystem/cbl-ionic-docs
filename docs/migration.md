@@ -17,7 +17,6 @@ From an architectural standpoint, the `cbl-ionic` plugin bears a strong resembla
 - Scopes and Collections
 - SQL++ Queries
 - Database Maintenance
-- Blob Retrieval
 
 :::note
 By updating your app to use this plugin, your database will be instantly upgraded to a 3.2 >= database, enabling support for Scopes and Collections. This behavior mirrors that of the native SDKs for each platform.
@@ -216,7 +215,8 @@ const collection = database.getDefaultCollection();
 const target = new URLEndpoint('ws://localhost:4984/projects');
 const auth = new BasicAuthenticator('demo@example.com', 'P@ssw0rd12');
 const config = new ReplicatorConfiguration(target);
-config.addCollection(this.collection);
+const collectionConfig = new CollectionConfiguration();
+config.addCollection(collection, collectionConfig);
 config.setAuthenticator(auth);
 
 const replicator = await Replicator.create(config);
