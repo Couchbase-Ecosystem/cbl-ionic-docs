@@ -413,7 +413,30 @@ By default, Couchbase Lite gets all the channels to which the configured user ac
 
 This behavior is suitable for most apps that rely on `user authentication` and the `sync function` to specify which data to pull for each user.
 
-Optionally, it’s also possible to specify a string array of channel names on Couchbase Lite’s replicator configuration object. In this case, the replication from Sync Gateway will only pull documents tagged with those channels.
+Optionally, it’s also possible to specify a string array of channel names on Couchbase Lite’s replicator configuration object by passing in a CollectionConfiguration object when adding in a collection.
+
+```typescript
+const config = new ReplicatorConfiguration(target);
+const collectionConfig = new CollectionConfiguration();
+collectionConfig.setChannels(['channel1', 'channel2']);
+config.addCollection(collection, collectionConfig);
+```
+In this case, the replication from Sync Gateway will only pull documents tagged with those channels.  
+
+:::caution
+Push replicator will ignore this filter.
+:::
+
+### Documents
+
+By default, Couchbase Lite will replicate all documents that belong to the channels specified in the collection configuration.  However, you can override this behavior by `filtering`  the documents using the `CollectionConfiguration` object.
+
+```typescript
+const config = new ReplicatorConfiguration(target);
+const collectionConfig = new CollectionConfiguration();
+collectionConfig.setDocumentIDs(['doc1', 'doc2', 'doc3']);
+config.addCollection(collection, collectionConfig);
+```
 
 ### Auto-purge on Channel Access Revocation
 

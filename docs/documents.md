@@ -12,11 +12,7 @@ sidebar_position: 7
 
 ### Document Structure
 
-In Couchbase Lite the term 'document' refers to an entry in the database. You can compare it to a record, or a row in a table.
-
-Each document has an ID or unique identifier. This ID is similar to a primary key in other databases.
-
-You can specify the ID programmatically. If you omit it, it will be automatically generated as a UUID.
+In Couchbase Lite the term 'document' refers to an entry in the database. You can compare it to a record, or a row in a table.  Each document has an ID or unique identifier. This ID is similar to a primary key in other databases.  You can specify the ID programmatically. If you omit it, it will be automatically generated as a UUID.
 
 :::note
 Couchbase documents are assigned to a Collection. The ID of a document must be unique within the Collection it is written to. You cannot change it after you have written the document.
@@ -90,22 +86,11 @@ hotel: {
 }
 ```
 
-### Open a Database
-
-First open your database. If the database does not already exist, Couchbase Lite will create it for you.
-
-```typescript
-const myDatabase = new Database('myDatabaseName', config);
-```
-See [Databases](https://cbl-ionic.dev/databases) for more information.
-
 ### Create a Document
 
 ```typescript
 let document = new MutableDocument(hotel.id);
 ```
-
-
 For more on using Documents, see Document Initializers and Mutability.
 
 ### Create a Dictionary
@@ -181,14 +166,6 @@ With the document now populated, we can persist to our Couchbase Lite database.
 
 ```typescript
 await collection.save(document);
-```
-
-### Close the Database
-
-With your document saved, you can now close our Couchbase Lite database.
-
-```typescript
-database.close();
 ```
 
 ## Working with Data
@@ -306,6 +283,17 @@ Use the `MutableDocument('specific_id')` initializer to create a new document wi
 
 The `Collection.document` method can be used to get a document. If it doesn't exist in the collection, it will return null. This method can be used to check if a document with a given ID already exists in the collection.
 
+### Convert Mutable Document from Document
+
+The `MutableDocument` class has a static function `fromDocument` that takes a `Document` as a parameter. This allows you to create a mutable copy of an existing document so you can modify it and then save it to a collection.
+
+```typescript
+const doc: Document = collection.document('doc1');
+const mutableDoc = MutableDocument.fromDocument(doc);
+mutableDoc.setString('name', 'New Name');
+await collection.save(mutableDoc);
+```
+
 #### Example 6. Persist a document
 
 The following code example creates a document and persists it to the database.
@@ -338,6 +326,40 @@ const token = collection.addDocumentChangeListener('user.john', async (change) =
 // Remove the change listener when it is no longer needed
 await collection.removeDocumentChangeListener(token);
 ```
+## Document Expiration
+
+Document expiration allows users to set the expiration date for a document. When the document expires, it is purged from the database. The purge is not replicated to Sync Gateway or Capella App Services.
+
+```typescript
+const expirationDate = new Date('2024-12-31T23:59:59');
+await collection.setDocumentExpiration('doc123', expirationDate);
+```
+
+## Purge a Document
+
+Documents can be purged from the local database using the `purge` method on the collection they are stored in.
+
+```typescript
+const doc = collection.document('doc1');
+await collection.purge(doc);
+```
+You can also purge a document by it's ID.
+
+```typescript
+await collection.purgeById('doc1');
+```
+
+Collection purges are not replicated.
+
+## Delete a Document 
+
+Documents can be deleted using the `delete` method on the collection they are stored in.
+
+```typescript
+const doc = collection.document('doc1');
+await collection.delete(doc);
+```
+Note that document deletion are replicated to Sync Gateway or Capella App Services.
 
 ## Document Constraints
 

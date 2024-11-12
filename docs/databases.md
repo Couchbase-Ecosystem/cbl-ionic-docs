@@ -62,7 +62,7 @@ import { CapacitorEngine } from 'cbl-ionic';
 const engine = new CapacitorEngine(); // Initialize once, early in your app
 ```
 
-This configuration ensures seamless interaction between your Ionic app and the underlying native database functionalities, facilitating effective database management.
+This configuration ensures seamless interaction between your Ionic app and the underlying native database functionalities, facilitating effective database management.  This only needs to be done once in your application and must be done before any other Couchbase Lite operations are performed.
 
 ### Create or Open a Database
 
@@ -90,10 +90,23 @@ You are advised to incorporate the closing of all open databases into your appli
 ```javascript
 await myDatabase.close();
 ```
+### Deleting a Database 
+
+The delete method is used to delete a database.
+
+```typescript
+ await database.deleteDatabase();
+```
+
+Alternatively, you can delete a database by calling the delete method on the Database class.
+
+```typescript
+Database.deleteDatabase('myDatabaseName', 'path/to/database');
+```
 
 ## Database Encryption
 
-Couchbase Lite includes the ability to encrypt Couchbase Lite databases. This allows mobile applications to secure data at rest, when it is being stored on the device. The algorithm used to encrypt the database is 256-bit AES.
+Couchbase Lite Enterprise Edition includes the ability to encrypt Couchbase Lite databases. This allows mobile applications to secure data at rest, when it is being stored on the device. The algorithm used to encrypt the database is 256-bit AES.
 
 ### Enabling
 
@@ -119,7 +132,7 @@ Couchbase Lite does not persist the key. It is the application’s responsibilit
 
 ### Opening
 
-An encrypted database can only be opened with the same language package that was used to encrypt it in the first place. So a database encrypted using the Ionic package, and then exported, is readable only by the Ionic package.
+An encrypted database can only be opened with the same language package that was used to encrypt it in the first place. So a database encrypted using the Ionic package on iOS, and then exported, is readable only by the iOS SDK since cbl-ionic is a wrapper around the native SDKs.
 
 ## Database Maintenance
 
@@ -127,15 +140,41 @@ From time to time it may be necessary to perform certain maintenance activities 
 
 Couchbase Lite's API provides the Database.performMaintenance method. The available maintenance operations, including compact are as shown in the enum MaintenanceType to accomplish this.
 
-This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API. For questions or issues, please visit the [Couchbase Forums](https://www.couchbase.com/forums/) where you can ask for help and discuss with the community.
 
+```typescript
+const dbName = 'my_secure_db';
+const config = new DatabaseConfiguration();
+const db = new Database(dbName, config);
+await db.open();
+await db.performMaintenance(MaintenanceType.compact);
+```
+This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API.  A full listing of the available maintenance operations is shown below:
 
-## Command Line Tool
+- **MaintenanceType.compact**: Compact the database file and delete unused attachments.
+- **MaintenanceType.reindex**: (Volatile API) Rebuild the entire database’s indexes.
+- **MaintenanceType.integrityCheck**: (Volatile API) Check for the database’s corruption. If found, an error will be returned.
+- **MaintenanceType.optimize**: Quickly updates database statistics that may help optimize queries that have been run by this Database since it was opened
+- **MaintenanceType.fullOptimize**: Fully scans all indexes to gather database statistics that help optimize queries.
 
-cblite is a command-line tool for inspecting and querying Couchbase Lite databases.
+ For questions or issues, please visit the [Couchbase Forums](https://www.couchbase.com/forums/) where you can ask for help and discuss with the community.
 
-You can download and build it from the couchbaselabs [GitHub repository](https://github.com/couchbaselabs/couchbase-mobile-tools/blob/master/README.cblite.md). Note that the cblite tool is not supported by the [Couchbase Support Policy](https://www.couchbase.com/support-policy/).
+## Deprecated API 
 
+With the introduction of Scopes and Collections, several Database APIs in the Ionic package are now deprecated. These features will be removed in a future release, and developers are encouraged to use the Scopes/Collections APIs instead for these operations.
+
+### Document APIs 
+- deleteDocument
+- getCount
+- getDocument
+- purgeDocument
+- save
+
+### Index APIs
+- createIndex
+- getIndexes
+- deleteIndex
+
+For developers not working with custom Scopes/Collections, you can use the `_default` (default) scope and collection to achieve the same functionality with the new Scopes/Collections APIs.
 
 ## Couchbase Lite for VSCode
 
@@ -145,10 +184,15 @@ Couchbase Lite for VSCode is a Visual Studio Code extension that provides a user
 
 Couchbase Lite for JetBrains is a JetBrains IDE plugin that provides a user interface for inspecting and querying Couchbase Lite databases. You can find more information about this plugin from its [GitHub repository](https://github.com/couchbaselabs/couchbase_jetbrains_plugin).
 
+## Command Line Tool
+
+cblite is a command-line tool for inspecting and querying Couchbase Lite databases.
+
+You can download and build it from the couchbaselabs [GitHub repository](https://github.com/couchbaselabs/couchbase-mobile-tools/blob/master/README.cblite.md). Note that the cblite tool is not supported by the [Couchbase Support Policy](https://www.couchbase.com/support-policy/).
+
 ## Troubleshooting
 
 You should use console logs as your first source of diagnostic information. If the information in the default logging level is insufficient you can focus it on database errors and generate more verbose messages.
-
 
 ```typescript
 try {
@@ -158,12 +202,3 @@ try {
   console.error('Setting log level failed:', error);
 }
 ```
-
-
-
-
-
-
-
-
-
