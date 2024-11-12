@@ -52,8 +52,11 @@ const avatarBlob = new Blob('image/jpeg', imageData);
 // Retrieve an existing document
 const document = await collection.document(documentId);
 
+//conver the document to a mutable document
+const mutDoc = MutableDocument.fromDocument(document);
+
 // Assign the Blob to the document under the 'avatar' key
-document.setBlob('avatar', avatarBlob);
+mutDoc.setBlob('avatar', avatarBlob);
 
 // Save the updated document back to the database
 await collection.save(document);
@@ -63,13 +66,17 @@ await collection.save(document);
 
 ```typescript
 // code for setting blob
+const mutDoc = new MutableDocument('doc1');
 const encoder = new TextEncoder();
 const blobEncoded = new Blob("text/plain", encoder.encode("Hello World"));
-doc.setBlob('textBlob', blobEncoded);
+mutDoc.setBlob('textBlob', blobEncoded);
+await collection.save(mutDoc);
 
 // code for getting blob's content
+const doc = await collection.document('doc1');
 const textDecoder = new TextDecoder();
-const blobArrayBuffer = await doc.getBlobContent('textBlob', collection);
+const blob = doc.getBlob('textBlob');
+const blobArrayBuffer =  blob.getBytes();
 const textBlobResults = textDecoder.decode(blobArrayBuffer);
 ```
 

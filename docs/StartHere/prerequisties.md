@@ -18,13 +18,13 @@ A developer using this plugin should have a basic understanding of the following
 - The capacitor plugin is supported on iOS and Android platforms.  Web support is not available.
 
 ## Capacitor Version
-- The plugin is built using Capacitor 5.7.5.  Support for 6.0 is planned. The plugin doesn't use any Ionic Framework specific code, so it should work with any version of Ionic that supports Capacitor 5.7.5. 
+- The plugin is built using Capacitor 6.1.2.  The plugin doesn't use any Ionic Framework specific code, so it should work with any version of Ionic that supports Capacitor 6.1.2. 
 
 ## Development Environment
 - Javascript
     - [Node >= 18](https://formulae.brew.sh/formula/node@18)
 - Capacitor
-    - [Capacitor v5 cli](https://capacitorjs.com/docs/getting-started)
+    - [Capacitor v6 cli](https://capacitorjs.com/docs/getting-started)
     - [Understanding on Capacitor Plugins Development](https://capacitorjs.com/docs/plugins/creating-plugins)
 - IDEs
     - [Visual Studio Code](https://code.visualstudio.com/download)
@@ -32,7 +32,7 @@ A developer using this plugin should have a basic understanding of the following
     - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 - iOS Development
     - A modern Mac 
-    - [XCode 14](https://developer.apple.com/xcode/) or higher installed and working (XCode 15 installed is preferred)
+    - [XCode 15](https://developer.apple.com/xcode/) or higher installed and working (XCode 15 installed is preferred)
     - [iOS 13 or higher].  Any apps using the plugin must be upgraded to iOS 13 or higher.
     - [XCode Command Line Tools](https://developer.apple.com/download/more/) installed 
     - [Simulators](https://developer.apple.com/documentation/safari-developer-tools/installing-xcode-and-simulators) downloaded and working

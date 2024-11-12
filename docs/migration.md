@@ -12,14 +12,15 @@ sidebar_position: 15
 
 In the past, Ionic offered a plugin for Couchbase Lite, known as @ionic-enterprise/couchbase-lite. However, this plugin has since been deprecated by Ionic. The Couchbase Developer Experience and Ecosystem team took the original plugin as a foundation and transformed it into the cbl-ionic package. This migration documentation aims to address common challenges you may encounter when transitioning from the Ionic version of the plugin to the new open-source `cbl-ionic` plugin.  
 
-From an architectural standpoint, the `cbl-ionic` plugin bears a strong resemblance to the original plugin. The key difference is that the `cbl-ionic` package is open-source and maintained by the Couchbase Developer Experience and Ecosystem team. The iOS implementation, originally written in Objective-C, has been rewritten in Swift. Similarly, the original Android implementation, which was written in Java, has been replaced with Kotlin.  The primary objective of the `cbl-ionic` plugin is to facilitate access to the latest versions of Couchbase Lite 3.x, while also supporting some of the major new features that the 3.x release offers:  
+From an architectural standpoint, the `cbl-ionic` plugin bears a strong resemblance to the original plugin. The key difference is that the `cbl-ionic` package is open-source and maintained by the Couchbase Developer Experience and Ecosystem team. The iOS implementation, originally written in Objective-C, has been rewritten in Swift. Similarly, the original Android implementation, which was written in Java, has been replaced with Kotlin.  The primary objective of the `cbl-ionic` plugin is to facilitate access to the latest versions of Couchbase Lite 3.2 >= , while also supporting some of the major new features that the >= 3.2 release offers:  
 
 - Scopes and Collections
 - SQL++ Queries
 - Database Maintenance
-- 
+- Blob Retrieval
+
 :::note
-By updating your app to use this plugin, your database will be instantly upgraded to a 3.x database, enabling support for Scopes and Collections. This behavior mirrors that of the native SDKs for each platform.
+By updating your app to use this plugin, your database will be instantly upgraded to a 3.2 >= database, enabling support for Scopes and Collections. This behavior mirrors that of the native SDKs for each platform.
 :::
 
 ## Database Compact / Database Maintenance
@@ -50,7 +51,7 @@ export enum MaintenanceType {
 }
 ```
 
-These bring the Ionic package in line with the native SDK's for each platform.
+These bring the Ionic package in line with the native SDK's for each platform.  Documentation for the Database Maintenance API can be found [here](databases.md).
 
 ## Scopes/Collections
 
@@ -237,13 +238,34 @@ const token = await replicator.addChangeListener((change) => {
  await replicator.start(false);
 ```
 
+## Blob Retrieval
+
+The Blob API has been updated to pull a blob content when the document is retrieved.  
+
+**Before**
+```javascript 
+const doc = await database.getDocument('doc1');
+const blobArrayBuffer = await doc.getBlobContent('textBlob', database);
+```
+
+**After**
+```javascript
+const doc = await collection.document('doc1');
+const blob = doc.getBlob('textBlob');
+const blobArrayBuffer =  blob.getBytes();
+```
+
 ### New Features
 
 The `cbl-ionic` plugin, in addition to supporting Scopes/Collections and SQL++ from the 3.x release, introduces several new features:
 
+- **Database Delete Function** - a new function in the Database API in addtion to the existing delete function that allows for the deletion of a database by passing the name and path instead of the database object.
+
 - **Database Change Encryption Key**: This new functionality in the Database API allows for the modification of a database's encryption key.
  
 - **Document Expiration**: A new method in the Collection API enables the setting and retrieval of a document's expiration date.
+
+- **Document and MutableDocument**: The Document and MutableDocument APIs have been updated to follow the native SDK's business rules for returning values based on the data type.
 
 - **Example App**: The `cbl-ionic` repository includes a `example` folder, which contains a comprehensive application for testing all APIs and features of the cbl-ionic plugin. It also includes a custom test runner for executing end-to-end tests written for the plugin
  
