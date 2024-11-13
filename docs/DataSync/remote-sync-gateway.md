@@ -45,7 +45,7 @@ You can set up a replication scheme across these data levels:
 
     A specific collection or a set of collections is synced.
 
-As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced on Capella.
+As part of the syncing setup, the replicator has to map the Couchbase Lite database collections to the configuration on the remote server.
 
 ## Replication Protocol
 
