@@ -3,9 +3,9 @@ id: remote-sync-gateway
 sidebar_position: 2
 ---
 
-# Remote Sync Gateway 
+# Remote Sync 
 
-> Description - _Couchbase Lite for Ionic — Synchronizing data changes between local and remote databases using Sync Gateway_
+> Description - _Couchbase Lite for Ionic — Synchronizing data changes between local and remote databases using Sync Gateway or Capella App Services_
 
 :::note
 All code examples are indicative only. They demonstrate the basic concepts and approaches to using a feature. Use them as inspiration and adapt these examples to best practice when developing applications for your platform.
@@ -13,19 +13,25 @@ All code examples are indicative only. They demonstrate the basic concepts and a
 
 ## Introduction
 
-Couchbase Lite for Ionic provides API support for secure, bi-directional, synchronization of data changes between mobile applications and a central server database. It does so by using a *replicator* to interact with Sync Gateway.
+Couchbase Lite for Ionic provides API support for secure, bi-directional, synchronization of data changes between mobile applications and a central server database. It does so by using a *replicator* to interact with Sync Gateway or Capella App Services.
 
-The *replicator* is designed to manage replication of documents and-or document changes between a source and a target database. For example, between a local Couchbase Lite database and remote Sync Gateway database, which is ultimately mapped to a bucket in a Couchbase Server instance in the cloud or on a server.
+The *replicator* is designed to manage replication of documents and-or document changes between a source and a target database. For example, between a local Couchbase Lite database and Capella App Services endpoint, which is ultimately mapped to a bucket in a Couchbase Capella Couchbase cluster instance in the cloud.
 
-This page shows sample code and configuration examples covering the implementation of a replication using Sync Gateway.
+This page shows sample code and configuration examples covering the implementation of a replication using Sync Gateway or Capella App Services.
 
-Your application runs a replicator (also referred to here as a client), which will initiate connection with a Sync Gateway (also referred to here as a server) and participate in the replication of database changes to bring both local and remote databases into sync.
+Your application runs a replicator (also referred to here as a client), which will initiate connection with a Sync Gateway or Capella App Services endpoint (also referred to here as a server) and participate in the replication of database changes to bring both local and remote databases into sync.
 
 Subsequent sections provide additional details and examples for the main configuration options.
 
+## Couchbase Capella Free Tier
+
+Couchbase Capella offers a free tier that allows you to get started with Couchbase Capella and Couchbase Capella App Services. The free tier includes a single node Capella cluster. 
+
+To get started with the free tier, see the documentation on [Couchbase Capella Free Tier](https://docs.couchbase.com/cloud/get-started/create-account.html).  For new developers to the platform, Couchbase Capella free tier is the fastest way to get started trying out sync within your mobile application. 
+
 ## Replication Concepts
 
-Couchbase Lite allows for one database for each application running on the mobile device. This database can contain one or more scopes. Each scope can contain one or more collections.
+Couchbase Lite allows for one or more databases for each application running on the mobile device. These databases can contain one or more scopes. Each scope can contain one or more collections.
 
 To learn about Scopes and Collections, see [Databases](../databases.md).
 
@@ -61,19 +67,19 @@ Scopes and Collections allow you to organize your documents in Couchbase Lite.
 
 When syncing, you can configure the collections to be synced.
 
-The collections specified in the Couchbase Lite replicator setup must exist (both scope and collection name must be identical) on the Sync Gateway side, otherwise starting the Couchbase Lite replicator will result in an error.
+The collections specified in the Couchbase Lite replicator setup must exist (both scope and collection name must be identical) on the Server side and configured to sync, otherwise starting the Couchbase Lite replicator will result in an error.
 
 During replication:
 
-    1. If Sync Gateway config (or server) is updated to remove a collection that is being synced, the client replicator will be offline and will be stopped after the first retry. An error will be reported.
+    1. If the server config is updated to remove a collection that is being synced, the client replicator will be offline and will be stopped after the first retry. An error will be reported.
 
-    2. If Sync Gateway config is updated to add a collection to a scope that is being synchronized, the replication will ignore the collection. The added collection will not automatically sync until the Couchbase Lite replicator’s configuration is updated.
+    2. If the server config is updated to add a collection to a scope that is being synchronized, the replication will ignore the collection. The added collection will not automatically sync until the Couchbase Lite replicator’s configuration is updated.
 
 ### Default Collection
 
-When upgrading Couchbase Lite to 3.1, the existing documents in the database will be automatically migrated to the default collection.
+When upgrading Couchbase Lite to >= 3.1, the existing documents in the database will be automatically migrated to the default collection.
 
-For backward compatibility with the code prior to 3.1, when you set up the replicator with the database, the default collection will be set up to sync with the default collection on Sync Gateway.
+For backward compatibility with the code prior to >= 3.1, when you set up the replicator with the database, the default collection will be set up to sync with the default collection on the server.
 
 #### Sync Couchbase Lite database with the default collection on Sync Gateway
 
@@ -116,8 +122,8 @@ The user-defined collections specified in the Couchbase Lite replicator setup mu
 You should configure and initialize a replicator for each Couchbase Lite database instance you want to sync. [Example 1](#example-1-replication-configuration-and-initialization) shows the configuration and initialization process.
 
 :::note
-You need Couchbase Lite 3.1+ and Sync Gateway 3.1+ to use `custom` Scopes and Collections.
-If you’re using Capella App Services or Sync Gateway releases that are older than version 3.1, you won’t be able to access `custom` Scopes and Collections. To use Couchbase Lite 3.1+ with these older versions, you can use the `default` Collection as a backup option.
+You need Couchbase Lite 3.1+ and Sync Gateway 3.1+ or Capella App Services to use `custom` Scopes and Collections.
+If you’re using a Sync Gateway release that is older than version 3.1, you won’t be able to access `custom` Scopes and Collections. To use Couchbase Lite 3.1+ with these older versions, you can use the `default` Collection as a backup option.
 :::
 
 #### Example 1. Replication configuration and initialization
@@ -278,7 +284,7 @@ const replicator = await Replicator.create(config);
 2. Here we use `setMaxAttempts()` to set the required number of retry attempts
 3. Here we use `setMaxAttemptWaitTime()` to set the required interval between retry attempts.
 
-### User Authorization
+### User Authorization in Sync Gateway
 
 By default, Sync Gateway does not enable user authorization. This makes it easier to get up and running with synchronization.
 
@@ -302,7 +308,7 @@ To authorize with Sync Gateway, an associated user must first be created. Sync G
 
 ### Server Authentication
 
-Define the credentials your app (the client) is expecting to receive from the Sync Gateway (the server) in order to ensure it is prepared to continue with the sync.
+Define the credentials your app (the client) is expecting to receive from the Sync Gateway or Capella App Services (the server) in order to ensure it is prepared to continue with the sync.
 
 Note that the client cannot authenticate the server if TLS is turned off. When TLS is enabled (Sync Gateway’s default) the client *must* authenticate the server. If the server cannot provide acceptable credentials then the connection will fail.
 
@@ -335,7 +341,7 @@ config.acceptOnlySelfSignedServerCertificate = true;
 
 Set this to true to accept any self signed cert. Any certificates that are not self-signed are rejected.
 
-This all assumes that you have configured the Sync Gateway to provide the appropriate SSL certificates, and have included the appropriate certificate in your app bundle.
+This all assumes that you have configured the server to provide the appropriate SSL certificates, and have included the appropriate certificate in your app bundle.
 
 ### Client Authentication
 
@@ -363,7 +369,7 @@ await replicator.start();
 
 #### Session Authentication
 
-Session authentication is another way to authenticate with Sync Gateway.
+Session authentication is another way to authenticate with Sync Gateway or Capella App Services.
 
 A user session must first be created through the [`POST /{tkn-db}/_session`](https://docs.couchbase.com/sync-gateway/current/rest-api.html#/session/post__db___session) endpoint on the Public REST API.
 
@@ -421,7 +427,7 @@ const collectionConfig = new CollectionConfiguration();
 collectionConfig.setChannels(['channel1', 'channel2']);
 config.addCollection(collection, collectionConfig);
 ```
-In this case, the replication from Sync Gateway will only pull documents tagged with those channels.  
+In this case, the replication from the server will only pull documents tagged with those channels.  
 
 :::caution
 Push replicator will ignore this filter.
@@ -476,23 +482,23 @@ Users will be receive an `AccessRemoved` notification from the DocumentListener 
 | **Pull only**        | User revoked access to channel.                                  | Previously synced documents are auto purged on local              |
 |                      | Sync Function includes `requireAccess(revokedChannel)`           |                                                                   |
 | **Push only**        | User revoked access to channel.                                  | No impact of auto-purge                                           |
-|                      | Sync Function includes `requireAccess(revokedChannel)`           | Documents get pushed but are rejected by Sync Gateway             |
+|                      | Sync Function includes `requireAccess(revokedChannel)`           | Documents get pushed but are rejected by the server             |
 | **Push-pull**        | User revoked access to channel                                   | Previously synced documents are auto purged on Couchbase Lite.    |
-|                      | Sync Function includes `requireAccess(revokedChannel)`           | Local changes continue to be pushed to remote but are rejected by Sync Gateway |
+|                      | Sync Function includes `requireAccess(revokedChannel)`           | Local changes continue to be pushed to remote but are rejected by the server |
 
 
-If a user subsequently regains access to a lost channel, then any previously auto-purged documents still assigned to any of their channels are automatically pulled down by the active Sync Gateway when they are next updated — see behavior summary in [Table 3](#table-3-behavior-if-access-is-regained).
+If a user subsequently regains access to a lost channel, then any previously auto-purged documents still assigned to any of their channels are automatically pulled down by the active server when they are next updated — see behavior summary in [Table 3](#table-3-behavior-if-access-is-regained).
 
 #### Table 3. Behavior if access is regained
 
 |  |       System State	                        |       Impact on Sync        |
 |----------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Replication Type** | **Access Control on Sync Gateway**                                          | **Expected behavior when enable_auto_purge=true**                                                                                                             |
+| **Replication Type** | **Access Control on the Server**                                          | **Expected behavior when enable_auto_purge=true**                                                                                                             |
 | **Pull only**        | User REASSIGNED access to channel                                           | Previously purged documents that are still in the channel are automatically pulled by Couchbase Lite when they are next updated                               |
-| **Push only**        | User REASSIGNED access to channel                                           | Local changes previously rejected by Sync Gateway will not be automatically pushed to remote unless resetCheckpoint is involved on CBL. Document changes subsequent to the channel reassignment will be pushed up as usual. |
+| **Push only**        | User REASSIGNED access to channel                                           | Local changes previously rejected by the serverwill not be automatically pushed to remote unless resetCheckpoint is involved on CBL. Document changes subsequent to the channel reassignment will be pushed up as usual. |
 |                      | Sync Function includes `requireAccess(reassignedChannel)` No impact of auto-purge |                                                                                                                                                              |
 | **Push-pull**        | User REASSIGNED access to channel                                           | Previously purged documents are automatically pulled by Couchbase Lite                                                                                       |
-|                      | Sync Function includes `requireAccess(reassignedChannel)`                   | Local changes previously rejected by Sync Gateway will not be automatically pushed to remote unless resetCheckpoint is involved. Document changes subsequent to the channel reassignment will be pushed up as usual. |
+|                      | Sync Function includes `requireAccess(reassignedChannel)`                   | Local changes previously rejected by the server will not be automatically pushed to remote unless resetCheckpoint is involved. Document changes subsequent to the channel reassignment will be pushed up as usual. |
 
 
 #### Config
@@ -671,7 +677,7 @@ await this.replicator.removeChangeListener(token);
 
 ### Document Access Removal Behavior
 
-When access to a document is removed on Sync Gateway (see: Sync Gateway’s [Sync Function](https://docs.couchbase.com/sync-gateway/current/sync-function-api.html)), the document replication listener sends a notification with the `AccessRemoved` flag set to `true` and subsequently purges the document from the database.
+When access to a document is removed on a server (see: Sync Gateway’s [Sync Function](https://docs.couchbase.com/sync-gateway/current/sync-function-api.html)), the document replication listener sends a notification with the `AccessRemoved` flag set to `true` and subsequently purges the document from the database.
 
 ## Documents Pending Push
 
