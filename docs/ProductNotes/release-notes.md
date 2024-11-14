@@ -4,6 +4,10 @@ sidebar_position: 1
 ---
 
 # Release Notes 
+**0.2.5**
+- Updated iOS and Android to use Couchbase Lite 3.2.1
+	- Updating users should run `npx cap sync` after updating the NPM package
+
 **0.2.4**
 - Included support for Couchbase Lite 3.2.0
 - Updated Ionic Capacitor version to [version 6](https://ionic.io/blog/announcing-capacitor-6-0)
