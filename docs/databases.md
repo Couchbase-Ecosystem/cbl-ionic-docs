@@ -148,6 +148,8 @@ const db = new Database(dbName, config);
 await db.open();
 await db.performMaintenance(MaintenanceType.compact);
 ```
+
+
 This is a resource intensive operation and is not performed automatically. It should be run on-demand using the API.  A full listing of the available maintenance operations is shown below:
 
 - **MaintenanceType.compact**: Compact the database file and delete unused attachments.

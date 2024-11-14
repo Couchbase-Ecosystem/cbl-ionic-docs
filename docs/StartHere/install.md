@@ -9,54 +9,11 @@ sidebar_position: 2
 
 To get started coding Couchbase Lite for Ionic Capacitor apps, you will need to download the assets for the Ionic Plugin repo and build the plugin.
 
- :::note
-This plugin is currently under active development.  The plugin is not yet available on npm.  You must use a release from the GitHub repo. 
- :::
-
 ### How to install the cbl-ionic Plugin
 
-1. Browse to the list of release on GitHub for the cbl-ionic plugin [here](https://github.com/Couchbase-Ecosystem/cbl-ionic/releases).  Pick a release to download and grab the cbl-ionic.tar.gz file for that release. Once it is downloaded, you can untar the file and the plugin into the root folder of the same as your ionic project.  Your directory structure should look something similar to this: 
-
-- root directory 
-  - cbl-ionic
-  - ionic-mobile-app
-
-From the root directory change directory into the cbl-ionic folder:
-
+1. The cbl-ionic plugin is available on npm.  You can install it by running the following command:
 ```shell
-  cd cbl-ionic
-```  
- 
-2. Install the dependencies on main project.
-
-    ```shell
-    npm install
-    ```
-3. Build and validate that the plugin works.  The verify process will build the plugin and install the CocoaPods in iOS and the gradle files in Android for the plugin.
-
-    ```shell
-    npm run verify
-    ```
-
-Once you have built the plugin, you can add it to your Ionic project.
-
-### Add the Plugin to your Ionic Project
-
-In your project package.json add the ionic plugin to your dependencies. Since this is done at the file system you can use either a relative file path or [npm link/unlink](https://docs.npmjs.com/cli/v10/commands/npm-link).  The following example shows using a file path. 
-
-```json  
- "dependencies": {
-    "cbl-ionic": "file:../cbl-ionic/"
-	...
-}
-```
-
-In this example the cbl-ionic repo is in the same "root" folder as the Ionic app, this .. would do a change directory (cd) out the root folder where the cbl-ionic folder is located.
-
-Finally do an npm install to install the plugin into your project.
-
-```shell
-npm install
+npm install cbl-ionic
 ```
 
 ### iOS - Validate Cocoa Pod Installation
@@ -77,11 +34,11 @@ install! 'cocoapods', :disable_input_output_paths => true
 def capacitor_pods
   pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
-  pod 'CblIonic', :path => '../../../cbl-ionic'
   pod 'CapacitorApp', :path => '../../node_modules/@capacitor/app'
   pod 'CapacitorHaptics', :path => '../../node_modules/@capacitor/haptics'
   pod 'CapacitorKeyboard', :path => '../../node_modules/@capacitor/keyboard'
   pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
+  pod 'CblIonic', :path => '../../node_modules/cbl-ionic'
 end
 
 target 'App' do
@@ -92,6 +49,7 @@ end
 post_install do |installer|
   assertDeploymentTarget(installer)
 end
+
 ```
 
 :::note
@@ -123,11 +81,32 @@ allprojects {
 
 In this example, the maven url was added that points to the maven server that hosts the Couchbase Lite Android packages.
 
+### Run Capacitor Sync
+
+After making plugin changes, it never hurts to run a sync to make sure everything is working correctly.
+
+```powershell
+npx cap sync 
+```
+
 ### Build your app
 You can now use the standard build and run commands that ionic capacitor offers to run your app from the main directory of your app.
 
 ```shell
 npm run build
+```
+### Live Reload
+
+To use the live reload feature of ionic capacitor, you can use the following commands:
+
+**iOS**:
+```shell
+ionic capacitor run ios --livereload external
+```
+
+**Android**:
+```shell
+ionic capacitor run android --livereload external
 ```
 
 ### Run your app in Native IDEs
@@ -143,20 +122,5 @@ npx cap open ios
 ```shell
 npx cap sync android
 npx cap open android 
-```
-
-
-### Live Reload
-
-To use the live reload feature of ionic capacitor, you can use the following commands:
-
-**iOS**:
-```shell
-ionic capacitor run ios --livereload external
-```
-
-**Android**:
-```shell
-ionic capacitor run android --livereload external
 ```
 
