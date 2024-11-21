@@ -63,6 +63,10 @@ cd ios/App
 pod install
 cd ../..
 ```
+:::note
+Note that if the iOS Couchbase Lite package is updated, you will have to run a `pod update` in your iOS project to update the Couchbase Lite package prior to running `npx cap sync`.
+:::
+
 
 ### Android - Update the `all projects` gradle file 
 

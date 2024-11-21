@@ -4,12 +4,18 @@ sidebar_position: 1
 ---
 
 # Release Notes 
+**0.2.6**
+- Updated Database Save and Database getDocument APIs to fix issue where the document wasn't properly updated in the database nor returned due to changes made in 0.2.4 (regression). 
+
 **0.2.5**
 - Updated iOS and Android to use Couchbase Lite 3.2.1
+	- Updating users will need to run `pod update` in your iOS project 
 	- Updating users should run `npx cap sync` after updating the NPM package
 
 **0.2.4**
 - Included support for Couchbase Lite 3.2.0
+	- Updating users will need to run `pod update` in your iOS project 
+	- Updating users should run `npx cap sync` after updating the NPM package
 - Updated Ionic Capacitor version to [version 6](https://ionic.io/blog/announcing-capacitor-6-0)
 	- Applications will need to [migrate from version 5 to version 6](https://capacitorjs.com/docs/updating/6-0)
 - Updated Documents and MutableDocuments API to match the Native SDK APIs, including default values for each data type
