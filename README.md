@@ -42,7 +42,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ---
 
-# 📢 Support Policy
+## 📢 Support Policy
 
 We truly appreciate your interest in this project!  
 This project is **community-maintained**, which means it's **not officially supported** by our support team.
