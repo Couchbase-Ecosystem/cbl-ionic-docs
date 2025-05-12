@@ -4,6 +4,13 @@ sidebar_position: 1
 ---
 
 # Release Notes 
+**1.0.0**
+- Included support for [Couchbase Lite 3.2.2](https://docs.couchbase.com/couchbase-lite/current/cbl-whatsnew.html#release-3-2-2-march-2025)
+- Fixed issue preventing [creation of second database instance](https://github.com/Couchbase-Ecosystem/cbl-ionic/issues/22)
+- Fixed a [session authentication issue](https://github.com/Couchbase-Ecosystem/cbl-ionic/issues/62)
+- Updated example app with [Replication](https://github.com/Couchbase-Ecosystem/cbl-ionic/issues/6) and [Query Screens](https://github.com/Couchbase-Ecosystem/cbl-ionic/issues/5)
+- Expanded Replication testing
+  
 **0.2.6**
 - Updated Database Save and Database getDocument APIs to fix issue where the document wasn't properly updated in the database nor returned due to changes made in 0.2.4 (regression). 
 
