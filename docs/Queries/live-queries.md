@@ -37,6 +37,10 @@ const token = await query.addChangeListener((change) => {
 }); 
 ```
 
+:::note
+Queries that use parameter expressions (e.g. $param) are not compatible with live queries and cannot be observed for changes.
+:::
+
 To stop receiving notifications, call `Query.removeChangeListener` with the token that was returned from the registration call. Regardless of the whether the API is synchronous or asynchronous, listeners will stop receiving notifications immediately:
 
 #### Example 2. Stopping a Live Query - Change Listener
