@@ -326,6 +326,11 @@ const token = collection.addDocumentChangeListener('user.john', async (change) =
 // Remove the change listener when it is no longer needed
 await collection.removeDocumentChangeListener(token);
 ```
+
+:::note
+Document and Collection Change Listeners are currently not supported on iOS
+:::
+
 ## Document Expiration
 
 Document expiration allows users to set the expiration date for a document. When the document expires, it is purged from the database. The purge is not replicated to Sync Gateway or Capella App Services.
