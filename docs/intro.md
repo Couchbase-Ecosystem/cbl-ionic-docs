@@ -56,7 +56,9 @@ Some of the features supported by other platform implementations of Couchbase Li
 * Vector Search
 	- This is still in beta for the native platforms and is not yet supported in the plugin.
 
+<!-- Commented out as P2P APIs are still in development and not yet released
 * Peer-to-Peer Sync
 	- There is no "platform" specific code built into the plugin to allow you to find other peers.
+-->
 
  

@@ -524,7 +524,7 @@ With Delta Sync, only the changed parts of a Couchbase document are replicated. 
 
 Replications to a Server (for example, a Sync Gateway, or passive listener) automatically use delta sync if the property is enabled at database level by the server — see: [databases.$db.delta_sync.enabled](https://docs.couchbase.com/sync-gateway/current/configuration-properties-legacy.html#databases-foo_db-delta_sync).
 
-Intra-Device replications automatically disable delta sync, whilst Peer-to-Peer replications automatically enable delta sync.
+Intra-Device replications automatically disable delta sync<!-- , whilst Peer-to-Peer replications automatically enable delta sync -->.
 
 ## Initialize
 
