@@ -18,6 +18,7 @@ build
 coverage
 .docusaurus
 .cache-loader
+.env
 types
 test-website
 test-website-in-workspace

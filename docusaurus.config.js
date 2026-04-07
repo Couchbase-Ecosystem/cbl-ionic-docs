@@ -1,4 +1,5 @@
 
+import 'dotenv/config';
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -23,6 +24,14 @@ const config = {
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `!function(){var e,t,n;e="${process.env.REO_CLIENT_ID}",t=function(){Reo.init({clientID:"${process.env.REO_CLIENT_ID}"})},(n=document.createElement("script")).src="https://static.reo.dev/"+e+"/reo.js",n.async=!0,n.onload=t,document.head.appendChild(n)}();`,
+    },
+  ],
 
   clientModules: [
     './src/clientModules/scarfAnalytics.js',

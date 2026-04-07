@@ -25,6 +25,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
+        env:
+          REO_CLIENT_ID: ${{ vars.REO_CLIENT_ID }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

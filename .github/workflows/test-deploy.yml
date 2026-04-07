@@ -22,3 +22,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Test build website
         run: yarn build
+        env:
+          REO_CLIENT_ID: ${{ vars.REO_CLIENT_ID }}
