@@ -71,6 +71,13 @@ const config = {
         sitemap: {
           changefreq: 'hourly',
         },
+        googleTagManager: {
+          containerId: 'GTM-MVPNN2',
+        },
+        gtag: {
+          trackingID: 'G-CVKKEY0D6B',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
